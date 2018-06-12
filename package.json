@@ -1,0 +1,19 @@
+{
+  "name": "thankful-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperuserLabs/thankful-website.git"
+  },
+  "author": "",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/SuperuserLabs/thankful-website/issues"
+  },
+  "homepage": "https://github.com/SuperuserLabs/thankful-website#readme"
+}
