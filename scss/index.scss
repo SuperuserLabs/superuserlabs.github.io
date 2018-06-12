@@ -18,10 +18,14 @@
     display: inline;
 }
 
-.info:nth-child(odd) {
-    text-align: left;
-}
-
-.info:nth-child(even) {
-    text-align: right;
+.info {
+    &:nth-child(odd) {
+        text-align: left;
+    }
+    &:nth-child(even) {
+        text-align: right;
+    }
+    p {
+        text-align: left;
+    }
 }
