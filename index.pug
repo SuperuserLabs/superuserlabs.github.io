@@ -1,39 +1,73 @@
 html
     head
+        title Thankful
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
         link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous")
+
+        script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous")
+
         link(rel="stylesheet" href="/css/index.css")
-        title Thankful
 
     body
-        div#wrapper
-            ul#top-bar
-                li
-                    a(href="idklol") Blog
-                li
-                    a(href="mb") Forum
-                li
-                    a(href="https://github.com/SuperuserLabs/thankful") GitHub
-            
-            div#header Be
-                h1 Thankful
+        nav.navbar.navbar-light.bg-light.navbar-expand-md
+            div.container
+                a.navbar-brand(href="#") Navbar
+                button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                div.collapse.navbar-collapse#navbarToggler
+                    ul.navbar-nav.mr-auto
+                        li.nav-item
+                            a.nav-link(href="#") Something
+                        li.nav-item
+                            a.nav-link(href="#") Something else
+                    div
+                        a(href="https://github.com/SuperuserLabs/thankful")
+                            i.fab.fa-github.fa-2x(style="padding: 0.2em; color: #888")
+                        a(href="https://twitter.com/bethankful")
+                            i.fab.fa-twitter.fa-2x(style="padding: 0.2em; color: #888")
 
-            div#info-area
-                div.info
-                    h2 waow
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut velit malesuada, accumsan ipsum vel, vestibulum massa. Mauris vulputate felis non leo faucibus, a pharetra lacus consequat. Ut non justo velit. Sed nulla ex, tempus non mi quis, facilisis tempus sem. Proin molestie tortor leo, vel sodales nisi faucibus non. Nullam dolor nulla, sodales mattis vulputate eget, interdum a purus. Quisque pulvinar rhoncus turpis, eu suscipit sem malesuada in. Ut vel ante vel dolor convallis ultricies ut ac sapien. Proin elementum non nunc eu tempus. Integer massa ex, gravida vitae faucibus id, pulvinar nec nisi. Aliquam erat volutpat. Aliquam ut eros non erat maximus facilisis. Duis in finibus purus.
-                div.info
-                    h2 omg
-                    p Donec nec elementum augue. Maecenas facilisis est elit, sed eleifend nisi ornare a. Nullam ultricies ante scelerisque tortor fermentum, at cursus justo tincidunt. Aliquam rutrum vitae lorem quis interdum. Donec ut lacus vitae augue pulvinar tincidunt. Sed bibendum tincidunt lacinia. Sed id velit posuere, dignissim arcu ac, fringilla lacus. Proin eget nisi faucibus, posuere risus ut, tristique mi. Morbi sagittis mattis tellus pharetra vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus posuere eros nunc, eget volutpat velit imperdiet non. Donec ut elit quis orci congue laoreet nec eu magna. Cras facilisis at libero sollicitudin tincidunt. Vestibulum aliquam mauris ac enim mattis, sit amet gravida enim convallis. Vestibulum consequat dui non gravida eleifend. Nam mauris erat, imperdiet quis augue ut, euismod posuere tellus.
-                div.info
-                    h2 much creators
-                    p Cras a lorem non ante dignissim rhoncus. Curabitur lorem nisl, faucibus eu ante sit amet, fringilla congue massa. Quisque sed tempus diam. Nam id libero et nisl pellentesque interdum. Vivamus eget tincidunt arcu. Duis eget volutpat enim. Morbi porta, quam a rhoncus suscipit, ex ex faucibus tellus, eu porttitor tellus elit semper elit. Morbi vestibulum nec nunc ut dapibus. Nam sed ligula faucibus, imperdiet massa non, gravida ex. Vivamus tincidunt augue eget mauris feugiat auctor. Suspendisse sit amet odio a odio pharetra dapibus ultricies in risus. Duis accumsan dolor libero, nec tempor diam tincidunt a. Etiam varius molestie sagittis. Praesent quis venenatis libero, nec pulvinar nunc.
-                div.info
-                    h2 very microtransaction
-                    p Aenean non ante efficitur dolor viverra venenatis. Donec nulla risus, lacinia sed lectus quis, ultricies faucibus nisi. Maecenas at lorem ut ante hendrerit condimentum. Suspendisse a turpis eget neque accumsan suscipit. In hac habitasse platea dictumst. Nunc id diam in dui consectetur laoreet quis vitae tortor. Aliquam tempor malesuada elit sit amet elementum. Aliquam non sem sed sem pharetra hendrerit.
+        div.container
+            div.row(style="margin-top: 8em; margin-bottom: 8em")
+                h1.text-center(style="width: 100%") Be #[b Thankful]
+                div.col-md-6.offset-md-3
+                    p.text-center
+                        | #[b Thankful] is a browser plugin that helps you donate to everyone you visit online using cryptocurrency.
 
-            div#footer
-                | Made with 🥔 by SuperuserLabs
+        div(style="padding: 4em;").bg-success.text-white
+            div.container
+                div.row
+                    div.col
+                        h2 Support #[b everyone] you like
+                        p Thankful tries to make it as easy as possible to reward every creator you like online.
+                    div.col-sm-4(style="text-align: center")
+                        i.fas.fa-donate.fa-8x
+
+        div(style="padding: 4em;").bg-warning.text-dark
+            div.container
+                div.row
+                    div.col-sm-4(style="text-align: center")
+                        i.fas.fa-coins.fa-8x
+                    div.col
+                        h2 Zero transaction fees#[sup *]
+                        p The only fees you pay are cryptocurrency fees, and the completely optional "Support the development of Thankful"-fee.
+
+        div(style="padding: 4em;").bg-primary.text-light
+            div.container
+                div.row
+                    div.col-md-6
+                        h2 A good usecase for cryptocurrency
+                        p Direct-to-creator donations would never be possible without cryptocurrency like Ethereum or Bitcoin, but now that they are we hope they will become the norm.
+                    div.col-md-6(style="text-align: center")
+                        i.fab.fa-bitcoin.fa-8x(style="color: gold")
+                        i.fab.fa-ethereum.fa-8x(style="margin-left: 0.25em; color: #444")
+
+        div.bg-dark.text-white
+            div.container
+                p.text-center(style="padding: 2em; margin: 0")
+                    b Made with #[i.fas.fa-heart(style="color: red")] by Superuser Labs
 
