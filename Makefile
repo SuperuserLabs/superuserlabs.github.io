@@ -1,0 +1,3 @@
+
+build:
+	pug index.pug
