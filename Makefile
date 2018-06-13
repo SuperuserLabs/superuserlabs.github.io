@@ -17,7 +17,7 @@ dev-pug-thankful:
 	npm run pug -- -o build/thankful --watch $(PUG_OPTS) thankful/index.pug
 
 dev-scss:
-	npm run sass -- --watch scss:build
+	npm run scss -- --watch scss:build
 
 host:
 	cd build && python -m http.server 8123
