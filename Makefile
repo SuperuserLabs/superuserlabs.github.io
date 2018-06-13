@@ -1,10 +1,11 @@
+PUG_ROOTS=index.pug thankful/index.pug
+PUG_OPTS='{"basedir": "."}'
 
 build:
-	npm run pug index.pug
-	npm run sass index.scss index.css
+	pug -O $(PUG_OPTS) $(PUG_ROOTS)
 
 dev-pug:
-	npm run pug-watch index.pug
+	pug --watch -O $(PUG_OPTS) $(PUG_ROOTS)
 
 dev-scss:
 	npm run scss-watch scss:css
