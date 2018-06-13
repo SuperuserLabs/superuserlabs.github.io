@@ -8,6 +8,7 @@ install:
 build:
 	npm run pug -- -o build $(PUG_OPTS) index.pug
 	npm run pug -- -o build/thankful $(PUG_OPTS) thankful/index.pug
+	npm run scss -- scss:build
 
 dev-pug-superuser:
 	npm run pug -- -o build --watch $(PUG_OPTS) index.pug
