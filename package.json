@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "scss",
-    "scss-watch": "scss --watch",
-    "pug": "pug",
-    "pug-watch": "pug --watch"
+    "pug": "pug"
   },
   "repository": {
     "type": "git",
