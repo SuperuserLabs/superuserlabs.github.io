@@ -5,10 +5,10 @@ install:
 	npm install
 
 build:
-	npm run pug -O $(PUG_OPTS) $(PUG_ROOTS)
+	pug -O $(PUG_OPTS) $(PUG_ROOTS)
 
 dev-pug:
-	npm run pug --watch -O $(PUG_OPTS) $(PUG_ROOTS)
+	pug --watch -O $(PUG_OPTS) $(PUG_ROOTS)
 
 dev-scss:
 	npm run scss-watch scss:css
