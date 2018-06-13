@@ -10,10 +10,10 @@ build:
 	npm run pug -- -o build/thankful $(PUG_OPTS) thankful/index.pug
 
 dev-pug-superuser:
-	npm run pug -- --watch $(PUG_OPTS) index.pug
+	npm run pug -- -o build --watch $(PUG_OPTS) index.pug
 
 dev-pug-thankful:
-	npm run pug -- --watch $(PUG_OPTS) thankful/index.pug
+	npm run pug -- -o build/thankful --watch $(PUG_OPTS) thankful/index.pug
 
 dev-scss:
 	npm run scss -- --watch scss:css

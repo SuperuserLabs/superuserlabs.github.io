@@ -1,5 +1,8 @@
 head
-    title Superuser Labs
+    if title
+        title #{title}
+    else
+        title Superuser Labs
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
