@@ -6,17 +6,17 @@ install:
 	npm install
 
 build:
-	pug -o build $(PUG_OPTS) index.pug
-	pug -o build/thankful $(PUG_OPTS) thankful/index.pug
+	npm run pug -- -o build $(PUG_OPTS) index.pug
+	npm run pug -- -o build/thankful $(PUG_OPTS) thankful/index.pug
 
 dev-pug-superuser:
-	pug --watch $(PUG_OPTS) index.pug
+	npm run pug -- --watch $(PUG_OPTS) index.pug
 
 dev-pug-thankful:
-	pug --watch $(PUG_OPTS) thankful/index.pug
+	npm run pug -- --watch $(PUG_OPTS) thankful/index.pug
 
 dev-scss:
-	npm run scss-watch scss:css
+	npm run scss -- --watch scss:css
 
 host:
 	cd build && python -m http.server 8123
