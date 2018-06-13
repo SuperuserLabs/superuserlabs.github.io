@@ -1,6 +1,9 @@
 PUG_ROOTS=index.pug thankful/index.pug
 PUG_OPTS='{"basedir": "."}'
 
+install:
+	npm install
+
 build:
 	pug -O $(PUG_OPTS) $(PUG_ROOTS)
 
