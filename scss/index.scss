@@ -1,31 +1,22 @@
-#wrapper {
-    text-align: center;
-    width: 50%;
-    margin: auto;
+$theme-colors: (
+  "primary": rgba(0, 123, 255, 0.8)
+);
+
+#mc_embed_signup {
+    display: inline-block;
+    h5 {
+        margin: 0;
+        margin-bottom: 0;
+    }
 }
 
-#top-bar {
-    text-align: right;
-    list-style-type: none;
-}
-
-#top-bar li {
+.form-control {
+    border-radius: 0;
+    margin: 0.3em;
+    width: 75%;
     display: inline;
-    padding-right: 10px;
 }
 
-#header h1 {
-    display: inline;
-}
-
-.info {
-    &:nth-child(odd) {
-        text-align: left;
-    }
-    &:nth-child(even) {
-        text-align: right;
-    }
-    p {
-        text-align: left;
-    }
+.btn {
+    border-radius: 0;
 }
