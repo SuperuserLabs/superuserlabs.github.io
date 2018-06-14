@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass",
-    "scss": "scss",
+    "sass": "node-sass",
     "pug": "pug"
   },
   "repository": {
@@ -21,6 +20,6 @@
   "homepage": "https://github.com/SuperuserLabs/thankful-website#readme",
   "devDependencies": {
     "pug-cli": "^1.0.0-alpha6",
-    "sass": "^1.5.1"
+    "node-sass": "^4.9.0"
   }
 }
