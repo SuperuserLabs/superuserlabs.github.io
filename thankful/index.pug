@@ -1,3 +1,4 @@
+include /templates/mixins.pug
 html
     - var title = "Thankful"
     include /templates/head.pug
@@ -5,48 +6,37 @@ html
     body
         include /templates/navbar.pug
 
-        div.container
-            div.row(style="margin-top: 8em; margin-bottom: 8em")
-                div.display-4.text-center.w-100 Be #[b Thankful]
-                p.text-center.w-100
-                    i.text-muted Support for every creator from every #[b.text-dark thankful] user.
-                div.col-md-6.offset-md-3
-                    p.text-center
-                        | #[b Thankful] is an open-source browser plugin that helps you donate to all your favorite creators using cryptocurrency.
+        +section("6em")
+            div.display-4.text-center.w-100 Be #[b Thankful]
+            p.text-center.w-100
+                i.text-muted Support for every creator from every #[b.text-dark thankful] user.
+            div.col-md-6.offset-md-3
+                p.text-center
+                    | #[b Thankful] is an open-source browser plugin that helps you donate to all your favorite creators using cryptocurrency.
 
-                    hr
-                    include /templates/email-signup.pug
+                hr
+                include /templates/email-signup.pug
 
-        div(style="padding: 4em; background-color: rgba(40, 167, 69, 0.8)").text-white
-            div.container
-                div.row
-                    div.col
-                        h2 Support #[b everyone] you like
-                        p Thankful tries to make it as easy as possible to reward every creator you like online.
-                    div.col-sm-4(style="text-align: center")
-                        i.fas.fa-donate.fa-8x
+        +section(style="background-color: rgba(40, 167, 69, 0.8)").text-white
+            div.col
+                h2 Support #[b everyone] you like
+                p Thankful tries to make it as easy as possible to reward every creator you like online.
+            div.col-sm-4(style="text-align: center")
+                i.fas.fa-donate.fa-8x
 
-        div(style="padding: 4em; background-color: rgba(255, 193, 7, 0.8)").text-dark
-            div.container
-                div.row
-                    div.col-sm-4(style="text-align: center")
-                        i.fas.fa-coins.fa-8x
-                    div.col
-                        h2 Zero transaction fees#[sup *]
-                        p The only fees you pay are cryptocurrency fees, and the completely optional "Support the development of Thankful"-fee.
+        +section(style="background-color: rgba(255, 193, 7, 0.8)").text-dark
+            div.col-sm-4(style="text-align: center")
+                i.fas.fa-coins.fa-8x
+            div.col
+                h2 Zero transaction fees#[sup *]
+                p The only fees you pay are cryptocurrency fees, and the completely optional "Support the development of Thankful"-fee.
 
-        div(style="padding: 4em; background-color: rgba(0, 123, 255, 0.8)").text-light
-            div.container
-                div.row
-                    div.col-md-6
-                        h2 A good usecase for cryptocurrency
-                        p Direct-to-creator donations would never be possible without cryptocurrency like Ethereum or Bitcoin, but now that they are we hope they will become the norm.
-                    div.col-md-6(style="text-align: center")
-                        i.fab.fa-bitcoin.fa-8x(style="color: #ffcd38")
-                        i.fab.fa-ethereum.fa-8x(style="margin-left: 0.25em; color: #343a40")
+        +section(style="background-color: rgba(0, 123, 255, 0.8)").text-light
+            div.col-md-6
+                h2 A good usecase for cryptocurrency
+                p Direct-to-creator donations would never be possible without cryptocurrency like Ethereum or Bitcoin, but now that they are we hope they will become the norm.
+            div.col-md-6(style="text-align: center")
+                i.fab.fa-bitcoin.fa-8x(style="color: #ffcd38")
+                i.fab.fa-ethereum.fa-8x(style="margin-left: 0.25em; color: #343a40")
 
-        div.bg-dark.text-white
-            div.container
-                p.text-center(style="padding: 2em; margin: 0")
-                    b Made with #[i.fas.fa-heart(style="color: red")] by Superuser Labs
-
+        include /templates/footer.pug
