@@ -18,14 +18,16 @@ html
                             li Work better together
 
         +section.bg-primary.text-light
-            h1(style="width: 100%; text-align: center") Our projects
-            br
-            br
+            h1.w-100.text-center Our projects
 
         +section.bg-primary.text-light
             div.col
                 h2 Thankful
                 p Donate directly to every content creator online that you like.
+                a.btn.btn-outline-light.mr-2(href="https://github.com/SuperuserLabs/thankful")
+                    | #[i.fab.fa-github] GitHub
+                a.btn.btn-outline-light(href="/thankful/")
+                    | More info
             div.col-md-4(style="text-align: center")
                 i.fab.fa-bitcoin.fa-8x(style="color: gold")
                 i.fab.fa-ethereum.fa-8x(style="margin-left: 0.25em; color: #444")
@@ -34,6 +36,12 @@ html
             div.col
                 h2 ActivityWatch
                 p Keep track of how you spend time on your computer, keep the data to yourself.
+                a.btn.btn-success.mr-2(href="https://github.com/ActivityWatch/activitywatch/releases")
+                    | #[i.fas.fa-download] Download
+                a.btn.btn-outline-light.mr-2(href="https://github.com/ActivityWatch/activitywatch/")
+                    | #[i.fab.fa-github] GitHub
+                a.btn.btn-outline-light.mr-2(href="https://activitywatch.net/")
+                    | More info
             div.col-md-4(style="text-align: center")
                 i.fas.fa-stopwatch.fa-8x
 
