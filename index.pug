@@ -65,12 +65,14 @@ html
                             div.card-body
                                 h5.card-title #{name}
                                 p.card-text #{text}
-                +teammember("Erik Bjäreholt", "erik.jpg", "Developer")
-                +teammember("Patrik Laurell", "patrik.jpg", "Developer")
-                +teammember("Johannes Ahnlide", "johannes.jpg", "Developer")
-                +teammember("Jacob Karlsson", "jacob.jpg", "Developer")
-                +teammember("Johan Bjäreholt", "johan.png", "Developer")
-                +teammember("Valthor Halldórsson", "valthor.jpg", "Developer")
+                div.col-lg-8.offset-lg-2
+                    div.row
+                        +teammember("Erik Bjäreholt", "erik.jpg", "Developer")
+                        +teammember("Patrik Laurell", "patrik.jpg", "Developer")
+                        +teammember("Johannes Ahnlide", "johannes.jpg", "Developer")
+                        +teammember("Jacob Karlsson", "jacob.jpg", "Developer")
+                        +teammember("Johan Bjäreholt", "johan.png", "Developer")
+                        +teammember("Valthor Halldórsson", "valthor.jpg", "Developer")
 
 
         include /templates/footer.pug
