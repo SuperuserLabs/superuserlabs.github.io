@@ -6,12 +6,16 @@ install:
  - make install
 
 script:
- - make build
+ - make build-superuser
+ - make build-thankful
+
+before_deploy:
+ - LOCAL_DIR="build-thankful" TARGET_BRANCH="gh-pages" GH_REF="github.com/SuperuserLabs/thankful.git" ./deploy.sh
 
 deploy:
   provider: pages
   skip-cleanup: true
-  local-dir: build
+  local-dir: build-superuser
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   target-branch: master

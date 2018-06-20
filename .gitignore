@@ -4,3 +4,4 @@ css/
 *.css
 *.css.map
 .sass-cache/
+build*

@@ -1,23 +1,48 @@
-.PHONY: install build dev-pug dev-scss host
+.PHONY: install build build-dev build-superuser build-thankful dev-pug dev-scss host
 
 PUG_OPTS= -O '{"basedir": "."}'
 
 install:
 	npm install
 
-build:
-	npm run pug -- -o build $(PUG_OPTS) index.pug
-	npm run pug -- -o build/thankful $(PUG_OPTS) thankful/index.pug
-	npm run sass -- scss/index.scss build/index.css
+build: build-superuser build-thankful
+
+build-superuser:
+	$(eval DEST := "build-superuser")
+	npm run pug -- -o ${DEST} $(PUG_OPTS) index.pug
+	npm run pug -- -o ${DEST}/thankful $(PUG_OPTS) thankful/index.pug
+	npm run sass -- scss/index.scss ${DEST}/index.css
+	cp -r media ${DEST}/
+
+build-thankful:
+	$(eval DEST := "build-thankful")
+	npm run pug -- -o ${DEST} $(PUG_OPTS) thankful/index.pug
+	npm run sass -- scss/index.scss ${DEST}/index.css
+	cp -r media ${DEST}/
+
+build-dev:
+	$(eval DEST := "build-dev")
+	npm run pug -- -o ${DEST} $(PUG_OPTS) index.pug
+	npm run pug -- -o ${DEST}/thankful $(PUG_OPTS) thankful/index.pug
+	npm run sass -- scss/index.scss ${DEST}/index.css
+	cp -r media ${DEST}/
 
 dev-pug-superuser:
-	npm run pug -- -o build --watch $(PUG_OPTS) index.pug
+	npm run pug -- -o build-dev --watch $(PUG_OPTS) index.pug
 
 dev-pug-thankful:
-	npm run pug -- -o build/thankful --watch $(PUG_OPTS) thankful/index.pug
+	npm run pug -- -o build-dev/thankful --watch $(PUG_OPTS) thankful/index.pug
 
 dev-scss:
-	npm run sass -- --watch scss --output build
+	npm run sass -- --watch scss --output build-dev
 
 serve:
-	cd build && python -m http.server 8123
+	mkdir -p build-dev
+	cp -r media build-dev/
+	cd build-dev && python -m http.server 8123
+
+clean:
+	rm -rf build
+	rm -rf build-dev
+	rm -rf build-superuser
+	rm -rf build-thankful
