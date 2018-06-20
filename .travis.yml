@@ -10,7 +10,7 @@ script:
  - make build-thankful
 
 before_deploy:
- - LOCAL_DIR="build-thankful" TARGET_BRANCH="gh-pages" GH_REF="github.com/SuperuserLabs/thankful.git" ./deploy.sh
+ - LOCAL_DIR="build-thankful" TARGET_BRANCH="gh-pages" GITHUB_REF="github.com/SuperuserLabs/thankful.git" ./deploy.sh
 
 deploy:
   provider: pages
