@@ -1,6 +1,6 @@
 .PHONY: install build build-dev build-superuser build-thankful dev-pug dev-scss host
 
-PUG_OPTS= -O '{"basedir": "."}'
+PUG_OPTS= -O pugopts.js
 
 install:
 	npm install
@@ -22,16 +22,16 @@ build-thankful:
 
 build-dev:
 	$(eval DEST := "build-dev")
-	npm run pug -- -o ${DEST} $(PUG_OPTS) index.pug
-	npm run pug -- -o ${DEST}/thankful $(PUG_OPTS) thankful/index.pug
+	DEV=true npm run pug -- -o ${DEST} $(PUG_OPTS) index.pug
+	DEV=true npm run pug -- -o ${DEST}/thankful $(PUG_OPTS) thankful/index.pug
 	npm run sass -- scss/index.scss ${DEST}/index.css
 	cp -r media ${DEST}/
 
 dev-pug-superuser:
-	npm run pug -- -o build-dev --watch $(PUG_OPTS) index.pug
+	DEV=true npm run pug -- -o build-dev --watch $(PUG_OPTS) index.pug
 
 dev-pug-thankful:
-	npm run pug -- -o build-dev/thankful --watch $(PUG_OPTS) thankful/index.pug
+	DEV=true npm run pug -- -o build-dev/thankful --watch $(PUG_OPTS) thankful/index.pug
 
 dev-scss:
 	npm run sass -- --watch scss --output build-dev

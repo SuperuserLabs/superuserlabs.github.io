@@ -1,12 +1,15 @@
 nav.navbar.navbar-light.bg-light.navbar-expand-md
     div.container
-        a.navbar-brand(href="/") Superuser Labs
+        a.navbar-brand(href=env.DEV ? "/" : "https://superuserlabs.github.io/") Superuser Labs
         button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation")
             span.navbar-toggler-icon
         div.collapse.navbar-collapse#navbarToggler
             ul.navbar-nav.mr-auto
                 li.nav-item(class=title==='Thankful' ? 'font-weight-bold' : '')
-                    a.nav-link(href="/thankful/") Thankful
+                    if env.DEV == "true"
+                        a.nav-link(href="/thankful/") Thankful
+                    else
+                        a.nav-link(href="https://getthankful.io/") Thankful
                 li.nav-item
                     a.nav-link(href="https://activitywatch.net/") ActivityWatch
             div
