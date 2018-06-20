@@ -19,5 +19,5 @@ dev-pug-thankful:
 dev-scss:
 	npm run sass -- --watch scss --output build
 
-host:
+serve:
 	cd build && python -m http.server 8123
