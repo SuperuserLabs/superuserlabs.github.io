@@ -17,44 +17,47 @@ html
     body
         include /templates/navbar.pug
 
-        +section("6em")
+        +section(0)(style="margin-top: 6em")
             h1.text-center(style="width: 100%") Turning you into a #[b Superuser]
-            div.col-md-6.offset-md-3
+            div.col-12
                 p.text-center
-                    | Superuser Labs is building open-source software that empowers users to:
-                    div(style="display: flex; justify-content: center")
-                        ul(style="display: inline-block;")
-                            li Have more privacy
-                            li Be in control of their data
-                            li Work better together
+                    i #[b Superuser Labs] is building #[a(href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="blank") free and open-source software] that #[b empowers users] to:
+
+        +section(0)(style="margin-bottom: 6em")
+            div.col.text-center
+                ul.list-inline.small
+                    li.list-inline-item.btn.btn-light.mx-3 Have more privacy
+                    li.list-inline-item.btn.btn-light.mx-3 Control their data
+                    li.list-inline-item.btn.btn-light.mx-3 Work better together
 
         +section.bg-primary.text-light
-            h1.w-100.text-center Our projects
+            h1.w-100.text-center.mb-5 Our projects
 
-        +section.bg-primary.text-light
-            div.col
-                h2 Thankful
-                p Donate directly to every content creator online that you like.
-                a.btn.btn-outline-light.mr-2(href="https://github.com/SuperuserLabs/thankful")
-                    | #[i.fab.fa-github] GitHub
-                a.btn.btn-outline-light(href="/thankful/")
-                    | More info
-            div.col-md-4(style="text-align: center")
-                i.fab.fa-bitcoin.fa-8x(style="color: gold")
-                i.fab.fa-ethereum.fa-8x(style="margin-left: 0.25em; color: #444")
+            div.col-12
+                div.row.mb-5
+                    div.col
+                        h2 Thankful
+                        p Donate directly to every content creator online that you like.
+                        a.btn.btn-outline-light.mr-2(href="https://github.com/SuperuserLabs/thankful")
+                            | #[i.fab.fa-github] GitHub
+                        a.btn.btn-outline-light(href="https://getthankful.io")
+                            | More info
+                    div.col-md-4(style="text-align: center")
+                        i.fab.fa-bitcoin.fa-8x(style="color: gold")
+                        i.fab.fa-ethereum.fa-8x(style="margin-left: 0.25em; color: #444")
 
-        +section.bg-primary.text-light
-            div.col
-                h2 ActivityWatch
-                p Keep track of how you spend time on your computer, keep the data to yourself.
-                a.btn.btn-success.mr-2(href="https://github.com/ActivityWatch/activitywatch/releases")
-                    | #[i.fas.fa-download] Download
-                a.btn.btn-outline-light.mr-2(href="https://github.com/ActivityWatch/activitywatch/")
-                    | #[i.fab.fa-github] GitHub
-                a.btn.btn-outline-light.mr-2(href="https://activitywatch.net/")
-                    | More info
-            div.col-md-4(style="text-align: center")
-                i.fas.fa-stopwatch.fa-8x
+                div.row
+                    div.col
+                        h2 ActivityWatch
+                        p Keep track of how you spend time on your computer, keep the data to yourself.
+                        a.btn.btn-success.mr-2(href="https://github.com/ActivityWatch/activitywatch/releases")
+                            | #[i.fas.fa-download] Download
+                        a.btn.btn-outline-light.mr-2(href="https://github.com/ActivityWatch/activitywatch/")
+                            | #[i.fab.fa-github] GitHub
+                        a.btn.btn-outline-light.mr-2(href="https://activitywatch.net/")
+                            | More info
+                    div.col-md-4(style="text-align: center")
+                        i.fas.fa-stopwatch.fa-8x
 
         +section.bg-success.text-white
             div.container
@@ -79,9 +82,9 @@ html
                 div.col-lg-8.offset-lg-2
                     div.row
                         +teammember("Erik Bjäreholt", "erik.jpg", "Developer")
-                        +teammember("Patrik Laurell", "patrik.jpg", "Developer")
                         +teammember("Johannes Ahnlide", "johannes.jpg", "Developer")
                         +teammember("Jacob Karlsson", "jacob.jpg", "Developer")
+                        +teammember("Patrik Laurell", "patrik.jpg", "Developer")
                         +teammember("Johan Bjäreholt", "johan.png", "Developer")
                         +teammember("Valthor Halldórsson", "valthor.jpg", "Developer")
 
