@@ -10,7 +10,7 @@ build: build-superuser build-thankful
 build-superuser:
 	$(eval DEST := "build-superuser")
 	npm run pug -- -o ${DEST} $(PUG_OPTS) index.pug
-	npm run pug -- -o ${DEST}/thankful $(PUG_OPTS) thankful/index.pug
+	npm run pug -- -o ${DEST}/thankful $(PUG_OPTS) thankful
 	npm run sass -- scss/index.scss ${DEST}/index.css
 	cp -r media ${DEST}/
 
@@ -18,14 +18,14 @@ build-thankful:
 	$(eval DEST := "build-thankful")
 	mkdir -p ${DEST}
 	echo "getthankful.io" > ${DEST}/CNAME
-	npm run pug -- -o ${DEST} $(PUG_OPTS) thankful/index.pug
+	npm run pug -- -o ${DEST} $(PUG_OPTS) thankful
 	npm run sass -- scss/index.scss ${DEST}/index.css
 	cp -r media ${DEST}/
 
 build-dev:
 	$(eval DEST := "build-dev")
 	DEV=true npm run pug -- -o ${DEST} $(PUG_OPTS) index.pug
-	DEV=true npm run pug -- -o ${DEST}/thankful $(PUG_OPTS) thankful/index.pug
+	DEV=true npm run pug -- -o ${DEST}/thankful $(PUG_OPTS) thankful
 	npm run sass -- scss/index.scss ${DEST}/index.css
 	cp -r media ${DEST}/
 
