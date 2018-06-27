@@ -1,0 +1,22 @@
+include /templates/mixins.pug
+html
+    head
+        title Thankful
+        include /templates/head-includes.pug
+        include /templates/analytics-thankful.pug
+
+    body
+        include /templates/navbar.pug
+
+        +section("6em")
+            div.display-4.text-center.w-100 Thank you!
+            div.col-md-6.offset-md-3
+                p.text-center
+                  | Thank you for showing interest! We are still in alpha and we need #[b your] input so that we can help you support the creators you love.
+                p.text-center
+                  | Please take #[a(href='https://docs.google.com/forms/d/e/1FAIpQLSeorT2AUsJ4_SxxEm12zYz89Pk9mz3XZvPxL336Q-mR-_LAqw/viewform?usp=sf_link') this survey] and subscribe below.
+
+                hr
+
+                include /templates/email-signup.pug
+
