@@ -15,78 +15,88 @@ html
         |</script>
 
     body
+      +layout
         include /templates/navbar.pug
 
-        +section(0)(style="margin-top: 6em")
-            h1.text-center(style="width: 100%") Turning you into a #[b Superuser]
-            div.col-12
-                p.text-center
-                    i #[b Superuser Labs] is building #[a(href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="blank") free and open-source software] that #[b empowers users] to:
+        +mlayout('main', 'content')
+          +cover('600px', '/media/tty.gif')
+            +text('div', 'text-center', 'white')
+              div(style='padding-top: 160px;')
+                +typo('div', 'display-1')
+                  | Turning you into a
+                +typo('div', 'display-4') Superuser
+              div(style='padding-top: 20px;')
+                | Superuser Labs is building #[a(href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="blank") free and open-source software] that empowers users to:
+              .mdl-grid(style='padding-top: 20px;')
+                +spacer
+                +cell(1)
+                  +text('span', 'text-center', 'white') Have more privacy
+                +cell(1)
+                  +text('span', 'text-center', 'white') Control their data
+                +cell(1)
+                  +text('span', 'text-center', 'white') Work better together
+                +spacer
 
-        +section(0)(style="margin-bottom: 6em")
-            div.col.text-center
-                ul.list-inline.small
-                    li.list-inline-item.btn.btn-light.mx-3 Have more privacy
-                    li.list-inline-item.btn.btn-light.mx-3 Control their data
-                    li.list-inline-item.btn.btn-light.mx-3 Work better together
+          +section
+            +cell(12)
+              h1.display-1 Our projects
 
-        +section.bg-primary.text-light
-            h1.w-100.text-center.mb-5 Our projects
+            +cell(8)
+              h2 Thankful
+              p Donate directly to every content creator online that you like.
+              +button("https://github.com/SuperuserLabs/thankful")
+                  | #[i.fab.fa-github] GitHub
+              +button("https://getthankful.io")
+                  | More info
+            +cell(4)
+              +fa('bitcoin', 'fab', 'amber')
+              +fa('ethereum', 'fab', 'blue-grey-900')
 
-            div.col-12
-                div.row.mb-5
-                    div.col
-                        h2 Thankful
-                        p Donate directly to every content creator online that you like.
-                        a.btn.btn-outline-light.mr-2(href="https://github.com/SuperuserLabs/thankful")
-                            | #[i.fab.fa-github] GitHub
-                        a.btn.btn-outline-light(href="https://getthankful.io")
-                            | More info
-                    div.col-md-4(style="text-align: center")
-                        i.fab.fa-bitcoin.fa-8x(style="color: gold")
-                        i.fab.fa-ethereum.fa-8x(style="margin-left: 0.25em; color: #444")
+            +cell(8)
+                h2 ActivityWatch
+                p Keep track of how you spend time on your computer, keep the data to yourself.
+                +button("https://github.com/ActivityWatch/activitywatch/releases")
+                    | #[i.fas.fa-download] Download
+                +button("https://github.com/ActivityWatch/activitywatch/")
+                    | #[i.fab.fa-github] GitHub
+                +button("https://activitywatch.net/")
+                    | More info
+            +cell(4)
+                +fa('stopwatch', 'fas')
 
-                div.row
-                    div.col
-                        h2 ActivityWatch
-                        p Keep track of how you spend time on your computer, keep the data to yourself.
-                        a.btn.btn-success.mr-2(href="https://github.com/ActivityWatch/activitywatch/releases")
-                            | #[i.fas.fa-download] Download
-                        a.btn.btn-outline-light.mr-2(href="https://github.com/ActivityWatch/activitywatch/")
-                            | #[i.fab.fa-github] GitHub
-                        a.btn.btn-outline-light.mr-2(href="https://activitywatch.net/")
-                            | More info
-                    div.col-md-4(style="text-align: center")
-                        i.fas.fa-stopwatch.fa-8x
-
-        +section.bg-success.text-white
-            div.container
-                div.row
-                    div.col-sm-4(style="text-align: center")
-                        i.fas.fa-donate.fa-8x
-                    div.col
-                        h2 Support us!
-                        p We rely on donations to keep our work going, keep an eye on this space for donations.
-
-
-        +section.bg-primary.text-white
-            h2.text-center.w-100.pb-4 Team
-            div.row.text-dark
-                mixin teammember(name, imagename, text)
-                    div.col-sm-4
-                        div.card.mb-4
-                            img.card-img-top(src="/media/" + imagename)
-                            div.card-body
-                                h5.card-title #{name}
-                                p.card-text #{text}
-                div.col-lg-8.offset-lg-2
-                    div.row
-                        +teammember("Erik Bjäreholt", "erik.jpg", "Developer")
-                        +teammember("Johannes Ahnlide", "johannes.jpg", "Developer")
-                        +teammember("Jacob Karlsson", "jacob.jpg", "Developer")
-                        +teammember("Patrik Laurell", "patrik.jpg", "Developer")
-                        +teammember("Johan Bjäreholt", "johan.png", "Developer")
-                        +teammember("Valthor Halldórsson", "valthor.jpg", "Developer")
+          +section
+            +cell(4)
+              +fa('donate', 'fas', 'black')
+            +cell(8)
+              h2 Support us!
+              p We rely on donations to keep our work going, keep an eye on this space for donations.
 
 
-        include /templates/footer.pug
+          +section
+            +cell(12)
+              h2.text-center.w-100.pb-4 Team
+            mixin teammember(name, imagename, text)
+              +cell(4)
+                .mdl-card.mdl-shadow--2dp
+                  .mdl-card--expand.mdl-card__title(style=`background: url('/media/${imagename}') center / cover; height: 256px`)
+                  .mdl-card__supporting-text
+                    h4 #{name}
+                    span #{text}
+            +spacer
+            +teammember("Erik Bjäreholt", "erik.jpg", "Developer")
+            +cell(1)
+            +teammember("Johannes Ahnlide", "johannes.jpg", "Developer")
+            +spacer
+            +spacer
+            +teammember("Jacob Karlsson", "jacob.jpg", "Developer")
+            +cell(1)
+            +teammember("Patrik Laurell", "patrik.jpg", "Developer")
+            +spacer
+            +spacer
+            +teammember("Johan Bjäreholt", "johan.png", "Developer")
+            +cell(1)
+            +teammember("Valthor Halldórsson", "valthor.jpg", "Developer")
+            +spacer
+
+
+          include /templates/footer.pug

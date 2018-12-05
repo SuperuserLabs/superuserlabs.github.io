@@ -1,5 +1,69 @@
-mixin section(padding="4em")
-    div(class=attributes.class, style=attributes.style)
-        div.container(style=`padding-top: ${padding}; padding-bottom: ${padding}`)
-            div.row
-                block
+mixin section(padding="4em 0px")
+    div()&attributes(attributes)
+      div(style=`padding: ${padding}`)
+        .mdl-grid(style="margin-left: 25%; margin-right: 25%;")
+            block
+
+
+mixin button(href)
+  a.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--colored(href=href, style='margin: 1em;')
+    block
+
+
+mixin navlink(href)
+  a.mdl-navigation__link(href=href)
+    block
+
+
+mixin nav
+  nav.mdl-navigation
+    block
+
+
+mixin text(color='black')
+  span(class=`mdl-color-text--${color}`)
+    block
+
+
+mixin spacer
+  .mdl-layout-spacer
+
+
+mixin cover(height, url)
+  div(style=`height: ${height}; position: relative; background-image: url("${url}"); background-repeat: no-repeat; background-size: cover;`)
+    block
+
+
+mixin text(tag, typography, color='black')
+  #{tag}(class=`${typography.split(' ').map(x => 'mdl-typography--' + x).join(' ')} mdl-color-text--${color}`)
+    block
+    
+
+mixin typo(tag, ...classes)
+  #{tag}(class=classes.map(x => `mdl-typography--${x}`).join(' '))
+    block
+
+
+mixin layout
+  .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+    block
+
+
+mixin mlayout(tag, cls)
+  #{tag}(class=`mdl-layout__${cls}`)
+    block
+
+
+mixin fa(name, group='fas', color='black')
+  i(class=`${group} fa-${name} fa-8x mdl-color-text--${color}`)
+
+
+mixin cell(cols)
+  div(class=`mdl-typography--font-thin mdl-cell mdl-cell--${cols}-col`)
+    div()&attributes(attributes)
+      block
+
+
+mixin sectitle
+  h2.mdl-typography--display-2-color-contrast
+    block
