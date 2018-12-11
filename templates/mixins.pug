@@ -29,15 +29,15 @@ mixin spacer
   .mdl-layout-spacer
 
 
-mixin cover(height, url)
-  div(style=`height: ${height}; position: relative; background-image: url("${url}"); background-repeat: no-repeat; background-size: cover;`)
+mixin cover(height, url, gradient)
+  div(style=`height: ${height}; position: relative; background: ${gradient ? gradient + ', ' : ''} url("${url}"); background-repeat: no-repeat; background-size: cover;`)
     block
 
 
 mixin text(tag, typography, color='black')
   #{tag}(class=`${typography.split(' ').map(x => 'mdl-typography--' + x).join(' ')} mdl-color-text--${color}`)
     block
-    
+
 
 mixin typo(tag, ...classes)
   #{tag}(class=classes.map(x => `mdl-typography--${x}`).join(' '))

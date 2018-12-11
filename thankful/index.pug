@@ -10,17 +10,20 @@ html
         include /templates/navbar.pug
 
         +mlayout('main', 'content')
-          +cover('800px', '/media/patrik-bkg.jpg')
+          +cover('800px', '/media/patrik-bkg.jpg', 'linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.85))')
             +text('div', 'text-center', 'white')
-              div(style='padding-top: 160px;')
+              div(style='padding-top: 12em;')
                 +typo('div', 'display-4') Be Thankful
               +typo('p', 'headline')
-                | Support for every creator from every thankful user.
+                | Support all the creators that you love, so they can continue their work.
               div
-                | Thankful is an open-source browser plugin that helps you donate to all your favorite creators using cryptocurrency.
-              h5(style='padding-top: 80px;') Get started!
+                | Thankful is an open-source browser plugin that makes it easier for you to support your favorite creators.
+                br
+              hr(style="width: 24em; margin: 4em auto 4em auto;")
+              h5(style='margin-bottom: 0.5em')
+                b Get started!
               p
-                | Are you a content creator or a donor?
+                | Are you a creator or do you want to support creators?
               div
                 +button('creator.html')
                   | I'm a creator
@@ -29,25 +32,33 @@ html
 
 
           +section
-            +cell(9).mdl-typography--font-thin
+            +cell(9)
                 +sectitle  Support everyone you like
-                p Thankful makes it easy to reward every creator you like online.
+                p The browser extension makes supporting creators easy. It keeps track of the creators you've viewed, gives an overview of them, and then lets you choose who you want to support at the end of every month.
             +cell(3)(align='right')
               +fa('donate', 'fas', 'amber')
 
-          +section.mdl-color--grey-300
-            +cell(3)
+          +section.mdl-color--grey-200
+            +cell(3)(style="margin-top: 2em")
               +fa('coins', 'fas', 'amber')
-            +cell(9)(align='right').mdl-typography--font-thin
+            +cell(9)(align='right')
                 +sectitle  Zero fees
                 p The only fees you pay are transaction fees, and the completely optional "I'm thankful for Thankful"-fee.
+                  br
 
           +section
-            +cell(9).mdl-typography--font-thin
-                +sectitle A good usecase for cryptocurrency
-                p.mdl-typography--font-light While some people in the crypto-community are figuring out how to do all kinds of cool and crazy things using the technology it seems like many people still view it as no more than a high volatility asset swinging between bubbles and crashes. By focusing on solving a small and mundane problem we hope to demystify cryptocurrency and facilitate its use in everyday life.
-            +cell(3)(align='right')
-              +fa('bitcoin', 'fab', 'amber')
-              +fa('ethereum', 'fab', 'blue-grey-900')
+            +cell(9)
+                +sectitle A good use case for cryptocurrency
+                p.mdl-typography--font-light
+                  | While some people in the crypto-community are figuring out how to do all kinds of cool and crazy things using the technology it seems like many people still view it as no more than a high volatility asset swinging between bubbles and crashes. By focusing on vasty improving the experience for an already common use of them (donations) we hope to demystify cryptocurrency and encourage adoption.
+                p
+                  | Payments currently happen on the Ethereum blockchain* since it currently has the most active development and strongest developer community, but we seek to let you use whichever cryptocurrency you choose.
+                p
+                  i *support for ERC-20 tokens planned
+            +cell(3)(align='right', style="margin-top: 2em")
+              span(style="margin-right: 2em")
+                +fa('ethereum', 'fab', 'blue-grey-900')
+              span
+                +fa('bitcoin', 'fab', 'amber')
 
           include /templates/footer.pug
