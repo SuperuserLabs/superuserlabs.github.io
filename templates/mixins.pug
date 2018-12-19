@@ -12,16 +12,6 @@ mixin button(href)
     block
 
 
-mixin navlink(href)
-  a.mdl-navigation__link(href=href)
-    block
-
-
-mixin nav
-  nav.mdl-navigation
-    block
-
-
 mixin text(color='black')
   span(class=`mdl-color-text--${color}`)
     block
@@ -48,11 +38,6 @@ mixin typo(tag, ...classes)
 
 mixin layout
   .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
-    block
-
-
-mixin mlayout(tag, cls)
-  #{tag}(class=`mdl-layout__${cls}`)
     block
 
 

@@ -18,7 +18,7 @@ html
       +layout
         include /templates/navbar.pug
 
-        +mlayout('main', 'content')
+        main.mdl-layout__content
           +cover('url("/media/tty.gif")', style="padding: 8em 0 8em 0")
             +text('div', 'text-center', 'white')
               div
@@ -60,7 +60,7 @@ html
                       | More info
 
           +section.mdl-color--grey-800.mdl-color-text--white
-            div(style="display: flex; margin-top: 2em;")
+            div(style="display: flex")
               div(style="min-width: 14em; display: flex; align-items: center; justify-content: center")
                 +fa('donate', 'fas', 'amber')
               div(style="flex-grow: 1")

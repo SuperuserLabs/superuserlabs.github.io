@@ -1,15 +1,19 @@
-+mlayout('header', 'header')
-  +mlayout('div', 'header-row')
-    +mlayout('span', 'title')
+header.mdl-layout__header.mdl-layout__header--scroll(style="font-family: 'Roboto', 'Helvetica', sans-serif;")
+  div.mdl-layout__header-row(style="padding: 0 2em 0 2em")
+    span.mdl-layout__title
       a(style="color: #FFF; text-decoration: none; padding-right: 1em",
         href='https://superuserlabs.github.io/')
         | Superuser Labs
-    +nav
-      +navlink('https://getthankful.io/') Thankful
-      +navlink('https://activitywatch.net/') ActivityWatch
+    div.mdl-navigation
+      a.mdl-navigation__link(href='https://getthankful.io/', style="font-weight: 500; color: #ddd")
+        | Thankful
+      a.mdl-navigation__link(href='https://activitywatch.net/', style="font-weight: 500; color: #ddd")
+        | ActivityWatch
     div.mdl-layout-spacer
-    +nav
-      +navlink('https://github.com/SuperuserLabs/thankful')
+    div.mdl-navigation
+      a.mdl-navigation__link(href='https://github.com/SuperuserLabs/thankful')
           i.fab.fa-github.fa-2x
-      +navlink('https://twitter.com/getthankful')
+      a.mdl-navigation__link(href='https://twitter.com/getthankful')
           i.fab.fa-twitter.fa-2x
+//-div.mdl-layout__drawer
+//-  span.mdl-layout-title Title
