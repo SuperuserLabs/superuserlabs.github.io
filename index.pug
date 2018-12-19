@@ -19,84 +19,71 @@ html
         include /templates/navbar.pug
 
         +mlayout('main', 'content')
-          +cover('600px', '/media/tty.gif')
+          +cover('url("/media/tty.gif")', style="padding: 8em 0 8em 0")
             +text('div', 'text-center', 'white')
-              div(style='padding-top: 160px;')
+              div
                 +typo('div', 'display-1')
                   | Turning you into a
                 +typo('div', 'display-4') Superuser
               div(style='padding-top: 20px;')
-                | Superuser Labs is building #[a(href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="blank") free and open-source software] that empowers users to:
-              .mdl-grid(style='padding-top: 20px;')
-                +spacer
-                +cell(1)
-                  +text('span', 'text-center', 'white') Have more privacy
-                +cell(1)
-                  +text('span', 'text-center', 'white') Control their data
-                +cell(1)
-                  +text('span', 'text-center', 'white') Work better together
-                +spacer
+                | Superuser Labs is building #[a(href="https://en.wikipedia.org/wiki/Free_and_open-source_software" target="blank") free and open-source software] that empowers users.
 
           +section
             +cell(12)
               h1.display-1 Our projects
 
-            +cell(8)
-              h2 Thankful
-              p Donate directly to every content creator online that you like.
-              +button("https://github.com/SuperuserLabs/thankful")
-                  | #[i.fab.fa-github] GitHub
-              +button("https://getthankful.io")
-                  | More info
-            +cell(4)
-              +fa('bitcoin', 'fab', 'amber')
-              +fa('ethereum', 'fab', 'blue-grey-900')
+            +cell(12)
+              div(style="display: flex; margin-top: 2em")
+                div(style="min-width: 14em; display: flex; align-items: center; justify-content: center")
+                  +fa('ethereum', 'fab', 'blue-grey-900')
+                  //-+fa('bitcoin', 'fab', 'amber')
+                div(style="flex-grow: 1")
+                  h3 Thankful
+                  p Donate directly to every content creator online that you like.
+                  +button("https://github.com/SuperuserLabs/thankful")
+                      | #[i.fab.fa-github] GitHub
+                  +button("https://getthankful.io")
+                      | More info
 
-            +cell(8)
-                h2 ActivityWatch
-                p Keep track of how you spend time on your computer, keep the data to yourself.
-                +button("https://github.com/ActivityWatch/activitywatch/releases")
-                    | #[i.fas.fa-download] Download
-                +button("https://github.com/ActivityWatch/activitywatch/")
-                    | #[i.fab.fa-github] GitHub
-                +button("https://activitywatch.net/")
-                    | More info
-            +cell(4)
-                +fa('stopwatch', 'fas')
+            +cell(12)
+              div(style="display: flex; margin-top: 2em;")
+                div(style="min-width: 14em; display: flex; align-items: center; justify-content: center")
+                  img(src="/media/activitywatch-logo.png" style="width: 8em;")
+                div(style="flex-grow: 1")
+                  h3 ActivityWatch
+                  p Keep track of how you spend time on your computer, keep the data to yourself.
+                  +button("https://github.com/ActivityWatch/activitywatch/releases").mdl-button--primary.mdl-button--raised
+                      | #[i.fas.fa-download] Download
+                  +button("https://github.com/ActivityWatch/activitywatch/")
+                      | #[i.fab.fa-github] GitHub
+                  +button("https://activitywatch.net/")
+                      | More info
 
-          +section
-            +cell(4)
-              +fa('donate', 'fas', 'black')
-            +cell(8)
-              h2 Support us!
-              p We rely on donations to keep our work going, keep an eye on this space for donations.
-
+          +section.mdl-color--grey-800.mdl-color-text--white
+            div(style="display: flex; margin-top: 2em;")
+              div(style="min-width: 14em; display: flex; align-items: center; justify-content: center")
+                +fa('donate', 'fas', 'amber')
+              div(style="flex-grow: 1")
+                h2 Support us!
+                p We rely on donations to keep our work going, keep an eye on this space for donations.
 
           +section
             +cell(12)
-              h2.text-center.w-100.pb-4 Team
+              h2.text-center Team
+
             mixin teammember(name, imagename, text)
               +cell(4)
-                .mdl-card.mdl-shadow--2dp
-                  .mdl-card--expand.mdl-card__title(style=`background: url('/media/${imagename}') center / cover; height: 256px`)
+                .mdl-card.mdl-shadow--2dp(style="width: 90%")
+                  .mdl-card--expand.mdl-card__title(style=`background: url('/media/${imagename}') center / cover; height: 256px;`)
                   .mdl-card__supporting-text
                     h4 #{name}
                     span #{text}
-            +spacer
+
             +teammember("Erik Bjäreholt", "erik.jpg", "Developer")
-            +cell(1)
             +teammember("Johannes Ahnlide", "johannes.jpg", "Developer")
-            +spacer
-            +spacer
             +teammember("Jacob Karlsson", "jacob.jpg", "Developer")
-            +cell(1)
             +teammember("Patrik Laurell", "patrik.jpg", "Developer")
-            +spacer
-            +spacer
             +teammember("Johan Bjäreholt", "johan.png", "Developer")
-            +cell(1)
             +teammember("Valthor Halldórsson", "valthor.jpg", "Developer")
-            +spacer
 
-
-          include /templates/footer.pug
+          +footer
