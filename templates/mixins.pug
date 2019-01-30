@@ -7,8 +7,8 @@ mixin section(padding="2em 0em")
               block
 
 
-mixin button(href)
-  a.mdl-button.mdl-js-button.mdl-button--raised(href=href, style='margin: 0 2em 1em 0;')&attributes(attributes)
+mixin button(href, style)
+  a.mdl-button.mdl-js-button.mdl-button--raised(href=href, style=`margin: 0 2em 1em 0; ${style}`)&attributes(attributes)
     block
 
 
@@ -22,7 +22,7 @@ mixin spacer
 
 
 mixin cover(background, style)
-  div(style=`position: relative; background: ${background}; background-repeat: no-repeat; background-size: cover; ${style}`)
+  div(style=`position: relative; background: ${background}; background-repeat: no-repeat; background-size: cover; background-position: center; ${style}`)
     block
 
 

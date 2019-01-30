@@ -19,16 +19,31 @@ html
               div
                 | Thankful is an open-source browser plugin that makes it easier for you to support your favorite creators.
                 br
+
               hr(style="width: 24em; margin: 2em auto 2em auto;")
-              h5(style='margin-bottom: 0.5em')
-                b Get started!
-              p
-                | Are you a creator or do you want to support creators?
+
               div
-                +button('creator.html')
-                  | I'm a creator
-                +button('donor.html')
-                  | I want to support creators
+                h5
+                  b Try the (very early) alpha!
+                div(style="display: flex; align-items: center; justify-content: center;")
+                  div(style="margin: 0 1em")
+                    a(href="https://chrome.google.com/webstore/detail/thankful/eapbondnpopbiepnjfhnaaejfdfjhnde")
+                      img(src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png")
+                  div
+                    a(href="https://addons.mozilla.org/en-US/firefox/addon/getthankful/")
+                      img(src="https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png")
+
+              //div
+                h5(style='margin-bottom: 0.5em')
+                  b Get started!
+                p
+                  | Are you a creator or do you want to support creators?
+                div
+                  +button('creator.html')
+                    | I'm a creator
+                  +button('donor.html')
+                    | I want to support creators
+
 
 
           +section
