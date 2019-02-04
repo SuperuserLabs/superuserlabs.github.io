@@ -1,5 +1,61 @@
-mixin section(padding="4em")
-    div(class=attributes.class, style=attributes.style)
-        div.container(style=`padding-top: ${padding}; padding-bottom: ${padding}`)
-            div.row
-                block
+mixin section(padding="2em 0em")
+    div()&attributes(attributes)
+      div(style=`padding: ${padding}`)
+        .mdl-grid
+          +cell(8).mdl-cell--2-offset-desktop
+            .mdl-grid
+              block
+
+
+mixin button(href, style)
+  a.mdl-button.mdl-js-button.mdl-button--raised(href=href, style=`margin: 0 2em 1em 0; ${style}`)&attributes(attributes)
+    block
+
+
+mixin text(color='black')
+  span(class=`mdl-color-text--${color}`)
+    block
+
+
+mixin spacer
+  .mdl-layout-spacer
+
+
+mixin cover(background, style)
+  div(style=`position: relative; background: ${background}; background-repeat: no-repeat; background-size: cover; background-position: center; ${style}`)
+    block
+
+
+mixin text(tag, typography, color='black')
+  #{tag}(class=`${typography.split(' ').map(x => 'mdl-typography--' + x).join(' ')} mdl-color-text--${color}`)
+    block
+
+
+mixin typo(tag, ...classes)
+  #{tag}(class=classes.map(x => `mdl-typography--${x}`).join(' '))
+    block
+
+
+mixin layout
+  .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+    block
+
+
+mixin fa(name, group='fas', color='black')
+  i(class=`${group} fa-${name} fa-8x mdl-color-text--${color}`)
+
+
+mixin cell(cols)
+  div(class=`mdl-cell mdl-cell--${cols}-col`)&attributes(attributes)
+    block
+
+
+mixin sectitle
+  h2.mdl-typography--display-2-color-contrast
+    block
+
+mixin footer
+  +section("2em")(class!=attributes.class)
+    +cell(12)
+      p(style="margin: 0")
+        b Made with #[i.fas.fa-heart(style="color: red")] by Superuser Labs

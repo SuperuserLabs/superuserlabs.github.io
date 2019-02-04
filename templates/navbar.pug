@@ -1,19 +1,19 @@
-nav.navbar.navbar-light.bg-light.navbar-expand-md
-    div.container
-        a.navbar-brand(href=env.DEV ? "/" : "https://superuserlabs.github.io/") Superuser Labs
-        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation")
-            span.navbar-toggler-icon
-        div.collapse.navbar-collapse#navbarToggler
-            ul.navbar-nav.mr-auto
-                li.nav-item(class=title==='Thankful' ? 'font-weight-bold' : '')
-                    if env.DEV == "true"
-                        a.nav-link(href="/thankful/") Thankful
-                    else
-                        a.nav-link(href="https://getthankful.io/") Thankful
-                li.nav-item
-                    a.nav-link(href="https://activitywatch.net/") ActivityWatch
-            div
-                a(href="https://github.com/SuperuserLabs/thankful")
-                    i.fab.fa-github.fa-2x(style="padding: 0.2em; color: #888")
-                a(href="https://twitter.com/getthankful")
-                    i.fab.fa-twitter.fa-2x(style="padding: 0.2em; color: #888")
+header.mdl-layout__header.mdl-layout__header--scroll(style="font-family: 'Roboto', 'Helvetica', sans-serif; background-color: #263238;")
+  div.mdl-layout__header-row(style="padding: 0 2em 0 2em")
+    span.mdl-layout__title
+      a(style="color: #FFF; text-decoration: none; padding-right: 1em",
+        href='https://superuserlabs.github.io/')
+        | Superuser Labs
+    div.mdl-navigation
+      a.mdl-navigation__link(href='https://getthankful.io/', style="font-weight: 500;")
+        | Thankful
+      a.mdl-navigation__link(href='https://activitywatch.net/', style="font-weight: 500;")
+        | ActivityWatch
+    div.mdl-layout-spacer
+    div.mdl-navigation
+      a.mdl-navigation__link(href='https://github.com/SuperuserLabs/thankful')
+          i.fab.fa-github.fa-2x
+      a.mdl-navigation__link(href='https://twitter.com/getthankful')
+          i.fab.fa-twitter.fa-2x
+//-div.mdl-layout__drawer
+//-  span.mdl-layout-title Title

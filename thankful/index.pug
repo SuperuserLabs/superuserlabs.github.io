@@ -6,65 +6,74 @@ html
         include /templates/analytics-thankful.pug
 
     body
+      +layout
         include /templates/navbar.pug
 
-        +section("6em")
-            div.display-4.text-center.w-100 Be #[b Thankful]
-            p.text-center.w-100
-                i.text-muted Support for every creator from every #[b.text-dark thankful] user.
-            div.col-md-6.offset-md-3
-                p.text-center
-                    | #[b Thankful] is an open-source browser plugin that helps you donate to all your favorite creators using cryptocurrency.
+        main.mdl-layout__content
+          +cover('linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05))', style="padding: 8em 0em 8em 0")
+            +text('div', 'text-center', 'grey-800')
+              div
+                +typo('div', 'display-4') Be Thankful
+              +typo('p', 'headline')
+                | Support all the creators that you love, so they can continue their work.
+              div
+                | Thankful is an open-source browser plugin that makes it easier for you to support your favorite creators.
+                br
 
-                //-div(style="display: flex; justify-content: center")
-                //-    a.btn.btn-sm.btn-outline-dark.mr-2(href="https://github.com/SuperuserLabs/thankful")
-                //-        | #[i.fab.fa-github] GitHub
+              hr(style="width: 24em; margin: 2em auto 2em auto;")
+
+              div
+                h5
+                  b Try the (very early) alpha!
+                div(style="display: flex; align-items: center; justify-content: center;")
+                  div(style="margin: 0 1em")
+                    a(href="https://chrome.google.com/webstore/detail/thankful/eapbondnpopbiepnjfhnaaejfdfjhnde")
+                      img(src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png")
+                  div
+                    a(href="https://addons.mozilla.org/en-US/firefox/addon/getthankful/")
+                      img(src="https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png")
+
+              //div
+                h5(style='margin-bottom: 0.5em')
+                  b Get started!
+                p
+                  | Are you a creator or do you want to support creators?
+                div
+                  +button('creator.html')
+                    | I'm a creator
+                  +button('donor.html')
+                    | I want to support creators
 
 
-                hr
-                h5.text-center Get started!
-                p.text-center
-                  | Are you a content creator or a donor?
-                div.text-center
-                  a.btn.m-2.btn-primary(href='creator.html')
-                    | I am a creator
-                  a.btn.m-2.btn-primary(href='donor.html')
-                    | I want to donate to creators
 
+          +section
+            +cell(9)
+                +sectitle  Support everyone you like
+                p The browser extension makes supporting creators easy. It keeps track of the creators you've viewed, gives an overview of them, and then lets you choose who you want to support at the end of every month.
+            +cell(3)(align='right')
+              +fa('donate', 'fas', 'amber')
 
-        +section(style="background-color: rgba(40, 167, 69, 0.8)").text-white
-            div.col
-                h2 Support #[b everyone] you like
-                p Thankful tries to make it as easy as possible to reward every creator you like online.
-            div.col-sm-4(style="text-align: center")
-                i.fas.fa-donate.fa-8x
-
-        +section(style="background-color: rgba(255, 193, 7, 0.8)").text-dark
-            div.col-sm-4(style="text-align: center")
-                i.fas.fa-coins.fa-8x
-            div.col
-                h2 Zero fees#[sup *]
+          +section.mdl-color--grey-200
+            +cell(3)(style="margin-top: 2em")
+              +fa('coins', 'fas', 'amber')
+            +cell(9)(align='right')
+                +sectitle Zero fees
                 p The only fees you pay are transaction fees, and the completely optional "I'm thankful for Thankful"-fee.
+                  br
 
-        +section(style="background-color: rgba(0, 123, 255, 0.8)").text-light
-            div.col-md-6
-                h2 A good usecase for cryptocurrency
-                p Direct-to-creator donations would never be possible without cryptocurrency like Ethereum or Bitcoin, but now that they are we hope they will become the norm.
-            div.col-md-6(style="text-align: center")
-                i.fab.fa-bitcoin.fa-8x(style="color: #ffcd38")
-                i.fab.fa-ethereum.fa-8x(style="margin-left: 0.25em; color: #343a40")
+          +section
+            +cell(9)
+                +sectitle A good use case for cryptocurrency
+                p.mdl-typography--font-light
+                  | While some people in the crypto-community are figuring out how to do all kinds of cool and crazy things using the technology it seems like many people still view it as no more than a high volatility asset swinging between bubbles and crashes. By focusing on vasty improving the experience for an already common use of them (donations) we hope to demystify cryptocurrency and encourage adoption.
+                p
+                  | Payments currently happen on the Ethereum blockchain* since it currently has the most active development and strongest developer community, but we seek to let you use whichever cryptocurrency you choose.
+                p
+                  i *support for ERC-20 tokens planned
+            +cell(3)(align='right', style="margin-top: 2em")
+              span(style="margin-right: 2em")
+                +fa('ethereum', 'fab', 'blue-grey-900')
+              span
+                +fa('bitcoin', 'fab', 'amber')
 
-        +section(style="background-color: #eee")
-            div.col-md-12
-                h3.text-center.mb-4 Try the (very early) alpha!
-                div.row
-                    div.col-4.offset-2
-                        div.text-center
-                            a(href="https://chrome.google.com/webstore/detail/thankful/eapbondnpopbiepnjfhnaaejfdfjhnde")
-                                img(src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_340x96.png")
-                    div.col-4
-                        p.text-center.pt-3
-                            h4
-                                i Coming soon to Firefox!
-
-        include /templates/footer.pug
+          +footer.mdl-color--grey-200

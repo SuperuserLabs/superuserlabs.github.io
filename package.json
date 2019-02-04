@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/SuperuserLabs/thankful-website#readme",
   "devDependencies": {
-    "pug-cli": "^1.0.0-alpha6",
-    "node-sass": "^4.9.0"
+    "node-sass": "^4.11.0",
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
