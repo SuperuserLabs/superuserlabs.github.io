@@ -3,16 +3,7 @@ html
     head
         title Superuser Labs
         include /templates/head-includes.pug
-
-        |<!-- Global site tag (gtag.js) - Google Analytics -->
-        |<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121118459-1"></script>
-        |<script>
-        | window.dataLayer = window.dataLayer || [];
-        | function gtag(){dataLayer.push(arguments);}
-        | gtag('js', new Date());
-        |
-        | gtag('config', 'UA-121118459-1');
-        |</script>
+        include /templates/analytics-superuserlabs.pug
 
     body
       +layout
@@ -89,11 +80,13 @@ html
                           a(href=`${linkedin}`, style="margin: 0 0 0 0.5em; color: #0077B5")
                             i.fab.fa-linkedin
 
-            +teammember("Erik Bjäreholt", "erik.jpg", "Developer", github="http://github.com/ErikBjare", linkedin="https://www.linkedin.com/in/erikbjareholt/")
+            +teammember("Erik Bjäreholt", "erik.jpg", "CEO, Developer", github="http://github.com/ErikBjare", linkedin="https://www.linkedin.com/in/erikbjareholt/")
             +teammember("Johannes Ahnlide", "johannes.jpg", "Developer", github="https://github.com/ahnlabb")
             +teammember("Jacob Karlsson", "jacob.jpg", "Developer", github="https://github.com/powersource", linkedin="https://www.linkedin.com/in/jacob-karlsson-6a483bb1/")
             +teammember("Patrik Laurell", "patrik.jpg", "Developer", github="https://github.com/patrik-laurell", linkedin="https://www.linkedin.com/in/patrik-laurell-ba5b306b/")
             +teammember("Johan Bjäreholt", "johan.png", "Developer", github="https://github.com/johan-bjareholt", linkedin="https://www.linkedin.com/in/johanbjareholt/")
             +teammember("Valthor Halldórsson", "valthor.jpg", "Developer", github="https://github.com/vlthr", linkedin="https://www.linkedin.com/in/valthor-halldorsson-002aaa13a/")
+            +teammember("Michael Young", "", "Developer", github="https://github.com/Miyou", linkedin="https://www.linkedin.com/in/michael-young-522148142/")
+            +teammember("Dwight Lidman", "", "Developer", github="https://github.com/dwilid", linkedin="https://www.linkedin.com/in/dwight-lidman/")
 
           +footer
