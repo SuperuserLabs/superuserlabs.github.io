@@ -1,10 +1,9 @@
 mixin section(padding="2em 0em")
     div()&attributes(attributes)
-      div(style=`padding: ${padding}`)
-        .mdl-grid
-          +cell(8).mdl-cell--2-offset-desktop
-            .mdl-grid
-              block
+      .mdl-grid(style=`padding: ${padding}`)
+        +cell(8).mdl-cell--2-offset-desktop
+          .mdl-grid(style="padding: 0")
+            block
 
 
 mixin button(href, style)
@@ -51,11 +50,11 @@ mixin cell(cols)
 
 
 mixin sectitle
-  h2.mdl-typography--display-2-color-contrast
+  h4.mdl-typography--display-1(style="margin-top: 0")
     block
 
 mixin footer
   +section("2em")(class!=attributes.class)
     +cell(12)
-      p(style="margin: 0")
+      p(style="margin: 0; text-align: center")
         b Made with #[i.fas.fa-heart(style="color: red")] by Superuser Labs
