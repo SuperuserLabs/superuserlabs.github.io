@@ -58,3 +58,20 @@ mixin footer
     +cell(12)
       p(style="margin: 0; text-align: center")
         b Made with #[i.fas.fa-heart(style="color: red")] by Superuser Labs
+
+
+mixin teammember(name, imagename, role, github, linkedin, image_style)
+  +cell(4)
+    .mdl-card.mdl-shadow--2dp(style="width: 90%; margin: 2em 0 0 0")
+      .mdl-card--expand.mdl-card__title(style=`background: url('/media/${imagename}') center / cover; height: 300px; ${image_style}`)
+      .mdl-card__supporting-text(style="padding: 1em")
+        div(style="float: left")
+          h5(style="margin: 0 0 0.25em 0") #{name}
+          div #{role}
+        div(style="float: right")
+          div(style="margin: 0.25em 0 0 0; font-size: 150%")
+            a(href=`${github}`, style="color: #444")
+              i.fab.fa-github
+            if(linkedin)
+              a(href=`${linkedin}`, style="margin: 0 0 0 0.5em; color: #0077B5")
+                i.fab.fa-linkedin

@@ -5,3 +5,4 @@ css/
 *.css.map
 .sass-cache/
 build*
+.DS_Store
