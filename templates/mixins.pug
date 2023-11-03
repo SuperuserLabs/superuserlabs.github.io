@@ -6,13 +6,11 @@ mixin section(padding="2em 0em")
 
 
 mixin button
-  a.rounded-md.border.mr-4.px-3.py-2.shadow(target="_blank")&attributes(attributes)
+  a.rounded-md.border.mr-4.px-3.py-2.shadow(class="hover:bg-gray-100" target="_blank")&attributes(attributes)
     block
-
 
 mixin fa(name, group='fas', color='black')
   i(class=`${group} fa-${name} fa-8x text-${color}`)
-
 
 mixin cell(cols)
   div(class=`col-span-${cols}`)&attributes(attributes)
