@@ -24,10 +24,8 @@ mixin sectitle
     block
 
 mixin footer
-  +section("8")(class!=attributes.class)
-    +cell(12)
-      p(style="m-0 text-center")
-        b Made with #[i.fas.fa-heart(style="color: red")] by Superuser Labs
+  div.bg-slate-900.text-white.w-full.p-8.text-center(class!=attributes.class)
+    b Made with #[i.fas.fa-heart(style="color: red")] by Superuser Labs
 
 mixin teammember(name, imagename, role, github, linkedin, image_style)
   .border.rounded-xl.shadow.bg-white.text-black

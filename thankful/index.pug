@@ -6,11 +6,12 @@ html
         include /templates/head-includes.pug
         include /templates/analytics-thankful.pug
 
-    body
+    // set background color on body, to match navbar color when scrolling above viewport
+    body(style="background-color: rgb(15 23 42)")
       div.flex.flex-col.min-h-screen.justify-between
         include /templates/navbar.pug
 
-        main
+        main.bg-white
           +section.bg-teal-950.text-white
             div.text-center.h-96.flex.flex-col.justify-center
               div
@@ -95,6 +96,4 @@ html
               p
                 | We believe in open source and self-ownership of data. That's why we designed Thankful so that we don't collect any of your data and don't need any servers. Even if we disappeared tomorrow, Thankful would still work.
 
-          +section
-            .mx-auto
-              +footer
+          +footer

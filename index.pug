@@ -5,11 +5,12 @@ html
         include /templates/head-includes.pug
         include /templates/analytics-superuserlabs.pug
 
-    body
+    // set background color on body, to match navbar color when scrolling above viewport
+    body(style="background-color: rgb(15 23 42)")
       div.flex.flex-col.min-h-screen.justify-between
         include /templates/navbar.pug
 
-        main
+        main.bg-white
           +section.bg-teal-950.text-white
             div.text-center.h-96.flex.flex-col.justify-center
               div
@@ -151,6 +152,4 @@ html
                 div.col-span-2(class="md:col-span-3")
                   +teammember("Michael Young", "michael.jpg", "Developer", github="https://github.com/Miyou", linkedin="https://www.linkedin.com/in/michael-young-522148142/")
 
-          +section
-            .mx-auto
-              +footer
+        +footer
