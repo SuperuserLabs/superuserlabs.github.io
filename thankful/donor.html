@@ -1,4 +1,17 @@
-<html><head><title>Thankful</title><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><!-- Favicon--><link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon"/><!-- MDL--><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/><!-- Possible values for primary: deep_orange, red, pink, purple, deep_purple, indigo, blue, light_blue, cyan, teal, green, light_green, lime, yellow, amber, orange, brown, blue_grey, grey--><!-- Possible values for secondary: deep_orange, red, pink, purple, deep_purple, indigo, blue, light_blue, cyan, teal, green, light_green, lime, yellow, amber, orange--><link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-orange.min.css"/><script defer="defer" src="https://code.getmdl.io/1.3.0/material.min.js"></script><!-- Font Awesome--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/><link rel="stylesheet" href="/index.css"/><!-- Roboto--><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"/><!-- Global site tag (gtag.js) - Google Analytics -->
+<html><head><title>Thankful</title><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><!-- Favicon--><link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon"/><!-- Tailwind--><script src="https://cdn.tailwindcss.com"></script><script>
+tailwind.config = {
+  theme: {
+    container: {
+      center: true,
+    },
+    extend: {
+      colors: {
+        clifford: '#da373d',
+      }
+    }
+  }
+};
+</script><!-- Font Awesome--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/><!-- Custom CSS--><link rel="stylesheet" href="/index.css"/><!-- Fonts (Roboto & Varela Round)--><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"/><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round" type="text/css"/><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121109725-1"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -44,7 +57,7 @@ var getOutboundLink = function(urlOrEvent) {
    window.open(url, target);
  }
 }
-</script></head><body><header class="mdl-layout__header mdl-layout__header--scroll" style="font-family: 'Roboto', 'Helvetica', sans-serif; background-color: #263238;"><div class="mdl-layout__header-row" style="padding: 0 2em 0 2em"><span class="mdl-layout__title"><a style="color: #FFF; text-decoration: none; padding-right: 1em" href="https://superuserlabs.org/">Superuser Labs</a></span><div class="mdl-navigation"><a class="mdl-navigation__link" href="https://superuserlabs.org/thankful/" style="font-weight: 500;">Thankful</a><a class="mdl-navigation__link" href="https://activitywatch.net/" style="font-weight: 500;" target="_blank">ActivityWatch</a></div><div class="mdl-layout-spacer"></div><div class="mdl-navigation"><a class="mdl-navigation__link" href="https://github.com/SuperuserLabs/" target="_blank"><i class="fab fa-github fa-2x"></i></a><a class="mdl-navigation__link" href="https://twitter.com/SuperusrLabs" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></div></div></header><div><div class="mdl-grid" style="padding: 6em"><div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset-desktop"><div class="mdl-grid" style="padding: 0"><div class="display-4 text-center w-100">Thank you!</div><div class="col-md-6 offset-md-3"><p class="text-center">Thank you for showing interest! We are still in alpha and we need <b>your</b> input so that we can help you support the creators you love.</p><p class="text-center">Please take <a href="https://docs.google.com/forms/d/e/1FAIpQLSeorT2AUsJ4_SxxEm12zYz89Pk9mz3XZvPxL336Q-mR-_LAqw/viewform?usp=sf_link">this survey</a> and subscribe below.</p><hr/><!-- Begin MailChimp Signup Form -->
+</script></head><body><header class="flex justify-between items-center bg-slate-900 p-4" style="font-family: 'Roboto', 'Helvetica', sans-serif;"><div class="flex items-center flex-grow"><span class="text-white text-xl"><a class="pl-4 pr-10 font-semibold hover:underline" href="https://superuserlabs.org/">Superuser Labs</a></span><div class="flex text-lg align-middle items-center text-gray-300"><a class="pr-10 hover:underline" href="https://activitywatch.net/" target="_blank"><img class="inline-block mr-2 py-2" src="/media/activitywatch-logo.png" alt="ActivityWatch" width="20px" height="20px"/>ActivityWatch</a><a class="pr-10 hover:underline" href="https://github.com/ErikBjare/gptme" target="_blank"><img class="inline-block mr-2 py-2" src="/media/gptme-logo.png" alt="gptme" width="20px" height="20px"/>gptme</a><a class="pr-10 hover:underline" href="https://superuserlabs.org/thankful/"><img class="inline-block mr-2 py-2" src="/media/thankful-logo.png" alt="Thankful" width="20px" height="20px"/>Thankful</a></div></div><div class="flex"><a class="text-white px-2" href="https://github.com/SuperuserLabs/" target="_blank"><i class="fab fa-github text-2xl"></i></a><a class="text-white px-2" href="https://twitter.com/SuperusrLabs" target="_blank"><i class="fab fa-twitter text-2xl"></i></a></div></header><div><div class="container mx-auto" style="padding: 6em"><div class="grid"><div class="display-4 text-center w-100">Thank you!</div><div class="col-md-6 offset-md-3"><p class="text-center">Thank you for showing interest! We are still in alpha and we need <b>your</b> input so that we can help you support the creators you love.</p><p class="text-center">Please take <a href="https://docs.google.com/forms/d/e/1FAIpQLSeorT2AUsJ4_SxxEm12zYz89Pk9mz3XZvPxL336Q-mR-_LAqw/viewform?usp=sf_link">this survey</a> and subscribe below.</p><hr/><!-- Begin MailChimp Signup Form -->
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
@@ -62,4 +75,4 @@ var getOutboundLink = function(urlOrEvent) {
    </div>
  </form>
 </div>
-<!--End mc_embed_signup--></div></div></div></div></div></body></html>
+<!--End mc_embed_signup--></div></div></div></div></body></html>
