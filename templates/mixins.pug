@@ -1,77 +1,46 @@
 mixin section(padding="2em 0em")
-    div()&attributes(attributes)
-      .mdl-grid(style=`padding: ${padding}`)
-        +cell(8).mdl-cell--2-offset-desktop
-          .mdl-grid(style="padding: 0")
-            block
+  div&attributes(attributes)
+    div.container.mx-auto(style=`padding: ${padding}`)
+      .grid
+        block
 
 
-mixin button(href, style)
-  a.mdl-button.mdl-js-button.mdl-button--raised(href=href, style=`margin: 0 2em 1em 0; ${style}`)&attributes(attributes)
-    block
-
-
-mixin text(color='black')
-  span(class=`mdl-color-text--${color}`)
-    block
-
-
-mixin spacer
-  .mdl-layout-spacer
-
-
-mixin cover(background, style)
-  div(style=`position: relative; background: ${background}; background-repeat: no-repeat; background-size: cover; background-position: center; ${style}`)
-    block
-
-
-mixin text(tag, typography, color='black')
-  #{tag}(class=`${typography.split(' ').map(x => 'mdl-typography--' + x).join(' ')} mdl-color-text--${color}`)
-    block
-
-
-mixin typo(tag, ...classes)
-  #{tag}(class=classes.map(x => `mdl-typography--${x}`).join(' '))
-    block
-
-
-mixin layout
-  .mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+mixin button
+  a.rounded-md.border.mr-4.px-3.py-2.shadow(target="_blank")&attributes(attributes)
     block
 
 
 mixin fa(name, group='fas', color='black')
-  i(class=`${group} fa-${name} fa-8x mdl-color-text--${color}`)
+  i(class=`${group} fa-${name} fa-8x text-${color}`)
 
 
 mixin cell(cols)
-  div(class=`mdl-cell mdl-cell--${cols}-col`)&attributes(attributes)
+  div(class=`col-span-${cols}`)&attributes(attributes)
     block
 
 
 mixin sectitle
-  h4.mdl-typography--display-1(style="margin-top: 0")
+  h4.text-4xl(style="mt-0")
     block
 
 mixin footer
-  +section("2em")(class!=attributes.class)
+  +section("8")(class!=attributes.class)
     +cell(12)
-      p(style="margin: 0; text-align: center")
+      p(style="m-0 text-center")
         b Made with #[i.fas.fa-heart(style="color: red")] by Superuser Labs
 
-
 mixin teammember(name, imagename, role, github, linkedin, image_style)
-  +cell(4)
-    .mdl-card.mdl-shadow--2dp(style="width: 90%; margin: 2em 0 0 0")
-      .mdl-card--expand.mdl-card__title(style=`background: url('/media/${imagename}') center / cover; height: 300px; ${image_style}`)
-      .mdl-card__supporting-text(style="padding: 1em")
-        div(style="float: left")
-          h5(style="margin: 0 0 0.25em 0") #{name}
-          div #{role}
-        div(style="float: right")
-          div(style="margin: 0.25em 0 0 0; font-size: 150%")
-            a(href=`${github}`, style="color: #444")
-              i.fab.fa-github
-            if(linkedin)
-              a(href=`${linkedin}`, style="margin: 0 0 0 0.5em; color: #0077B5")
-                i.fab.fa-linkedin
+  .border.rounded-xl.shadow.bg-white.text-black
+    div
+      div.h-72.rounded-t-xl(style=`background: url('/media/${imagename}') center / cover; ${image_style}`)
+    div.flex.p-3
+      div.flex-grow
+        div.m-0 #{name}
+        div.text-sm.text-gray-500 #{role}
+      div
+        div.text-2xl.ml-2
+          a(href=`${github}`, style="color: #444")
+            i.fab.fa-github
+          if(linkedin)
+            a.ml-2(href=`${linkedin}`, style="color: #0077B5")
+              i.fab.fa-linkedin

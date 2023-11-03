@@ -2,131 +2,99 @@ include /templates/mixins.pug
 html
     head
         title Thankful
-        link(rel="shortcut icon" type="image/png" href="/media/thankful-logo-512.png")
+        link(rel="shortcut icon" type="image/png" href="/media/thankful-logo.png")
         include /templates/head-includes.pug
         include /templates/analytics-thankful.pug
 
     body
-      +layout
+      div.flex.flex-col.min-h-screen.justify-between
         include /templates/navbar.pug
 
-        main.mdl-layout__content
-          +cover('linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05))', style="padding: 5em 0em 2em 0")
-            +text('div', 'text-center', 'grey-800')
+        main
+          +section.bg-teal-950.text-white
+            div.text-center.h-96.flex.flex-col.justify-center
               div
-                +typo('div', 'display-4')
-                  div(style="white-space: nowrap; font-size: 0.8em")
-                    img(src="/media/thankful-logo-512.png", style="width: 1em; display: inline-block; vertical-align: middle; margin: 0em 0em 0.2em 0")
-                    span(style="display: inline-block; vertical-align: middle; font-family: 'Varela round'")
-                      | #[b hankful]
-              div(style="font-family: 'Varela round'")
-                div(style="margin-top: 1.5em; font-size: 1.5em; font-weight: bold;")
-                  | Support the creators that you love using cryptocurrency
-                div(style="margin-top: 0.6em; font-size: 1.25em")
-                  | Easier, fairer, and without middlemen
+                div.text-7xl
+                  img(src="/media/thankful-logo.png", style="width: 5rem; display: inline-block; vertical-align: middle; margin: 0em 0em 0.2em 0;")
+                  span(style="display: inline-block; vertical-align: middle; font-family: 'Varela round'; text-shadow: -1px -1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;")
+                    | #[b hankful]
+              div(class='pt-10')
+                | Support the creators that you love using cryptocurrency
+                br
+                | Easier, fairer, and without middlemen
 
-              hr(style="width: 24em; margin: 2em auto 2em auto;")
+          +section.bg-gray-100
+            div.max-w-4xl.mx-auto.text-center
+              p
+                div.text-5xl.mb-4 Try the beta!
+                p.mb-4
+                  | We're currently in beta and you can try it out by downloading the browser extension for Chrome or Firefox.
+                div.flex.justify-center.text-xl
+                  a.mx-3.px-3.py-2.rounded.border-2.rounded-2xl.bg-blue-500.text-white(href="https://chrome.google.com/webstore/detail/thankful/eapbondnpopbiepnjfhnaaejfdfjhnde", target="_blank", onclick="getOutboundLink(event); return false;")
+                    i.fab.fa-chrome.mr-2
+                    |&nbsp;Get for Chrome
+                  a.mx-3.px-3.py-2.rounded.border-2.rounded-2xl.bg-orange-500.text-white(href="https://addons.mozilla.org/en-US/firefox/addon/getthankful/", target="_blank", onclick="getOutboundLink(event); return false;")
+                    i.fab.fa-firefox.mr-2
+                    |&nbsp;Get for Firefox
+              div.text-sm
+                p.py-4
+                  | ...or get the code
+                  a.text-blue-600(href="https://github.com/SuperuserLabs/thankful", target="_blank", onclick="getOutboundLink(event); return false;")
+                    |&nbsp;on GitHub
 
-              div(style="padding: 0 1em")
-                h5
-                  b Try the beta!
+          +section.text-white.bg-gray-800
+            div.max-w-4xl.mx-auto.text-center
+              div.text-3xl.my-8
+                .mb-4 Screenshot
+                figure.border.border-gray-400.rounded-xl
+                  img.rounded-xl(src="/media/screenshot-thankful-1280x800.png", alt="Screenshot of Thankful")
 
-                //div
-                  +button("asd", style="background-color: #F82; color: white")
-                    | #[i.fab.fa-firefox(style="color: #FFF")] Firefox
+          +section.max-w-5xl.mx-auto
+            mixin feature(name, icon, iconcolor="text-black-400", icontype="fa")
+              div.flex.my-8
+                div.w-24.flex-shrink-0.text-center.py-2
+                  i.text-6xl(class=`${icontype} ${icon} ${iconcolor}`)
+                div.flex-grow.ml-10
+                  h3.text-3xl.mb-2= name
+                  block
 
-                div(style="display: flex; align-items: center; justify-content: center;")
-                  div(style="margin-right: 1em")
-                    a(href="https://chrome.google.com/webstore/detail/thankful/eapbondnpopbiepnjfhnaaejfdfjhnde", target="_blank", onclick="getOutboundLink(event); return false;")
-                      img(src="https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png")
-                  div
-                    a(href="https://addons.mozilla.org/en-US/firefox/addon/getthankful/", target="_blank", onclick="getOutboundLink(event); return false;")
-                      img(src="https://addons.cdn.mozilla.net/static/img/addons-buttons/AMO-button_1.png")
+            div.text-5xl.my-4.text-center Features
 
-                div.mdl-typography--body-2-color-contrast(style="margin-top: 0.5em")
-                  | ...or get the code on #[a(href="https://github.com/SuperuserLabs/thankful", target="_blank", onclick="getOutboundLink(event); return false;").mdl-typography--body-2-color-contrast GitHub]
+            +feature("Support everyone you like", "fa-users", "text-purple-500")
+              p.mb-4
+                | Thankful automatically tracks which creators you spend time on. Then at the end of the month, it shows you a list of your top creators and lets you support them by sending them cryptocurrency.
+              p
+                | We currently support creators on:
+                ul.list-disc.list-inside.mt-2.ml-4
+                  li YouTube
+                  li GitHub
+                  li Medium
+                  li ...more to come
 
-                figure(style="border: 1px solid #555; border-radius: 3px; width: 30em; max-width: 100%; margin: 1em auto;")
-                  a(href="/media/screenshot-thankful-1280x800.png", target="_blank", onclick="getOutboundLink(event); return false;")
-                    img(src="/media/screenshot-thankful-1280x800.png", width="100%")
+            +feature("Healthier incentives, for a better web", "fa-seedling", "text-green-500")
+              p.mb-4
+                | There is a fundamental issue on the internet where ad-funded creators have incentive to steal your attention as long as possible instead of providing you with as much value as they can. And if you use an ad blocker, even your favorite creators get nothing from having you in their audience.
+              p
+                | By using Thankful, you incentivize creators to spend more time and effort on creating #[b what you want].
 
-                //div(style="margin: 1em 3em 0 3em")
-                  include /templates/email-signup-horizontal.pug
+            +feature("A good use case for cryptocurrency", "fa-coins", "text-yellow-400")
+              p.mb-4
+                | One of the earliest uses for cryptocurrency were donations. People and organizations all over the web accept donations and we want to build on that history and take it to the next level. You can read all about our master plan to make it easier to support every creator online #[a(href="https://github.com/SuperuserLabs/thankful/wiki/Growth-plan") here].
+              p.mb-4
+                | Payments are made with Ether*, the currency native to the Ethereum blockchain. This provides low transaction fees and lets us build more advanced features in the future by utilizing smart contracts and the vibrant Ethereum ecosystem.
+              p
+                i *support for more cryptocurrencies planned
 
-              //div
-                h5(style='margin-bottom: 0.5em')
-                  b Get started!
-                p
-                  | Are you a creator or do you want to support creators?
-                div
-                  +button('creator.html')
-                    | I'm a creator
-                  +button('donor.html')
-                    | I want to support creators
+            +feature("Zero fees (almost)", "fa-money-bill-wave", "text-green-500")
+              p
+                | The only fees you pay are transaction fees (usually ~1-3%), and the voluntary "I'm thankful for Thankful"-fee. This means #[b creators will get more] of what you give, and #[b reduces fees by about 90%] compared to Patreon.
+                br
+                | You can read more about how we get rid of almost all fees #[a(href="https://github.com/SuperuserLabs/thankful/wiki/Fees") here].
 
-
-          +section
-            +cell(9)
-                +sectitle Support everyone you like
-                div(style="opacity: 0.8")
-                  p
-                    | Thankful automatically tracks which creators you spend time on. Then at the end of the month, it shows you a list of your top creators and lets you support them by sending them cryptocurrency.
-                  p
-                    | We currently support creators on:
-                  ul(style="padding-left: 2em; margin: 0")
-                    li YouTube
-                    li GitHub
-                    li Medium
-                    li ...and more to come
-
-            +cell(3)(align='right', style="margin-top: 1em").mdl-cell--hide-tablet
-              +fa('heart', 'fas', 'red')
-
-          +section.mdl-color--grey-100
-            +cell(9)
-                +sectitle Healthier incentives, for a better web
-                p There is a fundamental issue on the internet where ad-funded creators have incentive to steal your attention as long as possible instead of providing you with as much value as they can. And if you use an ad blocker, even your favorite creators get nothing from having you in their audience.
-
-                p By using Thankful, you incentivize creators to spend more time and effort on creating #[b what you want].
-            +cell(3)(align='right', style="margin-top: 1em").mdl-cell--hide-tablet
-              span
-                +fa('seedling', 'fas', 'green')
-
-          +section
-            +cell(9)
-                +sectitle A good use case for cryptocurrency
-                p
-                  | One of the earliest uses for cryptocurrency were donations. People and organizations all over the web accept donations and we want to build on that history and take it to the next level. You can read all about our master plan to make it easier to support every creator online #[a(href="https://github.com/SuperuserLabs/thankful/wiki/Growth-plan") here].
-                p
-                  | Payments are made with Ether*, the currency native to the Ethereum blockchain. This provides low transaction fees and lets us build more advanced features in the future by utilizing smart contracts and the vibrant Ethereum ecosystem.
-                p
-                  i *support for more cryptocurrencies planned
-            +cell(3)(align='right', style="margin-top: 1em").mdl-cell--hide-tablet
-              span(style="margin-right: 2em")
-                +fa('ethereum', 'fab', 'blue-grey-900')
-              span
-                +fa('bitcoin', 'fab', 'amber')
-
-          +section.mdl-color--grey-100
-            +cell(9)
-              +sectitle
-                | Zero fees #[span(style="opacity: 0.5") (almost) ]
-              p The only fees you pay are transaction fees (usually ~1-3%), and the voluntary "I'm thankful for Thankful"-fee. This means #[b creators will get more] of what you give, and #[b reduces fees by about 90%] compared to Patreon.
-              p You can read more about how we get rid of almost all fees #[a(href="https://github.com/SuperuserLabs/thankful/wiki/Fees") here].
-            +cell(3)(align='right', style="margin-top: 1em").mdl-cell--hide-tablet
-              +fa('coins', 'fas', 'amber')
+            +feature("Open source, unstoppable, and you own your data", "fa-code", "text-blue-500")
+              p
+                | We believe in open source and self-ownership of data. That's why we designed Thankful so that we don't collect any of your data and don't need any servers. Even if we disappeared tomorrow, Thankful would still work.
 
           +section
-            +cell(9)
-              +sectitle
-                | Open source, unstoppable, and you own your data
-              p We believe in open source and self-ownership of data. That's why we designed Thankful so that we don't collect any of your data and don't need any servers. Even if we disappeared tomorrow, Thankful would still work.
-
-            +cell(3)(align='right', style="margin-top: 1em").mdl-cell--hide-tablet
-              +fa('code', 'fas', 'grey-500')
-
-          +section.mdl-color--grey-100
-            +cell(12)(style="font-size: 1.5em")
-              include /templates/email-signup-horizontal.pug
-
-          +footer
+            .mx-auto
+              +footer
