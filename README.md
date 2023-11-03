@@ -1,7 +1,7 @@
 Superuser Labs website
 ======================
 
-[![Build Status](https://travis-ci.org/SuperuserLabs/superuserlabs.github.io.svg?branch=dev)](https://travis-ci.org/SuperuserLabs/superuserlabs.github.io)
+[![Build](https://github.com/SuperuserLabs/superuserlabs.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/SuperuserLabs/superuserlabs.github.io/actions/workflows/pages.yml)
 
 The website for Superuser Labs and our projects.
 
