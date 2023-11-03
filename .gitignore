@@ -1,8 +1,11 @@
 node_modules
+.DS_Store
+
+# cache
+.*cache
+
+# built files
 *.html
-css/
 *.css
 *.css.map
-.sass-cache/
 build*
-.DS_Store
