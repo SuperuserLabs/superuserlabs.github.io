@@ -11,87 +11,87 @@ html
 
         main
           +section.bg-teal-950.text-white
-            // center the content
             div.text-center.h-96.flex.flex-col.justify-center
               div
                 div.text-4xl
                   | Turning you into a
                 div.text-9xl Superuser
-              div(class='pt-10')
-                | We build #[b(class="text-yellow-400") free and open-source software] that empowers users.
+              div.pt-10
+                | We build #[b(class="text-yellow-500") free and open-source software] that empowers users.
 
-          +section.bg-gray-100
+          +section.bg-gray-100.py-10
             div.max-w-4xl.mx-auto
               p
-                div.text-5xl.mb-4 About us
-              div.text-lg
+                div.text-4xl.mb-4.text-center About us
+              div
                 p.mb-4
-                  | We are a small team of developers and researchers who are passionate about building free and open-source software that empowers users.
+                  | We are a small team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!).
                 p.mb-4
-                  | Originally based in #[span(class="text-blue-950") 🇸🇪 Sweden], we have been active since 2017, and have experience working with a wide range of technologies in a range of fields,
+                  | Originally based in #[span(class="text-blue-950") 🇸🇪 Sweden], we have been active since 2017, and have experience working with technologies in a wide range of fields,
                   | including full-stack development, machine learning, algorithmic trading, smart contracts, and decentralized systems.
                 p.mb-4
-                  | We build open-source software, and offer consulting services in the fields of software development, machine learning, blockchain technology, and computational neuroscience.
+                  | We also offer consulting services in the fields of software development, machine learning, blockchain technology, and computational neuroscience.
 
-          +section.max-w-5xl.mx-auto
+          +section.max-w-4xl.mx-auto.py-10
             mixin project(name, imgname)
-              div.flex.my-8
-                div.w-32
-                  img(src=`/media/${imgname}`)
-                div.flex-grow.ml-10
+              div.flex.mb-10
+                // set width to fix image size
+                div.w-32.flex-shrink-0
+                  img.w-32(src=`/media/${imgname}`)
+                div.ml-10
                   h3.text-3xl.mb-2= name
-                  block
+                  div&attributes(attributes)
+                    block
 
-            div.text-5xl.my-4 Our projects
+            div.text-4xl.mb-10.text-center Our projects
 
-            +project("ActivityWatch", "activitywatch-logo.png")
+            +project("ActivityWatch", "activitywatch-logo.png").text-sm
               p
                 | The world's best free and open-source automated time-tracker.
                 br
                 | Cross-platform, local-first, extensible, and secure.
 
-              div.flex.text-lg
+              div.flex.text-sm.py-4
                 +button.bg-green-600.border-green-600.text-white(href="https://activitywatch.net/downloads/", class='hover:bg-green-700')
-                    | #[i.fas.fa-download.text-xl.mr-1] Downloads
+                    | #[i.fas.fa-download.mr-1] Downloads
                 +button(href="https://activitywatch.net/")
-                    | #[i.fas.fa-globe.text-xl] Website
+                    | #[i.fas.fa-globe] Website
                 +button.border-gray-300(href="https://github.com/ActivityWatch/activitywatch/")
-                    | #[i.fab.fa-github.text-xl] GitHub
+                    | #[i.fab.fa-github] GitHub
                 +button(href="https://docs.activitywatch.net/")
-                  | #[i.fas.fa-book.text-xl] Docs
+                  | #[i.fas.fa-book] Docs
 
-            +project("gptme", "gptme-logo.png")
+            +project("gptme", "gptme-logo.png").text-sm
               p
-                | A chat-CLI for interacting with LLMs in your terminal, similar to ChatGPT's "Advanced Data Analysis".
-              p
+                | A chat-CLI for conveniently interacting with LLMs in your terminal, similar to ChatGPT's "Advanced Data Analysis".
                 | Has access to tools to run code and modify files on the host machine, to speed up your workflow.
-              div.flex.text-lg
+              div.flex.text-sm.py-4
                 +button(href="https://github.com/ErikBjare/gptme")
-                  | #[i.fab.fa-github.text-xl] GitHub
+                  | #[i.fab.fa-github] GitHub
                 +button(href="https://erik.bjareholt.com/gptme/docs/")
-                  | #[i.fas.fa-book.text-xl] Docs
+                  | #[i.fas.fa-book] Docs
 
-            +project("Thankful", "thankful-logo-512.png")
-              p(class="mb-2") Donate crypto directly to every content creator that you like. Automatically and without middlemen.
+            +project("Thankful", "thankful-logo-512.png").text-sm
+              p.mb-2.text-sm Donate crypto directly to every content creator that you like. Automatically and without middlemen.
               p.text-gray-500
                 | #[b Note:] Thankful was discontinued in 2019. We've talked about reviving it, but it's not a priority.
               // TODO: Change URL to actual website once fixed
               //+button(href="https://github.com/SuperuserLabs/thankful", class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded")
                   | #[i.fas.fa-download] Get the extension
-              div.flex.text-lg
+              div.flex.text-sm.py-4
                 +button(href="https://github.com/SuperuserLabs/thankful")
-                    | #[i.fab.fa-github.text-xl] GitHub
+                    | #[i.fab.fa-github] GitHub
                 +button(href="https://superuserlabs.org/thankful/")
                     | More info
 
-            +project("uniswap-python", "uniswap-python.png")
+            +project("uniswap-python", "uniswap-python.png").text-sm
               p
                 | The unofficial Python library for Uniswap. Funded by #[a(href="https://bounties.gitcoin.co/grants/2631/uniswap-python") Gitcoin] and the Uniswap Grants Program.
-              div.flex.text-lg
+              div.flex.py-4
                 +button(href="https://github.com/uniswap-python/uniswap-python")
-                    | #[i.fab.fa-github.text-xl] GitHub
+                    | #[i.fab.fa-github] GitHub
                 +button(href="https://uniswap-python.com/")
-                  | #[i.fas.fa-book.text-xl] Docs
+                  | #[i.fas.fa-book] Docs
 
           //+section.bg-gray-800.text-white
             div(class="flex")
@@ -101,11 +101,11 @@ html
                 h2 Support us!
                 p We rely on donations to keep our work going, keep an eye on this space for donations.
 
-          div.bg-gray-800.text-white
+          div.bg-gray-800.text-white.py-10
             div.w-100.max-w-6xl.mx-auto
               div.container.mx-auto.px-6.py-10
                 div.flex.flex-col.items-center
-                  div.text-5xl.mb-10 History
+                  div.text-4xl.mb-10 History
                   ul.timeline
                     li.border-l-2.border-gray-200.pl-4.pb-4
                       p.font-bold 2014
@@ -126,30 +126,30 @@ html
                       p.font-bold 2023
                       p First consulting client: University of Ghent
 
-
-          +section
-            h2.text-center.text-3xl Team
-            div.grid.grid-cols-12.gap-4
-              div.col-span-3.col-start-4
+          +section.p-10
+            h2.text-center.text-4xl.mb-10 Team
+            div.grid.grid-cols-12.gap-10
+              div.col-span-6.col-start-1(class="lg:col-span-3 lg:col-start-4")
                 +teammember("Erik Bjäreholt", "erik.jpg", "CEO, Developer", github="http://github.com/ErikBjare", linkedin="https://www.linkedin.com/in/erikbjareholt/")
-              div.col-span-3
+              div.col-span-6(class="lg:col-span-3")
                 +teammember("Johan Bjäreholt", "johan.png", "Developer", github="https://github.com/johan-bjareholt", linkedin="https://www.linkedin.com/in/johanbjareholt/")
 
-          +section
-            h2.text-center.text-3xl Past
-            div.grid.grid-cols-12.gap-4
-              div.col-span-3
-                +teammember("Johannes Ahnlide", "johannes.jpg", "Developer", github="https://github.com/ahnlabb")
-              div.col-span-3
-                +teammember("Jacob Karlsson", "jacob.jpg", "Developer", github="https://github.com/powersource", linkedin="https://www.linkedin.com/in/jacob-karlsson-6a483bb1/")
-              div.col-span-3
-                +teammember("Patrik Laurell", "patrik.jpg", "Developer", github="https://github.com/patrik-laurell", linkedin="https://www.linkedin.com/in/patrik-laurell-ba5b306b/")
-              div.col-span-3
-                +teammember("Valthor Halldórsson", "valthor.jpg", "Developer", github="https://github.com/vlthr", linkedin="https://www.linkedin.com/in/valthor-halldorsson-002aaa13a/")
-              div.col-span-3
-                +teammember("Dwight Lidman", "dwight.jpg", "Developer", github="https://github.com/dwilid", linkedin="https://www.linkedin.com/in/dwight-lidman/", image_style="background-position-y: 10%")
-              div.col-span-3
-                +teammember("Michael Young", "", "Developer", github="https://github.com/Miyou", linkedin="https://www.linkedin.com/in/michael-young-522148142/")
+          div.w-full.bg-gray-800.text-white.p-10.pb-20
+            div(class="xl:w-3/4").mx-auto.text-sm
+              h2.text-center.text-3xl.mb-10 Past team members
+              div.grid.grid-cols-12.gap-10
+                div.col-span-2(class="md:col-span-3")
+                  +teammember("Johannes Ahnlide", "johannes.jpg", "Developer", github="https://github.com/ahnlabb")
+                div.col-span-2(class="md:col-span-3")
+                  +teammember("Jacob Karlsson", "jacob.jpg", "Developer", github="https://github.com/powersource", linkedin="https://www.linkedin.com/in/jacob-karlsson-6a483bb1/")
+                div.col-span-2(class="md:col-span-3")
+                  +teammember("Patrik Laurell", "patrik.jpg", "Developer", github="https://github.com/patrik-laurell", linkedin="https://www.linkedin.com/in/patrik-laurell-ba5b306b/")
+                div.col-span-2(class="md:col-span-3")
+                  +teammember("Valthor Halldórsson", "valthor.jpg", "Developer", github="https://github.com/vlthr", linkedin="https://www.linkedin.com/in/valthor-halldorsson-002aaa13a/")
+                div.col-span-2(class="md:col-span-3")
+                  +teammember("Dwight Lidman", "dwight.jpg", "Developer", github="https://github.com/dwilid", linkedin="https://www.linkedin.com/in/dwight-lidman/", image_style="background-position-y: 10%")
+                div.col-span-2(class="md:col-span-3")
+                  +teammember("Michael Young", "michael.jpg", "Developer", github="https://github.com/Miyou", linkedin="https://www.linkedin.com/in/michael-young-522148142/")
 
           +section
             .mx-auto

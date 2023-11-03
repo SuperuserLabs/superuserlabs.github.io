@@ -6,7 +6,7 @@ mixin section(padding="2em 0em")
 
 
 mixin button
-  a.rounded-md.border.mr-8.my-4.py-2.px-4.shadow(target="_blank")&attributes(attributes)
+  a.rounded-md.border.mr-4.px-3.py-2.shadow(target="_blank")&attributes(attributes)
     block
 
 
@@ -29,15 +29,14 @@ mixin footer
       p(style="m-0 text-center")
         b Made with #[i.fas.fa-heart(style="color: red")] by Superuser Labs
 
-
 mixin teammember(name, imagename, role, github, linkedin, image_style)
-  .border.rounded-xl.shadow(class="m-8")
+  .border.rounded-xl.shadow.bg-white.text-black
     div
       div.h-72.rounded-t-xl(style=`background: url('/media/${imagename}') center / cover; ${image_style}`)
     div.flex.p-3
       div.flex-grow
-        div.text-xl.m-0 #{name}
-        div.text-gray-500 #{role}
+        div.m-0 #{name}
+        div.text-sm.text-gray-500 #{role}
       div
         div.text-2xl.ml-2
           a(href=`${github}`, style="color: #444")
