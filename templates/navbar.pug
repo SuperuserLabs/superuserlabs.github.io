@@ -1,19 +1,15 @@
-header.mdl-layout__header.mdl-layout__header--scroll(style="font-family: 'Roboto', 'Helvetica', sans-serif; background-color: #263238;")
-  div.mdl-layout__header-row(style="padding: 0 2em 0 2em")
-    span.mdl-layout__title
-      a(style="color: #FFF; text-decoration: none; padding-right: 1em",
-        href='https://superuserlabs.org/')
+header.flex.justify-between.items-center.bg-slate-900.p-4(style="font-family: 'Roboto', 'Helvetica', sans-serif;")
+  div.flex.items-center
+    span.text-white.text-lg
+      a.text-white.no-underline.pr-4(href='https://superuserlabs.org/')
         | Superuser Labs
-    div.mdl-navigation
-      a.mdl-navigation__link(href='https://superuserlabs.org/thankful/', style="font-weight: 500;")
+    div.flex
+      a.text-white.font-medium.px-2(href='https://superuserlabs.org/thankful/')
         | Thankful
-      a.mdl-navigation__link(href='https://activitywatch.net/', style="font-weight: 500;" target="_blank")
+      a.text-white.font-medium.px-2(href='https://activitywatch.net/' target="_blank")
         | ActivityWatch
-    div.mdl-layout-spacer
-    div.mdl-navigation
-      a.mdl-navigation__link(href='https://github.com/SuperuserLabs/' target="_blank")
-          i.fab.fa-github.fa-2x
-      a.mdl-navigation__link(href='https://twitter.com/SuperusrLabs' target="_blank")
-          i.fab.fa-twitter.fa-2x
-//-div.mdl-layout__drawer
-//-  span.mdl-layout-title Title
+  div.flex
+    a.text-white.px-2(href='https://github.com/SuperuserLabs/' target="_blank")
+      i.fab.fa-github.text-2xl
+    a.text-white.px-2(href='https://twitter.com/SuperusrLabs' target="_blank")
+      i.fab.fa-twitter.text-2xl

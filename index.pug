@@ -6,115 +6,151 @@ html
         include /templates/analytics-superuserlabs.pug
 
     body
-      +layout
+      div.flex.flex-col.min-h-screen.justify-between
         include /templates/navbar.pug
 
-        main.mdl-layout__content
-          +cover('url("/media/tty.gif") 400px', style="padding: 8em 0 8em 0;")
-            +text('div', 'text-center', 'white')
+        main
+          +section.bg-teal-950.text-white
+            // center the content
+            div.text-center.h-96.flex.flex-col.justify-center
               div
-                +typo('div', 'display-1')
+                div.text-4xl
                   | Turning you into a
-                +typo('div', 'display-4') Superuser
-              div(style='padding-top: 20px;')
-                | Superuser Labs is building #[b(style="color: rgb(255,171,64)") free and open-source software] that empowers users.
+                div.text-9xl Superuser
+              div(class='pt-10')
+                | We build #[b(class="text-yellow-400") free and open-source software] that empowers users.
 
-          +section
-            +cell(12)
+          +section.bg-gray-100
+            div.max-w-4xl.mx-auto
               p
-                +typo('div', 'display-2') About us
-              div
-                p
-                  | We are a group of developers who are passionate about open-source software and empowering users. 
-                  | Originally based in #[b(style="color: #05F") 🇸🇪 Sweden], we have been active since 2017, and have experience working with a wide range of technologies in a range of fields,
+                div.text-5xl.mb-4 About us
+              div.text-lg
+                p.mb-4
+                  | We are a small team of developers and researchers who are passionate about building free and open-source software that empowers users.
+                p.mb-4
+                  | Originally based in #[span(class="text-blue-950") 🇸🇪 Sweden], we have been active since 2017, and have experience working with a wide range of technologies in a range of fields,
                   | including full-stack development, machine learning, algorithmic trading, smart contracts, and decentralized systems.
-                p
+                p.mb-4
                   | We build open-source software, and offer consulting services in the fields of software development, machine learning, blockchain technology, and computational neuroscience.
 
-          +section
-            +cell(12)
-              +typo('div', 'display-2') Our projects
+          +section.max-w-5xl.mx-auto
+            mixin project(name, imgname)
+              div.flex.my-8
+                div.w-32
+                  img(src=`/media/${imgname}`)
+                div.flex-grow.ml-10
+                  h3.text-3xl.mb-2= name
+                  block
 
-            +cell(12)
-              div(style="display: flex; margin-top: 2em;")
-                div(style="min-width: 14em; display: flex; align-items: center; justify-content: center")
-                  img(src="/media/activitywatch-logo.png" style="width: 8em;")
-                div(style="flex-grow: 1")
-                  h3 ActivityWatch
-                  p 
-                    | The world's best free and open-source automated time-tracker.
-                    br
-                    | Cross-platform, local-first, extensible, and secure.
+            div.text-5xl.my-4 Our projects
 
-                  +button("https://github.com/ActivityWatch/activitywatch/releases", style="background-color: #009624").mdl-button--colored.mdl-button--raised
-                      | #[i.fas.fa-download] Download
-                  +button("https://github.com/ActivityWatch/activitywatch/")
-                      | #[i.fab.fa-github] GitHub
-                  +button("https://activitywatch.net/")
-                      | More info
+            +project("ActivityWatch", "activitywatch-logo.png")
+              p
+                | The world's best free and open-source automated time-tracker.
+                br
+                | Cross-platform, local-first, extensible, and secure.
 
-            +cell(12)
-              div(style="display: flex; margin-top: 2em")
-                div(style="min-width: 14em; display: flex; align-items: center; justify-content: center")
-                  img(src="/media/thankful-logo-512.png" style="width: 8em;")
-                div(style="flex-grow: 1")
-                  h3 Thankful
-                  p(style="margin-bottom: 0.5em") Donate crypto directly to every content creator that you like. Automatically and without middlemen.
-                  p.mdl-color-text--grey
-                    | #[b Note:] Thankful was discontinued in 2019. We've talked about reviving it, but it's not a priority.
-                  // TODO: Change URL to actual website once fixed
-                  //+button("https://github.com/SuperuserLabs/thankful", style="background-color: #009624").mdl-button--colored.mdl-button--raised
-                      | #[i.fas.fa-download] Get the extension
-                  +button("https://github.com/SuperuserLabs/thankful")
-                      | #[i.fab.fa-github] GitHub
-                  +button("https://superuserlabs.org/thankful/")
-                      | More info
+              div.flex.text-lg
+                +button.bg-green-600.border-green-600.text-white(href="https://activitywatch.net/downloads/", class='hover:bg-green-700')
+                    | #[i.fas.fa-download.text-xl.mr-1] Downloads
+                +button(href="https://activitywatch.net/")
+                    | #[i.fas.fa-globe.text-xl] Website
+                +button.border-gray-300(href="https://github.com/ActivityWatch/activitywatch/")
+                    | #[i.fab.fa-github.text-xl] GitHub
+                +button(href="https://docs.activitywatch.net/")
+                  | #[i.fas.fa-book.text-xl] Docs
 
-            +cell(12)
-              div(style="display: flex; margin-top: 2em")
-                div(style="min-width: 14em; display: flex; align-items: center; justify-content: center")
-                  img(src="/media/uniswap-python.png" style="width: 8em;")
-                div(style="flex-grow: 1")
-                  h3 uniswap-python
-                  p
-                    | The unofficial Python library for Uniswap. Funded by #[a(href="https://bounties.gitcoin.co/grants/2631/uniswap-python") Gitcoin] and the Uniswap Grants Program.
-                  +button("https://github.com/uniswap-python/uniswap-python")
-                      | #[i.fab.fa-github] GitHub
+            +project("gptme", "gptme-logo.png")
+              p
+                | A chat-CLI for interacting with LLMs in your terminal, similar to ChatGPT's "Advanced Data Analysis".
+              p
+                | Has access to tools to run code and modify files on the host machine, to speed up your workflow.
+              div.flex.text-lg
+                +button(href="https://github.com/ErikBjare/gptme")
+                  | #[i.fab.fa-github.text-xl] GitHub
+                +button(href="https://erik.bjareholt.com/gptme/docs/")
+                  | #[i.fas.fa-book.text-xl] Docs
 
-          //+section.mdl-color--grey-800.mdl-color-text--white
-            div(style="display: flex")
-              div(style="min-width: 14em; display: flex; align-items: center; justify-content: center")
-                +fa('donate', 'fas', 'amber')
-              div(style="flex-grow: 1")
+            +project("Thankful", "thankful-logo-512.png")
+              p(class="mb-2") Donate crypto directly to every content creator that you like. Automatically and without middlemen.
+              p.text-gray-500
+                | #[b Note:] Thankful was discontinued in 2019. We've talked about reviving it, but it's not a priority.
+              // TODO: Change URL to actual website once fixed
+              //+button(href="https://github.com/SuperuserLabs/thankful", class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded")
+                  | #[i.fas.fa-download] Get the extension
+              div.flex.text-lg
+                +button(href="https://github.com/SuperuserLabs/thankful")
+                    | #[i.fab.fa-github.text-xl] GitHub
+                +button(href="https://superuserlabs.org/thankful/")
+                    | More info
+
+            +project("uniswap-python", "uniswap-python.png")
+              p
+                | The unofficial Python library for Uniswap. Funded by #[a(href="https://bounties.gitcoin.co/grants/2631/uniswap-python") Gitcoin] and the Uniswap Grants Program.
+              div.flex.text-lg
+                +button(href="https://github.com/uniswap-python/uniswap-python")
+                    | #[i.fab.fa-github.text-xl] GitHub
+                +button(href="https://uniswap-python.com/")
+                  | #[i.fas.fa-book.text-xl] Docs
+
+          //+section.bg-gray-800.text-white
+            div(class="flex")
+              div(class="min-w-56 flex items-center justify-center")
+                +fa('donate', 'fas', 'text-yellow-500')
+              div(class="flex-grow")
                 h2 Support us!
                 p We rely on donations to keep our work going, keep an eye on this space for donations.
 
-          +section.mdl-color--grey-800.mdl-color-text--white
-            +cell(12)
-              p
-                +typo('div', 'display-2') History
-              ul
-                li 2014 - Erik starts working on ActivityWatch
-                li 2017 - Superuser Labs was born, with Thankful as its initial product.
-                li 2019 - Thankful folds, ActivityWatch becomes the main focus again.
-                li 2021 - ActivityWatch getting adopted by researchers.
-                li 2022 - Superuser Labs formally incorporates as "Superuser Labs Lund AB"
-                li 2023 - First consulting customer: University of Ghent
+          div.bg-gray-800.text-white
+            div.w-100.max-w-6xl.mx-auto
+              div.container.mx-auto.px-6.py-10
+                div.flex.flex-col.items-center
+                  div.text-5xl.mb-10 History
+                  ul.timeline
+                    li.border-l-2.border-gray-200.pl-4.pb-4
+                      p.font-bold 2014
+                      p Erik starts working on ActivityWatch
+                    li.border-l-2.border-gray-200.pl-4.pb-4
+                      p.font-bold 2017
+                      p Superuser Labs was founded, with Thankful as its initial product.
+                    li.border-l-2.border-gray-200.pl-4.pb-4
+                      p.font-bold 2019
+                      p Thankful folds, ActivityWatch becomes the main focus.
+                    li.border-l-2.border-gray-200.pl-4.pb-4
+                      p.font-bold 2021
+                      p ActivityWatch getting adopted by researchers.
+                    li.border-l-2.border-gray-200.pl-4.pb-4
+                      p.font-bold 2022
+                      p Superuser Labs formally incorporates as "Superuser Labs Lund AB"
+                    li.border-l-2.border-gray-200.pl-4.pb-4
+                      p.font-bold 2023
+                      p First consulting client: University of Ghent
+
 
           +section
-            +cell(12)
-              h2.text-center Team
-            +teammember("Erik Bjäreholt", "erik.jpg", "CEO, Developer", github="http://github.com/ErikBjare", linkedin="https://www.linkedin.com/in/erikbjareholt/")
-            +teammember("Johan Bjäreholt", "johan.png", "Developer", github="https://github.com/johan-bjareholt", linkedin="https://www.linkedin.com/in/johanbjareholt/")
+            h2.text-center.text-3xl Team
+            div.grid.grid-cols-12.gap-4
+              div.col-span-3.col-start-4
+                +teammember("Erik Bjäreholt", "erik.jpg", "CEO, Developer", github="http://github.com/ErikBjare", linkedin="https://www.linkedin.com/in/erikbjareholt/")
+              div.col-span-3
+                +teammember("Johan Bjäreholt", "johan.png", "Developer", github="https://github.com/johan-bjareholt", linkedin="https://www.linkedin.com/in/johanbjareholt/")
 
           +section
-            +cell(12)
-              h2.text-center Past
-            +teammember("Johannes Ahnlide", "johannes.jpg", "Developer", github="https://github.com/ahnlabb")
-            +teammember("Jacob Karlsson", "jacob.jpg", "Developer", github="https://github.com/powersource", linkedin="https://www.linkedin.com/in/jacob-karlsson-6a483bb1/")
-            +teammember("Patrik Laurell", "patrik.jpg", "Developer", github="https://github.com/patrik-laurell", linkedin="https://www.linkedin.com/in/patrik-laurell-ba5b306b/")
-            +teammember("Valthor Halldórsson", "valthor.jpg", "Developer", github="https://github.com/vlthr", linkedin="https://www.linkedin.com/in/valthor-halldorsson-002aaa13a/")
-            +teammember("Dwight Lidman", "dwight.jpg", "Developer", github="https://github.com/dwilid", linkedin="https://www.linkedin.com/in/dwight-lidman/", image_style="background-position-y: 10%")
-            +teammember("Michael Young", "", "Developer", github="https://github.com/Miyou", linkedin="https://www.linkedin.com/in/michael-young-522148142/")
+            h2.text-center.text-3xl Past
+            div.grid.grid-cols-12.gap-4
+              div.col-span-3
+                +teammember("Johannes Ahnlide", "johannes.jpg", "Developer", github="https://github.com/ahnlabb")
+              div.col-span-3
+                +teammember("Jacob Karlsson", "jacob.jpg", "Developer", github="https://github.com/powersource", linkedin="https://www.linkedin.com/in/jacob-karlsson-6a483bb1/")
+              div.col-span-3
+                +teammember("Patrik Laurell", "patrik.jpg", "Developer", github="https://github.com/patrik-laurell", linkedin="https://www.linkedin.com/in/patrik-laurell-ba5b306b/")
+              div.col-span-3
+                +teammember("Valthor Halldórsson", "valthor.jpg", "Developer", github="https://github.com/vlthr", linkedin="https://www.linkedin.com/in/valthor-halldorsson-002aaa13a/")
+              div.col-span-3
+                +teammember("Dwight Lidman", "dwight.jpg", "Developer", github="https://github.com/dwilid", linkedin="https://www.linkedin.com/in/dwight-lidman/", image_style="background-position-y: 10%")
+              div.col-span-3
+                +teammember("Michael Young", "", "Developer", github="https://github.com/Miyou", linkedin="https://www.linkedin.com/in/michael-young-522148142/")
 
-          +footer
+          +section
+            .mx-auto
+              +footer
