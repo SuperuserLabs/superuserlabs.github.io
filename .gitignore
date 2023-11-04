@@ -5,7 +5,6 @@ node_modules
 .*cache
 
 # built files
-*.html
 *.css
 *.css.map
 build*
