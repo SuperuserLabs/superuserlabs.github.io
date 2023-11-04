@@ -11,12 +11,11 @@ on:
 
 jobs:
   build-and-deploy:
-    name: Build and deploy (py-${{ matrix.python_version }}, ruby-${{ matrix.ruby_version }})
+    name: Build and deploy (ruby-${{ matrix.ruby_version }})
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby_version: ['2.7']
-        python_version: ['3.9']
+        ruby_version: ['3.2']
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
@@ -27,10 +26,6 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby_version }}
           bundler-cache: true
-      - name: Setup Python
-        uses: actions/setup-python@v1
-        with:
-          python-version: ${{ matrix.python_version }}
       - name: Install dependencies
         run: |
           make install
@@ -38,12 +33,11 @@ jobs:
       - name: Build
         run: |
           make build
-          touch build-superuser/.nojekyll
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.8
         if: github.ref == 'refs/heads/master'
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: build-superuser # The folder the action should deploy.
+          folder: _site # The folder the action should deploy.
           git-config-name: GitHub Actions
           git-config-email: noreply@github.com

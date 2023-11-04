@@ -1,0 +1,28 @@
+include templates/mixins.pug
+doctype html
+html
+    head
+        title {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
+
+        // Favicon
+        link(rel="shortcut icon" href="{{ layout.favicon | default: '/media/favicon.ico' }}" type="{{ layout.favicon_type | default: 'image/x-icon' }}")
+
+        // Scripts and styles
+        include templates/head-includes.pug
+
+        // Google Analytics
+        | {% if site.analytics == "thankful" %}
+        +analytics-thankful
+        | {% else %}
+        +analytics-superuserlabs
+        | {% endif %}
+
+    // set background color on body, to match navbar color when scrolling above viewport
+    body(style="background-color: rgb(15 23 42)")
+      div.flex.flex-col.min-h-screen.justify-between
+        include templates/navbar.pug
+
+        main.bg-white
+          | {{ content }}
+
+        +footer

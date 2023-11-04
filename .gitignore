@@ -5,7 +5,13 @@ node_modules
 .*cache
 
 # built files
-*.html
 *.css
 *.css.map
 build*
+
+# jekyll
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
