@@ -1,31 +1,356 @@
-<html><head><title>Superuser Labs</title><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><!-- Favicon--><link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon"/><!-- Tailwind--><script src="https://cdn.tailwindcss.com"></script><script>
-tailwind.config = {
-  theme: {
-    container: {
-      center: true,
-    },
-    extend: {
-      colors: {
-        clifford: '#da373d',
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Superuser Labs</title>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
+    <!-- Scripts and styles-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script><script>
+    tailwind.config = {
+      theme: {
+        container: {
+          center: true,
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
       }
-    }
-  }
-};
-</script><!-- Font Awesome--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/><!-- Custom CSS--><link rel="stylesheet" href="/index.css"/><!-- Fonts (Roboto & Varela Round)--><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"/><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round" type="text/css"/><!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121118459-1"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    };
+    </script>
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Fonts (Roboto & Varela Round)-->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round" type="text/css">
+    <!-- jekyll-seo-tag--><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Superuser Labs | Superuser Labs is a team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!).</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Superuser Labs" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Superuser Labs is a team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!)." />
+<meta property="og:description" content="Superuser Labs is a team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!)." />
+<link rel="canonical" href="https://superuserlabs.org/" />
+<meta property="og:url" content="https://superuserlabs.org/" />
+<meta property="og:site_name" content="Superuser Labs" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Superuser Labs" />
+<meta name="twitter:site" content="@SuperusrLabs" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","dateModified":"2023-11-04T16:41:41+00:00","description":"Superuser Labs is a team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!).","headline":"Superuser Labs","name":"Superuser Labs","url":"https://superuserlabs.org/"}</script>
+<!-- End Jekyll SEO tag -->
 
-gtag('config', 'UA-121118459-1');
-gtag('config', 'G-2MVEP1H2F6');
-</script></head><!-- set background color on body, to match navbar color when scrolling above viewport--><body style="background-color: rgb(15 23 42)"><div class="flex flex-col min-h-screen justify-between"><header class="flex p-4 bg-slate-900 text-xl whitespace-nowrap" style="font-family: 'Roboto', 'Helvetica', sans-serif;"><div class="text-white"><a class="ml-4 font-semibold hover:underline" href="https://superuserlabs.org/">Superuser Labs</a></div><div class="hidden text-gray-300 md:flex"><a class="mx-10 hover:underline" href="https://activitywatch.net/" target="_blank"><img class="inline-block mr-2" src="/media/activitywatch-logo.png" alt="ActivityWatch" width="20px" height="20px"/>ActivityWatch</a><a class="mr-10 hover:underline" href="https://github.com/ErikBjare/gptme" target="_blank"><img class="inline-block mr-2" src="/media/gptme-logo.png" alt="gptme" width="20px" height="20px"/>gptme</a><a class="mr-10 hover:underline" href="https://superuserlabs.org/thankful/"><img class="inline-block mr-2" src="/media/thankful-logo.png" alt="Thankful" width="20px" height="20px"/>Thankful</a></div><div class="flex-1 text-right"><a class="text-white mx-2" href="https://github.com/SuperuserLabs/" target="_blank"><i class="fab fa-github"></i></a><a class="text-white mx-2" href="https://twitter.com/SuperusrLabs" target="_blank"><i class="fab fa-twitter"></i></a><a class="text-white mx-2" href="https://www.linkedin.com/company/superuser-labs" target="_blank"><i class="fab fa-linkedin"></i></a></div></header><main class="bg-white"><div class="bg-slate-950 text-white"><div class="container mx-auto" style="padding: 2em 0em"><div class="grid"><div class="text-center h-96 flex flex-col justify-center"><div><div class="text-2xl">Turning you into a</div><div class="text-7xl">Superuser</div></div><div class="pt-10">We build <b class="text-yellow-300">free and open-source software</b> that empowers users.</div></div></div></div></div><div class="bg-gray-100 py-10"><div class="container mx-auto" style="padding: 2em 0em"><div class="grid"><div class="p-4 max-w-4xl mx-auto"><p class="text-center text-2xl">About us</p><div><p class="my-4">We are a small team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!).</p><p class="my-4">Originally based in <span class="text-blue-950">🇸🇪 Sweden</span>, we have been active since 2017, and have experience working with technologies in a wide range of fields,
-including full-stack development, machine learning, algorithmic trading, smart contracts, and decentralized systems.</p><p class="my-4">We also offer consulting services in the fields of software development, machine learning, blockchain technology, and computational neuroscience.</p></div></div></div></div></div><div class="max-w-4xl mx-auto py-10"><div class="container mx-auto" style="padding: 2em 0em"><div class="grid"><div class="text-4xl mb-10 text-center">Projects</div><div class="flex flex-col mb-10 p-6 md:flex-row"><!-- set width to fix image size--><div class="w-32 shrink-0 mx-auto md:mx-0 md:mr-10"><img src="/media/activitywatch-logo.png"/></div><div class="text-sm"><h3 class="text-3xl mb-2">ActivityWatch</h3><div><p class="mb-4">The world's best free and open-source automated time-tracker.<br/>Cross-platform, local-first, extensible.</p><div class="flex flex-wrap"><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3 bg-green-600 border-green-600 text-white hover:bg-green-700" target="_blank" href="https://activitywatch.net/downloads/"><i class="fas fa-download mr-1"></i> Downloads</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://activitywatch.net/"><i class="fas fa-globe"></i> Website</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3 border-gray-300" target="_blank" href="https://github.com/ActivityWatch/activitywatch/"><i class="fab fa-github"></i> GitHub</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://docs.activitywatch.net/"><i class="fas fa-book"></i> Docs</a></div><div class="flex flex-wrap"><a href="https://github.com/ActivityWatch/activitywatch" target="_blank"><img class="opacity-80 hover:opacity-100" src="https://img.shields.io/github/stars/ActivityWatch/activitywatch?style=social"/></a></div></div></div></div><div class="flex flex-col mb-10 p-6 md:flex-row"><!-- set width to fix image size--><div class="w-32 shrink-0 mx-auto md:mx-0 md:mr-10"><img src="/media/gptme-logo.png"/></div><div class="text-sm"><h3 class="text-3xl mb-2">gptme</h3><div><p class="mb-4">A chat-CLI for conveniently interacting with LLMs in your terminal, similar to ChatGPT's "Advanced Data Analysis".
-Has access to tools to run code and modify files on the host machine, to speed up your workflow.</p><div class="flex flex-wrap"><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://github.com/ErikBjare/gptme"><i class="fab fa-github"></i> GitHub</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://erik.bjareholt.com/gptme/docs/"><i class="fas fa-book"></i> Docs</a></div><div class="flex flex-wrap"><a href="https://github.com/ErikBjare/gptme" target="_blank"><img class="opacity-80 hover:opacity-100" src="https://img.shields.io/github/stars/ErikBjare/gptme?style=social"/></a></div></div></div></div><div class="flex flex-col mb-10 p-6 md:flex-row"><!-- set width to fix image size--><div class="w-32 shrink-0 mx-auto md:mx-0 md:mr-10"><img src="/media/thankful-logo.png"/></div><div class="text-sm"><h3 class="text-3xl mb-2">Thankful</h3><div><p class="mb-1">Donate crypto directly to every content creator that you like. Automatically and without middlemen.</p><p class="mb-4 text-gray-500"><b>Note:</b> Thankful was discontinued in 2019. We've talked about reviving it, but it's not a priority.</p><!-- TODO: Change URL to actual website once fixed--><!--+button(href="https://github.com/SuperuserLabs/thankful", class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded")| <i class="fas fa-download"></i> Get the extension--><div class="flex flex-wrap"><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://superuserlabs.org/thankful/"><i class="fas fa-globe"></i> Website</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://github.com/SuperuserLabs/thankful"><i class="fab fa-github"></i> GitHub</a></div><div class="flex flex-wrap"><a href="https://github.com/SuperuserLabs/thankful" target="_blank"><img class="opacity-80 hover:opacity-100" src="https://img.shields.io/github/stars/SuperuserLabs/thankful?style=social"/></a></div></div></div></div><div class="flex flex-col mb-10 p-6 md:flex-row"><!-- set width to fix image size--><div class="w-32 shrink-0 mx-auto md:mx-0 md:mr-10"><img src="/media/uniswap-python.png"/></div><div class="text-sm"><h3 class="text-3xl mb-2">uniswap-python</h3><div><p class="mb-4">The unofficial Python library for Uniswap. Funded by <a href="https://bounties.gitcoin.co/grants/2631/uniswap-python">Gitcoin</a> and the Uniswap Grants Program.</p><div class="flex flex-wrap"><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://github.com/uniswap-python/uniswap-python"><i class="fab fa-github"></i> GitHub</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://uniswap-python.com/"><i class="fas fa-book"></i> Docs</a></div><div class="flex flex-wrap"><a href="https://github.com/uniswap-python/uniswap-python" target="_blank"><img class="opacity-80 hover:opacity-100" src="https://img.shields.io/github/stars/uniswap-python/uniswap-python?style=social"/></a></div></div></div></div></div></div></div><!--+section.bg-gray-800.text-whitediv(class="flex")
+    <!-- Google Analytics-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121118459-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-121118459-1');
+    gtag('config', 'G-2MVEP1H2F6');
+    </script>
+  </head>
+  <!-- set background color on body, to match navbar color when scrolling above viewport-->
+  <body style="background-color: rgb(15 23 42)">
+    <div class="flex flex-col min-h-screen justify-between">
+      <header class="flex p-4 bg-slate-900 text-xl whitespace-nowrap" style="font-family: 'Roboto', 'Helvetica', sans-serif;">
+        <div class="text-white"><a class="ml-4 font-semibold hover:underline" href="/">Superuser Labs</a></div>
+        <div class="hidden text-gray-300 md:flex"><a class="mx-10 hover:underline" href="https://activitywatch.net/" target="_blank"><img class="inline-block mr-2" src="/media/activitywatch-logo.png" alt="ActivityWatch" width="20px" height="20px">ActivityWatch</a><a class="mr-10 hover:underline" href="https://github.com/ErikBjare/gptme" target="_blank"><img class="inline-block mr-2" src="/media/gptme-logo.png" alt="gptme" width="20px" height="20px">gptme</a><a class="mr-10 hover:underline" href="/thankful/"><img class="inline-block mr-2" src="/media/thankful-logo.png" alt="Thankful" width="20px" height="20px">Thankful</a></div>
+        <div class="flex-1 text-right"><a class="text-white mx-2" href="https://github.com/SuperuserLabs" target="_blank"><i class="fab fa-github"></i></a><a class="text-white mx-2" href="https://twitter.com/SuperusrLabs" target="_blank"><i class="fab fa-twitter"></i></a><a class="text-white mx-2" href="https://www.linkedin.com/company/superuser-labs" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+      </header>
+      <main class="bg-white"><div class="bg-slate-950 text-white">
+  <div class="container mx-auto" style="padding: 2em 0em">
+    <div class="grid">
+      <div class="text-center h-96 flex flex-col justify-center">
+        <div>
+          <div class="text-2xl">Turning you into a</div>
+          <div class="text-7xl">Superuser</div>
+        </div>
+        <div class="pt-10">We build <b class="text-yellow-300">free and open-source software</b> that empowers users.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-gray-100 py-10">
+  <div class="container mx-auto" style="padding: 2em 0em">
+    <div class="grid">
+      <div class="p-4 max-w-4xl mx-auto">
+        <p class="text-center text-2xl">About us</p>
+        <div>
+          <p class="my-4">We are a small team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!).</p>
+          <p class="my-4">Originally based in <span class="text-blue-950">🇸🇪 Sweden</span>, we have been active since 2017, and have experience working with technologies in a wide range of fields,
+            including full-stack development, machine learning, algorithmic trading, smart contracts, and decentralized systems.
+          </p>
+          <p class="my-4">We also offer consulting services in the fields of software development, machine learning, blockchain technology, and computational neuroscience.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="max-w-4xl mx-auto py-10">
+  <div class="container mx-auto" style="padding: 2em 0em">
+    <div class="grid">
+      <div class="text-4xl mb-10 text-center">Projects</div>
+      <div class="flex flex-col mb-10 p-6 md:flex-row">
+        <!-- set width to fix image size-->
+        <div class="w-32 shrink-0 mx-auto md:mx-0 md:mr-10"><img src="/media/activitywatch-logo.png"/></div>
+        <div class="text-sm">
+          <h3 class="text-3xl mb-2">ActivityWatch</h3>
+          <div>
+            <p class="mb-4">The world's best free and open-source automated time-tracker.<br/>Cross-platform, local-first, extensible.</p>
+            <div class="flex flex-wrap"><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3 bg-green-600 border-green-600 text-white hover:bg-green-700" target="_blank" href="https://activitywatch.net/downloads/"><i class="fas fa-download mr-1"></i> Downloads</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://activitywatch.net/"><i class="fas fa-globe"></i> Website</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3 border-gray-300" target="_blank" href="https://github.com/ActivityWatch/activitywatch/"><i class="fab fa-github"></i> GitHub</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://docs.activitywatch.net/"><i class="fas fa-book"></i> Docs</a>
+            </div>
+            <div class="flex flex-wrap"><a href="https://github.com/ActivityWatch/activitywatch" target="_blank"><img class="opacity-80 hover:opacity-100" src="https://img.shields.io/github/stars/ActivityWatch/activitywatch?style=social"/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col mb-10 p-6 md:flex-row">
+        <!-- set width to fix image size-->
+        <div class="w-32 shrink-0 mx-auto md:mx-0 md:mr-10"><img src="/media/gptme-logo.png"/></div>
+        <div class="text-sm">
+          <h3 class="text-3xl mb-2">gptme</h3>
+          <div>
+            <p class="mb-4">
+              A chat-CLI for conveniently interacting with LLMs in your terminal, similar to ChatGPT's "Advanced Data Analysis".
+              Has access to tools to run code and modify files on the host machine, to speed up your workflow.
+            </p>
+            <div class="flex flex-wrap"><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://github.com/ErikBjare/gptme"><i class="fab fa-github"></i> GitHub</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://erik.bjareholt.com/gptme/docs/"><i class="fas fa-book"></i> Docs</a>
+            </div>
+            <div class="flex flex-wrap"><a href="https://github.com/ErikBjare/gptme" target="_blank"><img class="opacity-80 hover:opacity-100" src="https://img.shields.io/github/stars/ErikBjare/gptme?style=social"/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col mb-10 p-6 md:flex-row">
+        <!-- set width to fix image size-->
+        <div class="w-32 shrink-0 mx-auto md:mx-0 md:mr-10"><img src="/media/thankful-logo.png"/></div>
+        <div class="text-sm">
+          <h3 class="text-3xl mb-2">Thankful</h3>
+          <div>
+            <p class="mb-1">Donate crypto directly to every content creator that you like. Automatically and without middlemen.</p>
+            <p class="mb-4 text-gray-500"><b>Note:</b> Thankful was discontinued in 2019. We've talked about reviving it, but it's not a priority.</p>
+            <!-- TODO: Change URL to actual website once fixed-->
+            <!--+button(href="https://github.com/SuperuserLabs/thankful", class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded")| <i class="fas fa-download"></i> Get the extension
+            -->
+            <div class="flex flex-wrap"><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://superuserlabs.org/thankful/"><i class="fas fa-globe"></i> Website</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://github.com/SuperuserLabs/thankful"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <div class="flex flex-wrap"><a href="https://github.com/SuperuserLabs/thankful" target="_blank"><img class="opacity-80 hover:opacity-100" src="https://img.shields.io/github/stars/SuperuserLabs/thankful?style=social"/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col mb-10 p-6 md:flex-row">
+        <!-- set width to fix image size-->
+        <div class="w-32 shrink-0 mx-auto md:mx-0 md:mr-10"><img src="/media/uniswap-python.png"/></div>
+        <div class="text-sm">
+          <h3 class="text-3xl mb-2">uniswap-python</h3>
+          <div>
+            <p class="mb-4">The unofficial Python library for Uniswap. Funded by <a href="https://bounties.gitcoin.co/grants/2631/uniswap-python">Gitcoin</a> and the Uniswap Grants Program.</p>
+            <div class="flex flex-wrap"><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://github.com/uniswap-python/uniswap-python"><i class="fab fa-github"></i> GitHub</a><a class="rounded-md border mr-4 px-3 py-2 shadow hover:bg-gray-100 mb-3" target="_blank" href="https://uniswap-python.com/"><i class="fas fa-book"></i> Docs</a>
+            </div>
+            <div class="flex flex-wrap"><a href="https://github.com/uniswap-python/uniswap-python" target="_blank"><img class="opacity-80 hover:opacity-100" src="https://img.shields.io/github/stars/uniswap-python/uniswap-python?style=social"/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--+section.bg-gray-800.text-white
+div(class="flex")
   div(class="min-w-56 flex items-center justify-center")
     +fa('donate', 'fas', 'text-yellow-500')
   div(class="flex-grow")
     h2 Support us!
     p We rely on donations to keep our work going, keep an eye on this space for donations.
---><div class="bg-gray-800 text-white py-10"><div class="w-100 max-w-6xl mx-auto"><div class="container mx-auto px-6 py-10"><div class="flex flex-col items-center"><div class="text-4xl mb-10">History</div><ul class="timeline"><li class="border-l-2 border-gray-200 pl-4 pb-4"><p class="font-bold">2014</p><p>Erik starts working on ActivityWatch</p></li><li class="border-l-2 border-gray-200 pl-4 pb-4"><p class="font-bold">2017</p><p>Superuser Labs was founded, with Thankful as its initial product.</p></li><li class="border-l-2 border-gray-200 pl-4 pb-4"><p class="font-bold">2019</p><p>Thankful folds, ActivityWatch becomes the main focus.</p></li><li class="border-l-2 border-gray-200 pl-4 pb-4"><p class="font-bold">2021</p><p>ActivityWatch getting adopted by researchers.</p></li><li class="border-l-2 border-gray-200 pl-4 pb-4"><p class="font-bold">2022</p><p>Superuser Labs formally incorporates as "Superuser Labs Lund AB"</p></li><li class="border-l-2 border-gray-200 pl-4 pb-4"><p class="font-bold">2023</p><p>First consulting client: University of Ghent</p></li></ul></div></div></div></div><div class="p-10 max-w-3xl mx-auto sm:p-20"><div class="container mx-auto" style="padding: 2em 0em"><div class="grid"><h2 class="text-center text-4xl mb-10">Team</h2><div class="grid grid-cols-1 gap-10 sm:grid-cols-2"><div class="border rounded-xl shadow bg-white text-black"><div><div class="h-72 rounded-t-xl" style="background: url('/media/erik.jpg') center / cover; undefined"></div></div><div class="flex p-3"><div class="flex-grow"><div class="m-0">Erik Bjäreholt</div><div class="text-sm text-gray-500">CEO, Developer</div></div><div><div class="text-2xl ml-2"><a href="http://github.com/ErikBjare" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/erikbjareholt/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a></div></div></div></div><div class="border rounded-xl shadow bg-white text-black"><div><div class="h-72 rounded-t-xl" style="background: url('/media/johan.png') center / cover; undefined"></div></div><div class="flex p-3"><div class="flex-grow"><div class="m-0">Johan Bjäreholt</div><div class="text-sm text-gray-500">Developer</div></div><div><div class="text-2xl ml-2"><a href="https://github.com/johan-bjareholt" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/johanbjareholt/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a></div></div></div></div></div></div></div></div><div class="w-full bg-gray-800 text-white p-10 pb-20"><div class="xl:w-3/4 mx-auto text-sm"><details><summary class="text-center text-3xl py-10 hover:cursor-pointer">Past team members<div class="text-xs text-gray-500">(click to expand)</div></summary><div class="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"><div class="border rounded-xl shadow bg-white text-black"><div><div class="h-72 rounded-t-xl" style="background: url('/media/johannes.jpg') center / cover; undefined"></div></div><div class="flex p-3"><div class="flex-grow"><div class="m-0">Johannes Ahnlide</div><div class="text-sm text-gray-500">Developer</div></div><div><div class="text-2xl ml-2"><a href="https://github.com/ahnlabb" style="color: #444"><i class="fab fa-github"></i></a></div></div></div></div><div class="border rounded-xl shadow bg-white text-black"><div><div class="h-72 rounded-t-xl" style="background: url('/media/jacob.jpg') center / cover; undefined"></div></div><div class="flex p-3"><div class="flex-grow"><div class="m-0">Jacob Karlsson</div><div class="text-sm text-gray-500">Developer</div></div><div><div class="text-2xl ml-2"><a href="https://github.com/powersource" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/jacob-karlsson-6a483bb1/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a></div></div></div></div><div class="border rounded-xl shadow bg-white text-black"><div><div class="h-72 rounded-t-xl" style="background: url('/media/patrik.jpg') center / cover; undefined"></div></div><div class="flex p-3"><div class="flex-grow"><div class="m-0">Patrik Laurell</div><div class="text-sm text-gray-500">Developer</div></div><div><div class="text-2xl ml-2"><a href="https://github.com/patrik-laurell" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/patrik-laurell-ba5b306b/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a></div></div></div></div><div class="border rounded-xl shadow bg-white text-black"><div><div class="h-72 rounded-t-xl" style="background: url('/media/valthor.jpg') center / cover; undefined"></div></div><div class="flex p-3"><div class="flex-grow"><div class="m-0">Valthor Halldórsson</div><div class="text-sm text-gray-500">Developer</div></div><div><div class="text-2xl ml-2"><a href="https://github.com/vlthr" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/valthor-halldorsson-002aaa13a/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a></div></div></div></div><div class="border rounded-xl shadow bg-white text-black"><div><div class="h-72 rounded-t-xl" style="background: url('/media/dwight.jpg') center / cover; background-position-y: 10%"></div></div><div class="flex p-3"><div class="flex-grow"><div class="m-0">Dwight Lidman</div><div class="text-sm text-gray-500">Developer</div></div><div><div class="text-2xl ml-2"><a href="https://github.com/dwilid" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/dwight-lidman/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a></div></div></div></div><div class="border rounded-xl shadow bg-white text-black"><div><div class="h-72 rounded-t-xl" style="background: url('/media/michael.jpg') center / cover; undefined"></div></div><div class="flex p-3"><div class="flex-grow"><div class="m-0">Michael Young</div><div class="text-sm text-gray-500">Developer</div></div><div><div class="text-2xl ml-2"><a href="https://github.com/Miyou" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/michael-young-522148142/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a></div></div></div></div></div></details></div></div></main><div class="bg-slate-900 text-white w-full p-8 text-center"><b>Made with <i class="fas fa-heart" style="color: red"></i> by Superuser Labs</b></div></div></body></html>
+
+-->
+<div class="bg-gray-800 text-white py-10">
+  <div class="w-100 max-w-6xl mx-auto">
+    <div class="container mx-auto px-6 py-10">
+      <div class="flex flex-col items-center">
+        <div class="text-4xl mb-10">History</div>
+        <ul class="timeline">
+          <li class="border-l-2 border-gray-200 pl-4 pb-4">
+            <p class="font-bold">2014</p>
+            <p>Erik starts working on ActivityWatch</p>
+          </li>
+          <li class="border-l-2 border-gray-200 pl-4 pb-4">
+            <p class="font-bold">2017</p>
+            <p>Superuser Labs was founded, with Thankful as its initial product.</p>
+          </li>
+          <li class="border-l-2 border-gray-200 pl-4 pb-4">
+            <p class="font-bold">2019</p>
+            <p>Thankful folds, ActivityWatch becomes the main focus.</p>
+          </li>
+          <li class="border-l-2 border-gray-200 pl-4 pb-4">
+            <p class="font-bold">2021</p>
+            <p>ActivityWatch getting adopted by researchers.</p>
+          </li>
+          <li class="border-l-2 border-gray-200 pl-4 pb-4">
+            <p class="font-bold">2022</p>
+            <p>Superuser Labs formally incorporates as "Superuser Labs Lund AB"</p>
+          </li>
+          <li class="border-l-2 border-gray-200 pl-4 pb-4">
+            <p class="font-bold">2023</p>
+            <p>First consulting client: University of Ghent</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="p-10 max-w-3xl mx-auto sm:p-20">
+  <div class="container mx-auto" style="padding: 2em 0em">
+    <div class="grid">
+      <h2 class="text-center text-4xl mb-10">Team</h2>
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2">
+        <div class="border rounded-xl shadow bg-white text-black">
+          <div>
+            <div class="h-72 rounded-t-xl" style="background: url('/media/erik.jpg') center / cover; undefined"></div>
+          </div>
+          <div class="flex p-3">
+            <div class="flex-grow">
+              <div class="m-0">Erik Bjäreholt</div>
+              <div class="text-sm text-gray-500">CEO, Developer</div>
+            </div>
+            <div>
+              <div class="text-2xl ml-2"><a href="http://github.com/ErikBjare" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/erikbjareholt/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-xl shadow bg-white text-black">
+          <div>
+            <div class="h-72 rounded-t-xl" style="background: url('/media/johan.png') center / cover; undefined"></div>
+          </div>
+          <div class="flex p-3">
+            <div class="flex-grow">
+              <div class="m-0">Johan Bjäreholt</div>
+              <div class="text-sm text-gray-500">Developer</div>
+            </div>
+            <div>
+              <div class="text-2xl ml-2"><a href="https://github.com/johan-bjareholt" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/johanbjareholt/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-full bg-gray-800 text-white p-10 pb-20">
+  <div class="xl:w-3/4 mx-auto text-sm">
+    <details>
+      <summary class="text-center text-3xl py-10 hover:cursor-pointer">Past team members
+        <div class="text-xs text-gray-500">(click to expand)</div>
+      </summary>
+      <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div class="border rounded-xl shadow bg-white text-black">
+          <div>
+            <div class="h-72 rounded-t-xl" style="background: url('/media/johannes.jpg') center / cover; undefined"></div>
+          </div>
+          <div class="flex p-3">
+            <div class="flex-grow">
+              <div class="m-0">Johannes Ahnlide</div>
+              <div class="text-sm text-gray-500">Developer</div>
+            </div>
+            <div>
+              <div class="text-2xl ml-2"><a href="https://github.com/ahnlabb" style="color: #444"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-xl shadow bg-white text-black">
+          <div>
+            <div class="h-72 rounded-t-xl" style="background: url('/media/jacob.jpg') center / cover; undefined"></div>
+          </div>
+          <div class="flex p-3">
+            <div class="flex-grow">
+              <div class="m-0">Jacob Karlsson</div>
+              <div class="text-sm text-gray-500">Developer</div>
+            </div>
+            <div>
+              <div class="text-2xl ml-2"><a href="https://github.com/powersource" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/jacob-karlsson-6a483bb1/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-xl shadow bg-white text-black">
+          <div>
+            <div class="h-72 rounded-t-xl" style="background: url('/media/patrik.jpg') center / cover; undefined"></div>
+          </div>
+          <div class="flex p-3">
+            <div class="flex-grow">
+              <div class="m-0">Patrik Laurell</div>
+              <div class="text-sm text-gray-500">Developer</div>
+            </div>
+            <div>
+              <div class="text-2xl ml-2"><a href="https://github.com/patrik-laurell" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/patrik-laurell-ba5b306b/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-xl shadow bg-white text-black">
+          <div>
+            <div class="h-72 rounded-t-xl" style="background: url('/media/valthor.jpg') center / cover; undefined"></div>
+          </div>
+          <div class="flex p-3">
+            <div class="flex-grow">
+              <div class="m-0">Valthor Halldórsson</div>
+              <div class="text-sm text-gray-500">Developer</div>
+            </div>
+            <div>
+              <div class="text-2xl ml-2"><a href="https://github.com/vlthr" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/valthor-halldorsson-002aaa13a/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-xl shadow bg-white text-black">
+          <div>
+            <div class="h-72 rounded-t-xl" style="background: url('/media/dwight.jpg') center / cover; background-position-y: 10%"></div>
+          </div>
+          <div class="flex p-3">
+            <div class="flex-grow">
+              <div class="m-0">Dwight Lidman</div>
+              <div class="text-sm text-gray-500">Developer</div>
+            </div>
+            <div>
+              <div class="text-2xl ml-2"><a href="https://github.com/dwilid" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/dwight-lidman/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-xl shadow bg-white text-black">
+          <div>
+            <div class="h-72 rounded-t-xl" style="background: url('/media/michael.jpg') center / cover; undefined"></div>
+          </div>
+          <div class="flex p-3">
+            <div class="flex-grow">
+              <div class="m-0">Michael Young</div>
+              <div class="text-sm text-gray-500">Developer</div>
+            </div>
+            <div>
+              <div class="text-2xl ml-2"><a href="https://github.com/Miyou" style="color: #444"><i class="fab fa-github"></i></a><a class="ml-2" href="https://www.linkedin.com/in/michael-young-522148142/" style="color: #0077B5"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+</div></main>
+      <div class="bg-slate-900 text-white w-full p-8 text-center"><b>Made with <i class="fas fa-heart" style="color: red"></i> by Superuser Labs</b></div>
+    </div>
+  </body>
+</html>
