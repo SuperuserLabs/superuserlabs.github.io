@@ -46,9 +46,16 @@ collections:
     permalink: /blog/:title/
 
 # jekyll-seo-tag config
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 twitter:
   username: SuperusrLabs
   card: summary
+social:
+  name: Superuser Labs
+  links:
+    - https://twitter.com/SuperusrLabs
+    - https://www.linkedin.com/in/superuser-labs
+    - https://github.com/SuperuserLabs
 
 # Exclude from processing.
 # The following items will not be processed, by default.
