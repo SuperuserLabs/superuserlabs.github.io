@@ -1,9 +1,13 @@
 include templates/mixins.pug
+doctype html
 html
     head
-        title {{ title | default: site.title }}
+        title {{ page.title | default: layout.title |  default: site.title }}
 
-        // Meta tags
+        // Favicon
+        link(rel="shortcut icon" href="{{ layout.favicon | default: '/media/favicon.ico' }}" type="{{ layout.favicon_type | default: 'image/x-icon' }}")
+
+        // Scripts and styles
         include templates/head-includes.pug
 
         // Google Analytics
