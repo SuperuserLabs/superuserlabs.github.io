@@ -9,3 +9,10 @@ node_modules
 *.css
 *.css.map
 build*
+
+# jekyll
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
