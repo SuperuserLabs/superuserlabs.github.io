@@ -2,7 +2,7 @@ include templates/mixins.pug
 doctype html
 html
     head
-        title {{ page.title | default: layout.title |  default: site.title }}
+        title {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
 
         // Favicon
         link(rel="shortcut icon" href="{{ layout.favicon | default: '/media/favicon.ico' }}" type="{{ layout.favicon_type | default: 'image/x-icon' }}")
