@@ -6,24 +6,18 @@ include templates/mixins.pug
 +section.bg-slate-950.text-white
   div.text-center.h-96.flex.flex-col.justify-center
     div
-      div.text-2xl
-        | Turning you into a
-      div.text-7xl Superuser
-    div.pt-10
-      | We build #[b(class="text-yellow-300") free and open-source software] that empowers users.
-
-+section.bg-gray-100.py-10
-  div.p-4.max-w-4xl.mx-auto
-    p.text-center.text-2xl
-      | About us
-    div
-      p.my-4
-        | We are a small team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!).
-      p.my-4
-        | Originally based in #[span(class="text-blue-950") 🇸🇪 Sweden], we have been active since 2017, and have experience working with technologies in a wide range of fields,
-        | including full-stack development, machine learning, algorithmic trading, smart contracts, and decentralized systems.
-      p.my-4
-        | We also offer consulting services in the fields of software development, machine learning, and computational neuroscience.
+      div.text-7xl Superuser #[span(class="text-slate-600") Labs]
+    div.pt-10.text-slate-300
+      | We build #[i(class="text-green-400") free] and #[i(class="text-green-400") open-source] software that empowers you
+      //-| Our software has been downloaded over #[b(class="text-green-500") 500,000 times] worldwide, and is used by individuals, researchers, and organizations alike.
+      //-| People use ActivityWatch as a critical tool to understand and improve their productivity, focus, and well-being in an increasingly digital world.
+    div.mt-6.text-slate-200.text-xl.opacity-80
+      div
+        | Software that gives you #[i(class="text-orange-400") superpowers]
+      div
+        | To make you a #[i(class="text-amber-200") superuser]
+      div
+        | For #[i(class="text-green-500") free]
 
 +section.max-w-4xl.mx-auto.py-10
   mixin project(name, imgname)
@@ -65,12 +59,12 @@ include templates/mixins.pug
       | A chat-CLI for conveniently interacting with LLMs in your terminal, similar to ChatGPT's "Advanced Data Analysis".
       | Has access to tools to run code and modify files on the host machine, to speed up your workflow.
     div.flex.flex-wrap
-      +button.mb-3(href="https://github.com/ErikBjare/gptme")
+      +button.mb-3(href="https://github.com/gptme/gptme")
         | #[i.fab.fa-github] GitHub
-      +button.mb-3(href="https://erik.bjareholt.com/gptme/docs/")
+      +button.mb-3(href="https://gptme.org/docs/")
         | #[i.fas.fa-book] Docs
     div.flex.flex-wrap
-      +github-stars-badge('ErikBjare/gptme')
+      +github-stars-badge('gptme/gptme')
 
   +project("Thankful", "thankful-logo.png")
     p.mb-1 Donate crypto directly to every content creator that you like. Automatically and without middlemen.
@@ -98,59 +92,25 @@ include templates/mixins.pug
     div.flex.flex-wrap
       +github-stars-badge('uniswap-python/uniswap-python')
 
-//+section.bg-gray-800.text-white
-  div(class="flex")
-    div(class="min-w-56 flex items-center justify-center")
-      +fa('donate', 'fas', 'text-yellow-500')
-    div(class="flex-grow")
-      h2 Support us!
-      p We rely on donations to keep our work going, keep an eye on this space for donations.
++section.bg-gray-100.py-10
+  div.p-4.max-w-4xl.mx-auto
+    p.text-center.text-2xl
+      | About us
+    div
+      p.my-4
+        | We are a small team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!).
+      p.my-4
+        | Originally based in #[span(class="text-blue-950") 🇸🇪 Sweden], we have been active since 2017, and have experience working with technologies in a wide range of fields,
+        | including full-stack development, machine learning, algorithmic trading, smart contracts, and decentralized systems.
+      p.my-4
+        | We also offer consulting services in the fields of software development, machine learning, and computational neuroscience.
 
-div.bg-gray-800.text-white.py-10
-  div.w-100.max-w-6xl.mx-auto
-    div.container.mx-auto.px-6.py-10
-      div.flex.flex-col.items-center
-        div.text-4xl.mb-10 History
-        ul.timeline
-          li.border-l-2.border-gray-200.pl-4.pb-4
-            p.font-bold 2014
-            p Erik starts working on ActivityWatch
-          li.border-l-2.border-gray-200.pl-4.pb-4
-            p.font-bold 2017
-            p Superuser Labs was founded, with Thankful as its initial project.
-          li.border-l-2.border-gray-200.pl-4.pb-4
-            p.font-bold 2019
-            p Thankful folds, ActivityWatch becomes the main focus.
-          li.border-l-2.border-gray-200.pl-4.pb-4
-            p.font-bold 2021
-            p ActivityWatch getting adopted by researchers.
-            p Receives Uniswap Grant for uniswap-python
-          li.border-l-2.border-gray-200.pl-4.pb-4
-            p.font-bold 2022
-            p Superuser Labs formally incorporates as "Superuser Labs Lund AB"
-          li.border-l-2.border-gray-200.pl-4.pb-4
-            p.font-bold 2023
-            p First consulting client: University of Ghent
-            p March: Erik starts working on gptme
-            p September: First public release of gptme
-            p December: Erik joins Lovable founding team as first hire
-          li.border-l-2.border-gray-200.pl-4.pb-4
-            p.font-bold 2024
-            p May: Erik leaves Lovable to focus on Superuser Labs and gptme full-time
-            p November: gptme-webui and gptme-agent-template is created
-          li.border-l-2.border-gray-200.pl-4.pb-4
-            p.font-bold 2025
-            p January: prototype of landing page for gptme.ai
-            p March: initial commit to gptme.ai infra
-            p May: initial commit to gptme-tauri
-
-+section.p-10.max-w-3xl.mx-auto(class="sm:p-20")
++section.p-10(class="sm:p-20")
   h2.text-center.text-4xl.mb-10 Team
-  div.grid.grid-cols-1.gap-10(class="sm:grid-cols-2")
+  div.max-w-3xl.mx-auto.grid.grid-cols-1.gap-10(class="sm:grid-cols-2")
     +teammember("Erik Bjäreholt", "erik.jpg", "CEO, Developer", github="http://github.com/ErikBjare", linkedin="https://www.linkedin.com/in/erikbjareholt/")
     +teammember("Johan Bjäreholt", "johan.png", "Developer", github="https://github.com/johan-bjareholt", linkedin="https://www.linkedin.com/in/johanbjareholt/")
 
-div.w-full.bg-gray-800.text-white.p-10.pb-20
   div(class="xl:w-3/4").mx-auto.text-sm
     details
       summary.text-center.text-3xl.py-10(class="hover:cursor-pointer")
@@ -165,3 +125,66 @@ div.w-full.bg-gray-800.text-white.p-10.pb-20
         +teammember("Valthor Halldórsson", "valthor.jpg", "Developer", github="https://github.com/vlthr", linkedin="https://www.linkedin.com/in/valthor-halldorsson-002aaa13a/")
         +teammember("Dwight Lidman", "dwight.jpg", "Developer", github="https://github.com/dwilid", linkedin="https://www.linkedin.com/in/dwight-lidman/", image_style="background-position-y: 10%")
         +teammember("Michael Young", "michael.jpg", "Developer", github="https://github.com/Miyou", linkedin="https://www.linkedin.com/in/michael-young-522148142/")
+
+div.bg-gray-800.text-white.py-10
+  div.w-100.max-w-6xl.mx-auto
+    div.container.mx-auto.px-6.py-10
+      div.flex.flex-col.items-center
+        div.text-4xl.mb-10 History
+        ul.timeline
+          // TODO: mention 2013 as when I graduated high school/started university?
+          li.border-l-2.border-gray-200.pl-4.pb-4
+            p.font-bold 2014
+            p Erik starts working on ActivityWatch
+          li.border-l-2.border-gray-200.pl-4.pb-4
+            p.font-bold 2016
+            p ActivityWatch v0.1 released
+            p Johan joins ActivityWatch development
+          li.border-l-2.border-gray-200.pl-4.pb-4
+            p.font-bold 2017
+            p Superuser Labs was founded, with Thankful as its initial project
+            p We are awarded a Leapfrogs grant by Lund University
+          li.border-l-2.border-gray-200.pl-4.pb-4
+            p.font-bold 2018
+            p We receive a double Leapfrogs grant
+            p Thankful team grows to 5 developers over the summer
+          li.border-l-2.border-gray-200.pl-4.pb-4
+            p.font-bold 2019
+            p Thankful folds, ActivityWatch becomes the main focus
+          li.border-l-2.border-gray-200.pl-4.pb-4
+            p.font-bold 2021
+            p ActivityWatch getting adopted by researchers
+            p Receives Uniswap Grant for uniswap-python
+          li.border-l-2.border-gray-200.pl-4.pb-4
+            p.font-bold 2022
+            p Superuser Labs formally incorporates as "Superuser Labs Lund AB"
+          li.border-l-2.border-gray-200.pl-4.pb-4
+            p.font-bold 2023
+            p First consulting client: University of Ghent
+            p March: Erik starts working on gptme
+            p September: First public release of gptme
+            p December: Erik joins Lovable as first hire
+          li.border-l-2.border-gray-200.pl-4.pb-4
+            p.font-bold 2024
+            p May: Erik leaves Lovable, focus returns to Superuser Labs and gptme
+            p November: gptme-webui and gptme-agent-template is created
+            p November: #[a(href="https://github.com/TimeToLearnAlice") Alice] and #[a(href="https://timetobuildbob.github.io") Bob] are born
+          li.border-l-2.border-gray-200.pl-4.pb-4
+            p.font-bold 2025
+            p January: prototype of landing page for gptme.ai
+            p March: initial commit to gptme.ai infra
+            p May: initial commit to gptme-tauri
+            p October: Bob achieves autonomous operation
+            p November: consulting for venture firm Pale Blue Dot
+            p December: consulting for Dendrite Systems (Strawberry Browser)
+          //-li.border-l-2.border-gray-200.pl-4.pb-4
+          //-  p.font-bold 2026
+          //-  p Jan-April: consulting for researcher at Lund University to customize ActivityWatch in a study
+
+//+section.bg-gray-800.text-white
+  div(class="flex")
+    div(class="min-w-56 flex items-center justify-center")
+      +fa('donate', 'fas', 'text-yellow-500')
+    div(class="flex-grow")
+      h2 Support us!
+      p We rely on donations to keep our open-source work going, keep an eye on this space for donations.
