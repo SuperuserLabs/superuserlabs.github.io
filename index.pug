@@ -56,8 +56,9 @@ include templates/mixins.pug
 
   +project("gptme", "gptme-logo.png")
     p.mb-4
-      | A chat-CLI for conveniently interacting with LLMs in your terminal, similar to ChatGPT's "Advanced Data Analysis".
-      | Has access to tools to run code and modify files on the host machine, to speed up your workflow.
+      | A personal AI agent that runs on your computer.
+      | Has access to tools to read/write files, run code, browse the web, and much more with plugins.
+      | Can be used for coding, research, and creating advanced autonomous agents like #[a(href="https://github.com/TimeToBuildBob") Bob].
     div.flex.flex-wrap
       +button.mb-3(href="https://github.com/gptme/gptme")
         | #[i.fab.fa-github] GitHub
@@ -104,6 +105,7 @@ include templates/mixins.pug
         | including full-stack development, machine learning, algorithmic trading, smart contracts, and decentralized systems.
       p.my-4
         | We also offer consulting services in the fields of software development, machine learning, and computational neuroscience.
+      //-| Research and development company building free and open-source software to empower users.
 
 +section.p-10(class="sm:p-20")
   h2.text-center.text-4xl.mb-10 Team
