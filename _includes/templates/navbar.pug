@@ -1,21 +1,13 @@
-header.flex.items-center.p-4.bg-slate-900.text-base.whitespace-nowrap
-  div.text-white.flex.items-center
-    a.ml-4.font-semibold.flex.items-center(href='{{ site.baseurl }}/', class="hover:opacity-80 transition-opacity")
-      img.mr-2.rounded(src='/media/superuserlabs-logo-workspace-rounded.png', alt='Superuser Labs', width='28', height='28')
+header.border-b.border-slate-800
+  div.max-w-6xl.mx-auto.flex.items-center.px-6.py-3
+    a.font-semibold.flex.items-center.text-white(href='{{ site.baseurl }}/', class="hover:opacity-80 transition-opacity")
+      img.rounded-lg(src='/media/superuserlabs-icon-padded.png', alt='Superuser Labs', width='34', height='34', class="mr-2.5", style="background: rgb(2,6,23);")
       | Superuser Labs
 
-  div.hidden.text-gray-300.text-sm.items-center(class="md:flex")
-    a.mx-8.flex.items-center(href='https://activitywatch.net/' target="_blank", class="hover:text-white transition-colors")
-      img.inline-block.mr-2(src='/media/activitywatch-logo.png', alt='ActivityWatch', width='18', height='18')
-      | ActivityWatch
-    a.mr-8.flex.items-center(href='https://gptme.org/' target="_blank", class="hover:text-white transition-colors")
-      img.inline-block.mr-2(src='/media/gptme-logo.png', alt='gptme', width='18', height='18')
-      | gptme
-
-  div.flex-1.text-right.flex.items-center.justify-end.gap-4
-    a.text-gray-400.text-lg(href='https://github.com/{{ site.github_username }}' target="_blank", class="hover:text-white transition-colors")
-      i.fab.fa-github
-    a.text-gray-400.text-lg(href='https://twitter.com/{{ site.twitter_username }}' target="_blank", class="hover:text-white transition-colors")
-      i.fab.fa-twitter
-    a.text-gray-400.text-lg(href='https://www.linkedin.com/company/{{ site.linkedin_company }}' target="_blank", class="hover:text-white transition-colors")
-      i.fab.fa-linkedin
+    div.flex-1.flex.items-center.justify-end.gap-5
+      a.text-slate-500.text-lg(href='https://github.com/{{ site.github_username }}' target="_blank", class="hover:text-white transition-colors")
+        i.fab.fa-github
+      a.text-slate-500.text-lg(href='https://twitter.com/{{ site.twitter_username }}' target="_blank", class="hover:text-white transition-colors")
+        i.fab.fa-twitter
+      a.text-slate-500.text-lg(href='https://www.linkedin.com/company/{{ site.linkedin_company }}' target="_blank", class="hover:text-white transition-colors")
+        i.fab.fa-linkedin
