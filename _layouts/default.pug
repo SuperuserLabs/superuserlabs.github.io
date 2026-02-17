@@ -5,7 +5,10 @@ html
         title {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
 
         // Favicon
-        link(rel="shortcut icon" href="{{ layout.favicon | default: '/media/favicon.ico' }}" type="{{ layout.favicon_type | default: 'image/x-icon' }}")
+        link(rel="icon" href="{{ layout.favicon | default: '/media/favicon.ico' }}" type="{{ layout.favicon_type | default: 'image/x-icon' }}")
+        link(rel="icon" type="image/png" sizes="32x32" href="/media/favicon-32.png")
+        link(rel="icon" type="image/png" sizes="192x192" href="/media/favicon-192.png")
+        link(rel="apple-touch-icon" href="/media/apple-touch-icon.png")
 
         // Scripts and styles
         include templates/head-includes.pug
@@ -18,7 +21,7 @@ html
         | {% endif %}
 
     // set background color on body, to match navbar color when scrolling above viewport
-    body(style="background-color: rgb(15 23 42)")
+    body.antialiased(style="background-color: rgb(15 23 42); font-family: 'Inter', 'Roboto', 'Helvetica', sans-serif;")
       div.flex.flex-col.min-h-screen.justify-between
         include templates/navbar.pug
 
