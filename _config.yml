@@ -28,6 +28,7 @@ url: "https://superuserlabs.org" # the base hostname & protocol for your site, e
 twitter_username: SuperusrLabs
 github_username: SuperuserLabs
 linkedin_company: superuser-labs
+og_image: /media/og-cover.png
 
 # Build settings
 #theme: minima
