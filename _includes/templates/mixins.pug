@@ -4,10 +4,6 @@ mixin section(padding="2em 0em")
       .grid
         block
 
-mixin button
-  a.rounded-lg.border.border-gray-200.mr-3.px-4.py-2.text-sm.font-medium(class="hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank")&attributes(attributes)
-    block
-
 mixin fa(name, group='fas', color='black')
   i(class=`${group} fa-${name} fa-8x text-${color}`)
 
@@ -15,35 +11,39 @@ mixin cell(cols)
   div(class=`col-span-${cols}`)&attributes(attributes)
     block
 
-mixin sectitle
-  h4.text-4xl(style="mt-0")
-    block
-
 mixin footer
-  div.bg-slate-900.text-gray-400.w-full.py-6.text-center.text-sm(class!=attributes.class)
-    | Made with #[i.fas.fa-heart(style="color: #ef4444")] by Superuser Labs
+  div.border-t.border-slate-800.text-slate-500.w-full.py-8.text-center.text-sm
+    div.max-w-6xl.mx-auto.px-6.flex.flex-col.items-center.gap-4(class="sm:flex-row sm:justify-between")
+      span Made with #[i.fas.fa-heart(style="color: #ef4444")] by Superuser Labs
+      div.flex.items-center.gap-5
+        a.text-slate-600(href='https://github.com/SuperuserLabs' target="_blank", class="hover:text-slate-300 transition-colors")
+          i.fab.fa-github
+        a.text-slate-600(href='https://twitter.com/SuperusrLabs' target="_blank", class="hover:text-slate-300 transition-colors")
+          i.fab.fa-twitter
+        a.text-slate-600(href='https://www.linkedin.com/company/superuser-labs' target="_blank", class="hover:text-slate-300 transition-colors")
+          i.fab.fa-linkedin
 
 mixin teammember(name, imagename, role, github, linkedin, twitter, website, image_style)
-  .border.border-gray-100.rounded-2xl.shadow-sm.bg-white.text-black.overflow-hidden(class="hover:shadow-md transition-shadow")
+  div.group.rounded-2xl.bg-slate-900.border.border-slate-800.overflow-hidden(class="hover:border-slate-700 transition-all")
     div
-      div.h-64.rounded-t-2xl(style=`background: url('/media/${imagename}') center / cover; ${image_style || ''}`)
+      div.h-56(style=`background: url('/media/${imagename}') center / cover; ${image_style || ''}`)
     div.flex.items-center.p-4
       div.flex-grow
-        div.font-medium #{name}
-        div.text-sm.text-gray-500 #{role}
+        div.font-medium.text-white #{name}
+        div.text-sm.text-slate-400 #{role}
       div.flex.items-center.gap-2
         if github
-          a(href=`${github}` target="_blank", class="text-gray-400 hover:text-gray-700 transition-colors")
-            i.fab.fa-github.text-xl
+          a(href=`${github}` target="_blank", class="text-slate-600 hover:text-white transition-colors")
+            i.fab.fa-github.text-lg
         if linkedin
-          a(href=`${linkedin}` target="_blank", class="text-gray-400 hover:text-blue-600 transition-colors")
-            i.fab.fa-linkedin.text-xl
+          a(href=`${linkedin}` target="_blank", class="text-slate-600 hover:text-blue-400 transition-colors")
+            i.fab.fa-linkedin.text-lg
         if twitter
-          a(href=`${twitter}` target="_blank", class="text-gray-400 hover:text-blue-400 transition-colors")
-            i.fab.fa-twitter.text-xl
+          a(href=`${twitter}` target="_blank", class="text-slate-600 hover:text-sky-400 transition-colors")
+            i.fab.fa-twitter.text-lg
         if website
-          a(href=`${website}` target="_blank", class="text-gray-400 hover:text-green-600 transition-colors")
-            i.fas.fa-globe.text-xl
+          a(href=`${website}` target="_blank", class="text-slate-600 hover:text-green-400 transition-colors")
+            i.fas.fa-globe.text-lg
 
 mixin analytics-superuserlabs(ua_id, ga_id)
   |<!-- Global site tag (gtag.js) - Google Analytics -->

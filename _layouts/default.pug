@@ -1,6 +1,6 @@
 include templates/mixins.pug
 doctype html
-html
+html.dark
     head
         title {% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
 
@@ -20,12 +20,11 @@ html
         +analytics-superuserlabs
         | {% endif %}
 
-    // set background color on body, to match navbar color when scrolling above viewport
-    body.antialiased(style="background-color: rgb(15 23 42); font-family: 'Inter', 'Roboto', 'Helvetica', sans-serif;")
-      div.flex.flex-col.min-h-screen.justify-between
+    body.antialiased.bg-slate-950.text-gray-100(style="font-family: 'Inter', system-ui, sans-serif;")
+      div.flex.flex-col.min-h-screen
         include templates/navbar.pug
 
-        main.bg-white
+        main
           | {{ content }}
 
         +footer

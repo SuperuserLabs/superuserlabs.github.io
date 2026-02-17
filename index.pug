@@ -3,161 +3,167 @@ layout: default
 ---
 include templates/mixins.pug
 
-+section.bg-slate-950.text-white
-  div.text-center.flex.flex-col.justify-center.items-center.py-24(class="md:py-32")
-    div.mb-8
-      img.mx-auto.rounded-2xl(src='/media/superuserlabs-logo.png', alt='Superuser Labs', width='120', height='120')
-    div
-      h1.text-6xl.font-bold(class="md:text-7xl") Superuser #[span.text-slate-500 Labs]
-    p.mt-6.text-lg.text-slate-300.max-w-2xl.mx-auto.px-4
-      | We build #[span.text-green-400 free] and #[span.text-green-400 open-source] software that empowers you
-    div.mt-8.flex.flex-wrap.justify-center.gap-3.text-slate-400.text-base
-      span Software that gives you #[span.text-orange-400 superpowers]
-      span.hidden(class="sm:inline") &middot;
-      span For #[span.text-green-400 free]
+//- ============================================================
+//- HERO
+//- ============================================================
+div.relative.overflow-hidden.dot-grid
+  div.max-w-6xl.mx-auto.px-6.py-28.text-center(class="md:py-36")
+    div.relative.inline-block.mb-8.logo-glow
+      img.rounded-2xl(src='/media/superuserlabs-logo.png', alt='Superuser Labs', width='100', height='100')
+    h1.text-5xl.font-extrabold.tracking-tight(class="sm:text-6xl md:text-7xl")
+      | Superuser #[span.text-slate-600 Labs]
+    p.mt-6.text-lg.text-slate-400.max-w-xl.mx-auto
+      | We build #[span.gradient-text free and open-source] software that empowers you
+    //- Stats row
+    div.mt-12.flex.justify-center.gap-12(class="sm:gap-16")
+      div
+        div.text-3xl.font-bold.text-white 16k+
+        div.text-xs.text-slate-500.mt-1 GitHub stars
+      div
+        div.text-3xl.font-bold.text-white 2014
+        div.text-xs.text-slate-500.mt-1 Founded
+      div
+        div.text-3xl.font-bold.text-white 500k+
+        div.text-xs.text-slate-500.mt-1 Downloads
 
-+section.max-w-4xl.mx-auto.py-16
-  mixin project(name, imgname)
-    div.flex.flex-col.mb-8.p-6.rounded-xl(class="md:flex-row hover:bg-gray-50 transition-colors")
-      div.w-28.shrink-0.mx-auto.mb-4(class="md:mx-0 md:mr-8 md:mb-0")
-        img.rounded-lg(src=`/media/${imgname}`)
-      div.text-sm
-        h3.text-2xl.font-semibold.mb-2= name
-        div&attributes(attributes)
-          block
+//- ============================================================
+//- PROJECTS — bento grid
+//- ============================================================
+div.max-w-6xl.mx-auto.px-6.py-20
+  h2.text-2xl.font-bold.text-slate-300.mb-8 Projects
 
   mixin github-stars-badge(repo)
-    a(href=`https://github.com/${repo}`, target="_blank")
-      img.opacity-70(class="hover:opacity-100 transition-opacity" src=`https://img.shields.io/github/stars/${repo}?style=social`)
+    a.inline-block(href=`https://github.com/${repo}`, target="_blank")
+      img.opacity-60(class="hover:opacity-100 transition-opacity" src=`https://img.shields.io/github/stars/${repo}?style=social&label=stars`, style="filter: brightness(2);")
 
-  h2.text-3xl.font-bold.mb-12.text-center Projects
+  //- Featured projects — large cards
+  div.grid.grid-cols-1.gap-4.mb-4(class="md:grid-cols-2")
+    //- ActivityWatch
+    a.card-shine.group.block.rounded-2xl.bg-slate-900.border.border-slate-800.p-8(class="hover:border-slate-700 transition-all" href="https://activitywatch.net/" target="_blank")
+      div.flex.items-start.gap-5
+        img.w-14.h-14.rounded-xl.shrink-0(src='/media/activitywatch-logo.png', alt='ActivityWatch')
+        div
+          div.flex.items-center.gap-3.mb-2
+            h3.text-xl.font-semibold.text-white ActivityWatch
+            +github-stars-badge('ActivityWatch/activitywatch')
+          p.text-sm.text-slate-400.mb-5
+            | The world's best free and open-source automated time-tracker. Cross-platform, local-first, extensible.
+          div.flex.flex-wrap.gap-2
+            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700 Downloads
+            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700 Docs
+            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700
+              i.fab.fa-github.mr-1
+              | GitHub
 
-  +project("ActivityWatch", "activitywatch-logo.png")
-    p.mb-4.text-gray-600
-      | The world's best free and open-source automated time-tracker.
-      br
-      | Cross-platform, local-first, extensible.
-    div.flex.flex-wrap.gap-1.mb-3
-      +button.bg-green-600.border-green-600.text-white(href="https://activitywatch.net/downloads/", class='hover:bg-green-700 hover:border-green-700')
-        | #[i.fas.fa-download.mr-1] Downloads
-      +button(href="https://activitywatch.net/")
-        | #[i.fas.fa-globe.mr-1] Website
-      +button(href="https://github.com/ActivityWatch/activitywatch/")
-        | #[i.fab.fa-github.mr-1] GitHub
-      +button(href="https://docs.activitywatch.net/")
-        | #[i.fas.fa-book.mr-1] Docs
-    +github-stars-badge('ActivityWatch/activitywatch')
+    //- gptme
+    a.card-shine.group.block.rounded-2xl.bg-slate-900.border.border-slate-800.p-8(class="hover:border-slate-700 transition-all" href="https://gptme.org/" target="_blank")
+      div.flex.items-start.gap-5
+        img.w-14.h-14.rounded-xl.shrink-0(src='/media/gptme-logo.png', alt='gptme')
+        div
+          div.flex.items-center.gap-3.mb-2
+            h3.text-xl.font-semibold.text-white gptme
+            +github-stars-badge('gptme/gptme')
+          p.text-sm.text-slate-400.mb-5
+            | A personal AI agent in your terminal. Read/write files, run code, browse the web. Powers autonomous agents like #[span.text-green-400 Bob].
+            | Available as CLI, web app, desktop app, and at #[span.text-green-400 gptme.ai].
+          div.flex.flex-wrap.gap-2
+            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700 gptme.ai
+            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700 Docs
+            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700
+              i.fab.fa-github.mr-1
+              | GitHub
 
-  +project("gptme", "gptme-logo.png")
-    p.mb-4.text-gray-600
-      | A personal AI agent in your terminal.
-      | Tools for reading/writing files, running code, browsing the web, and more.
-      | Used for coding, research, and building autonomous agents like #[a.text-blue-600.underline(href="https://timetobuildbob.github.io" target="_blank") Bob].
-      | Available as CLI, web app, desktop app, and managed service at #[a.text-blue-600.underline(href="https://gptme.ai" target="_blank") gptme.ai].
-    div.flex.flex-wrap.gap-1.mb-3
-      +button(href="https://gptme.org/")
-        | #[i.fas.fa-globe.mr-1] Website
-      +button(href="https://github.com/gptme/gptme")
-        | #[i.fab.fa-github.mr-1] GitHub
-      +button(href="https://gptme.org/docs/")
-        | #[i.fas.fa-book.mr-1] Docs
-    +github-stars-badge('gptme/gptme')
+  //- Secondary projects — compact
+  div.grid.grid-cols-1.gap-4(class="sm:grid-cols-2")
+    a.group.block.rounded-xl.bg-slate-900.border.border-slate-800.p-5(class="hover:border-slate-700 transition-all" href="https://github.com/uniswap-python/uniswap-python" target="_blank")
+      div.flex.items-center.gap-4
+        img.w-10.h-10.rounded-lg.shrink-0(src='/media/uniswap-python.png', alt='uniswap-python')
+        div
+          div.flex.items-center.gap-2
+            h3.text-base.font-semibold.text-white uniswap-python
+          p.text-xs.text-slate-500 Unofficial Python library for Uniswap
 
-  +project("Thankful", "thankful-logo.png")
-    p.mb-1.text-gray-600 Donate crypto directly to every content creator that you like. Automatically and without middlemen.
-    p.mb-4.text-gray-400.text-xs
-      | Discontinued in 2019.
-    div.flex.flex-wrap.gap-1.mb-3
-      +button(href="https://superuserlabs.org/thankful/")
-        | #[i.fas.fa-globe.mr-1] Website
-      +button(href="https://github.com/SuperuserLabs/thankful")
-        | #[i.fab.fa-github.mr-1] GitHub
-    +github-stars-badge('SuperuserLabs/thankful')
+    a.group.block.rounded-xl.bg-slate-900.border.border-slate-800.p-5.opacity-60(class="hover:border-slate-700 hover:opacity-80 transition-all" href="https://github.com/SuperuserLabs/thankful" target="_blank")
+      div.flex.items-center.gap-4
+        img.w-10.h-10.rounded-lg.shrink-0(src='/media/thankful-logo.png', alt='Thankful')
+        div
+          div.flex.items-center.gap-2
+            h3.text-base.font-semibold.text-white Thankful
+            span.text-xs.text-slate-600 Discontinued
+          p.text-xs.text-slate-500 Donate crypto directly to creators you love
 
-  +project("uniswap-python", "uniswap-python.png")
-    p.mb-4.text-gray-600
-      | The unofficial Python library for Uniswap. Funded by the Uniswap Grants Program.
-    div.flex.flex-wrap.gap-1.mb-3
-      +button(href="https://github.com/uniswap-python/uniswap-python")
-        | #[i.fab.fa-github.mr-1] GitHub
-      +button(href="https://uniswap-python.com/")
-        | #[i.fas.fa-book.mr-1] Docs
-    +github-stars-badge('uniswap-python/uniswap-python')
+//- ============================================================
+//- TEAM
+//- ============================================================
+div.border-t.border-slate-800.py-20
+  div.max-w-6xl.mx-auto.px-6
+    h2.text-2xl.font-bold.text-slate-300.mb-8 Team
 
-div.bg-gray-50.py-16
-  div.px-6.max-w-3xl.mx-auto.text-center
-    h2.text-3xl.font-bold.mb-6 About us
-    div.text-gray-600.space-y-4.text-left(class="sm:text-center")
-      p
-        | We are a small team of developers and researchers passionate about free and open-source software, building tools to empower users like you.
-      p
-        | Based in #[span.font-medium Sweden], active since 2017, with experience across full-stack development, machine learning, AI agents, and decentralized systems.
-      p.text-sm.text-gray-500
-        | We also offer consulting in software development, machine learning, and AI.
+    div.grid.grid-cols-1.gap-6(class="sm:grid-cols-3")
+      +teammember("Erik Bjäreholt", "erik.jpg", "CEO, Developer", github="https://github.com/ErikBjare", linkedin="https://www.linkedin.com/in/erikbjareholt/", twitter="https://twitter.com/ErikBjare")
+      +teammember("Johan Bjäreholt", "johan.png", "Developer", github="https://github.com/johan-bjareholt", linkedin="https://www.linkedin.com/in/johanbjareholt/")
+      +teammember("Bob", "bob.jpg", "AI Agent", github="https://github.com/TimeToBuildBob", twitter="https://twitter.com/TimeToBuildBob", website="https://timetobuildbob.github.io")
 
-+section.py-16(class="sm:py-20")
-  h2.text-center.text-3xl.font-bold.mb-12 Team
-  div.max-w-4xl.mx-auto.grid.grid-cols-1.gap-8(class="sm:grid-cols-3")
-    +teammember("Erik Bjäreholt", "erik.jpg", "CEO, Developer", github="https://github.com/ErikBjare", linkedin="https://www.linkedin.com/in/erikbjareholt/", twitter="https://twitter.com/ErikBjare")
-    +teammember("Johan Bjäreholt", "johan.png", "Developer", github="https://github.com/johan-bjareholt", linkedin="https://www.linkedin.com/in/johanbjareholt/")
-    +teammember("Bob", "bob.jpg", "AI Agent, Developer", "https://github.com/TimeToBuildBob", null, "https://twitter.com/TimeToBuildBob", "https://timetobuildbob.github.io")
+    p.text-sm.text-slate-600.mt-4
+      | Bob is an autonomous agent built with #[a.text-slate-400.underline(href="https://gptme.org/" target="_blank") gptme] — contributing code and reviewing PRs around the clock.
 
-  div.max-w-4xl.mx-auto.mt-4
-    p.text-center.text-sm.text-gray-500.mt-2
-      | Bob is an autonomous AI agent built with #[a.underline(href="https://gptme.org/" target="_blank") gptme], contributing code and reviewing PRs 24/7.
-
-  div.max-w-4xl.mx-auto.text-sm.mt-8
-    details
-      summary.text-center.text-xl.font-medium.py-6.text-gray-500(class="hover:cursor-pointer hover:text-gray-700 transition-colors")
+    //- Past members
+    details.mt-8
+      summary.text-sm.text-slate-600.cursor-pointer(class="hover:text-slate-400 transition-colors")
         | Past team members
+      div.grid.grid-cols-2.gap-4.mt-6(class="md:grid-cols-3 lg:grid-cols-6")
+        each member in [{name:"Johannes Ahnlide",img:"johannes.jpg",gh:"https://github.com/ahnlabb"},{name:"Jacob Karlsson",img:"jacob.jpg",gh:"https://github.com/powersource"},{name:"Patrik Laurell",img:"patrik.jpg",gh:"https://github.com/patrik-laurell"},{name:"Valthor Halldórsson",img:"valthor.jpg",gh:"https://github.com/vlthr"},{name:"Dwight Lidman",img:"dwight.jpg",gh:"https://github.com/dwilid"},{name:"Michael Young",img:"michael.jpg",gh:"https://github.com/Miyou"}]
+          a.block.text-center.group(href=member.gh target="_blank")
+            div.w-16.h-16.mx-auto.rounded-full.bg-slate-800.overflow-hidden(class="group-hover:ring-2 group-hover:ring-slate-600 transition-all")
+              div.w-full.h-full(style=`background: url('/media/${member.img}') center / cover`)
+            div.text-xs.text-slate-500.mt-2(class="group-hover:text-slate-300 transition-colors")= member.name
 
-      div.grid.grid-cols-1.gap-6.mt-4(class="sm:grid-cols-2 md:grid-cols-3")
-        +teammember("Johannes Ahnlide", "johannes.jpg", "Developer", github="https://github.com/ahnlabb")
-        +teammember("Jacob Karlsson", "jacob.jpg", "Developer", github="https://github.com/powersource", linkedin="https://www.linkedin.com/in/jacob-karlsson-6a483bb1/")
-        +teammember("Patrik Laurell", "patrik.jpg", "Developer", github="https://github.com/patrik-laurell", linkedin="https://www.linkedin.com/in/patrik-laurell-ba5b306b/")
-        +teammember("Valthor Halldórsson", "valthor.jpg", "Developer", github="https://github.com/vlthr", linkedin="https://www.linkedin.com/in/valthor-halldorsson-002aaa13a/")
-        +teammember("Dwight Lidman", "dwight.jpg", "Developer", github="https://github.com/dwilid", linkedin="https://www.linkedin.com/in/dwight-lidman/", image_style="background-position-y: 10%")
-        +teammember("Michael Young", "michael.jpg", "Developer", github="https://github.com/Miyou", linkedin="https://www.linkedin.com/in/michael-young-522148142/")
+//- ============================================================
+//- ABOUT — woven into the flow
+//- ============================================================
+div.border-t.border-slate-800.py-16
+  div.max-w-3xl.mx-auto.px-6.text-center
+    p.text-slate-400.text-base.leading-relaxed
+      | A small team of developers and researchers from #[span.text-slate-300 Sweden], building open-source tools since 2017.
+      | Experience spanning full-stack development, machine learning, AI agents, and decentralized systems.
+    p.mt-4.text-sm.text-slate-600
+      | We also offer consulting in software development, ML, and AI. #[a.text-slate-400.underline(href="mailto:erik@superuserlabs.org") Get in touch].
 
-div.bg-slate-900.text-white.py-16
+//- ============================================================
+//- HISTORY — timeline
+//- ============================================================
+div.border-t.border-slate-800.py-20
   div.max-w-3xl.mx-auto.px-6
-    h2.text-3xl.font-bold.text-center.mb-12 History
-    div.space-y-0
-      mixin timeline-entry(year)
-        div.flex
-          div.w-20.shrink-0.text-right.pr-6
-            span.font-bold.text-green-400= year
-          div.border-l-2.border-slate-700.pl-6.pb-8
-            block
+    h2.text-2xl.font-bold.text-slate-300.mb-10 History
 
-      +timeline-entry("2014")
-        p.text-slate-300 Erik starts working on ActivityWatch
-      +timeline-entry("2016")
-        p.text-slate-300 ActivityWatch v0.1 released
-        p.text-slate-300 Johan joins ActivityWatch development
-      +timeline-entry("2017")
-        p.text-slate-300 Superuser Labs founded, with Thankful as its initial project
-        p.text-slate-300 Awarded a Leapfrogs grant by Lund University
-      +timeline-entry("2018")
-        p.text-slate-300 Double Leapfrogs grant received
-        p.text-slate-300 Thankful team grows to 5 developers over the summer
-      +timeline-entry("2019")
-        p.text-slate-300 Thankful folds, ActivityWatch becomes the main focus
-      +timeline-entry("2021")
-        p.text-slate-300 ActivityWatch adopted by researchers
-        p.text-slate-300 Uniswap Grant received for uniswap-python
-      +timeline-entry("2022")
-        p.text-slate-300 Formally incorporates as "Superuser Labs Lund AB"
-      +timeline-entry("2023")
-        p.text-slate-300 First consulting client: University of Ghent
-        p.text-slate-300 Erik starts working on gptme (March), first public release (September)
-        p.text-slate-300 Erik joins Lovable as first hire (December)
-      +timeline-entry("2024")
-        p.text-slate-300 Erik leaves Lovable, focus returns to Superuser Labs and gptme
-        p.text-slate-300 gptme-webui and gptme-agent-template created
-        p.text-slate-300 #[a.text-green-400.underline(href="https://timetobuildbob.github.io" target="_blank") Bob] is born (November)
-      +timeline-entry("2025")
-        p.text-slate-300 gptme.ai service launched
-        p.text-slate-300 gptme desktop app (Tauri) development begins
-        p.text-slate-300 Bob achieves autonomous operation (October)
-        p.text-slate-300 Consulting for Pale Blue Dot and Dendrite Systems
+    mixin timeline-entry(year, highlight)
+      div.flex.group
+        div.w-16.shrink-0.text-right.pr-5
+          if highlight
+            span.font-bold.text-green-400.text-sm= year
+          else
+            span.font-bold.text-slate-500.text-sm= year
+        div.border-l.border-slate-800.pl-5.pb-6(class="group-hover:border-slate-600 transition-colors")
+          block
+
+    +timeline-entry("2014")
+      p.text-sm.text-slate-500 Erik starts working on ActivityWatch
+    +timeline-entry("2016")
+      p.text-sm.text-slate-500 ActivityWatch v0.1 released
+    +timeline-entry("2017", true)
+      p.text-sm.text-slate-400 Superuser Labs founded
+      p.text-sm.text-slate-500 Leapfrogs grant from Lund University
+    +timeline-entry("2019")
+      p.text-sm.text-slate-500 Thankful folds, ActivityWatch becomes main focus
+    +timeline-entry("2022")
+      p.text-sm.text-slate-500 Formally incorporates as "Superuser Labs Lund AB"
+    +timeline-entry("2023", true)
+      p.text-sm.text-slate-400 Erik starts working on gptme
+      p.text-sm.text-slate-500 First public release of gptme (September)
+    +timeline-entry("2024", true)
+      p.text-sm.text-slate-400 Full focus returns to Superuser Labs and gptme
+      p.text-sm.text-slate-400 #[a.text-green-400(href="https://timetobuildbob.github.io" target="_blank") Bob] is born
+    +timeline-entry("2025", true)
+      p.text-sm.text-slate-400 gptme.ai service launched
+      p.text-sm.text-slate-400 Bob achieves autonomous operation
+      p.text-sm.text-slate-500 Consulting for Pale Blue Dot, Dendrite Systems
