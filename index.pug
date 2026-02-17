@@ -7,142 +7,148 @@ include templates/mixins.pug
 //- HERO
 //- ============================================================
 div.relative.overflow-hidden.dot-grid
-  div.max-w-6xl.mx-auto.px-6.py-28.text-center(class="md:py-36")
-    div.relative.inline-block.mb-8.logo-glow
-      img.rounded-2xl(src='/media/superuserlabs-logo.png', alt='Superuser Labs', width='100', height='100')
-    h1.text-5xl.font-extrabold.tracking-tight(class="sm:text-6xl md:text-7xl")
-      | Superuser #[span.text-slate-600 Labs]
-    p.mt-6.text-lg.text-slate-400.max-w-xl.mx-auto
+  div.max-w-6xl.mx-auto.px-6.py-16.text-center(class="md:py-24")
+    //- Inline logo + title (like the OG preview)
+    div.flex.items-center.justify-center.gap-5.mb-6
+      div.logo-glow.shrink-0
+        img.rounded-2xl.block(src='/media/superuserlabs-logo.png', alt='Superuser Labs', width='80', height='80', style="background: rgb(2,6,23);")
+      h1.text-5xl.font-extrabold.tracking-tight.text-left(class="sm:text-6xl md:text-7xl")
+        | Superuser #[span.text-slate-600 Labs]
+    p.text-lg.text-slate-400.max-w-xl.mx-auto
       | We build #[span.gradient-text free and open-source] software that empowers you
     //- Stats row
-    div.mt-12.flex.justify-center.gap-12(class="sm:gap-16")
+    div.mt-8.flex.justify-center.gap-10(class="sm:gap-16")
       div
-        div.text-3xl.font-bold.text-white 16k+
+        div.text-2xl.font-bold.text-white(class="sm:text-3xl") 20k+
         div.text-xs.text-slate-500.mt-1 GitHub stars
       div
-        div.text-3xl.font-bold.text-white 2014
-        div.text-xs.text-slate-500.mt-1 Founded
+        div.text-2xl.font-bold.text-white(class="sm:text-3xl") 10+
+        div.text-xs.text-slate-500.mt-1 Years active
       div
-        div.text-3xl.font-bold.text-white 500k+
+        div.text-2xl.font-bold.text-white(class="sm:text-3xl") 500k+
         div.text-xs.text-slate-500.mt-1 Downloads
 
 //- ============================================================
 //- PROJECTS — bento grid
 //- ============================================================
-div.max-w-6xl.mx-auto.px-6.py-20
-  h2.text-2xl.font-bold.text-slate-300.mb-8 Projects
-
-  mixin github-stars-badge(repo)
-    a.inline-block(href=`https://github.com/${repo}`, target="_blank")
-      img.opacity-60(class="hover:opacity-100 transition-opacity" src=`https://img.shields.io/github/stars/${repo}?style=social&label=stars`, style="filter: brightness(2);")
+div.max-w-6xl.mx-auto.px-6.py-12
+  h2.text-2xl.font-bold.text-slate-300.mb-6.text-center Projects
 
   //- Featured projects — large cards
   div.grid.grid-cols-1.gap-4.mb-4(class="md:grid-cols-2")
     //- ActivityWatch
-    a.card-shine.group.block.rounded-2xl.bg-slate-900.border.border-slate-800.p-8(class="hover:border-slate-700 transition-all" href="https://activitywatch.net/" target="_blank")
-      div.flex.items-start.gap-5
+    div.card-shine.rounded-2xl.bg-slate-900.border.border-slate-800.p-8.flex.flex-col(class="hover:border-slate-700 transition-all")
+      div.flex.items-start.gap-5.flex-1
         img.w-14.h-14.rounded-xl.shrink-0(src='/media/activitywatch-logo.png', alt='ActivityWatch')
         div
           div.flex.items-center.gap-3.mb-2
             h3.text-xl.font-semibold.text-white ActivityWatch
-            +github-stars-badge('ActivityWatch/activitywatch')
-          p.text-sm.text-slate-400.mb-5
+            span.text-xs.text-slate-500
+              i.fas.fa-star.text-yellow-500.mr-1
+              | 16k+
+          p.text-sm.text-slate-400
             | The world's best free and open-source automated time-tracker. Cross-platform, local-first, extensible.
-          div.flex.flex-wrap.gap-2
-            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700 Downloads
-            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700 Docs
-            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700
-              i.fab.fa-github.mr-1
-              | GitHub
+      div.flex.flex-wrap.gap-2.mt-5
+        a.px-3.py-1.rounded-full.bg-green-900.text-green-300.text-xs.border.border-green-800.font-medium(href="https://activitywatch.net/downloads/" target="_blank", class="hover:bg-green-800 transition-colors")
+          i.fas.fa-download.mr-1
+          | Downloads
+        a.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700(href="https://activitywatch.net/" target="_blank", class="hover:bg-slate-700 transition-colors")
+          | Website
+        a.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700(href="https://github.com/ActivityWatch/activitywatch" target="_blank", class="hover:bg-slate-700 transition-colors")
+          i.fab.fa-github.mr-1
+          | GitHub
+        a.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700(href="https://docs.activitywatch.net/" target="_blank", class="hover:bg-slate-700 transition-colors")
+          | Docs
 
     //- gptme
-    a.card-shine.group.block.rounded-2xl.bg-slate-900.border.border-slate-800.p-8(class="hover:border-slate-700 transition-all" href="https://gptme.org/" target="_blank")
-      div.flex.items-start.gap-5
+    div.card-shine.rounded-2xl.bg-slate-900.border.border-slate-800.p-8.flex.flex-col(class="hover:border-slate-700 transition-all")
+      div.flex.items-start.gap-5.flex-1
         img.w-14.h-14.rounded-xl.shrink-0(src='/media/gptme-logo.png', alt='gptme')
         div
           div.flex.items-center.gap-3.mb-2
             h3.text-xl.font-semibold.text-white gptme
-            +github-stars-badge('gptme/gptme')
-          p.text-sm.text-slate-400.mb-5
-            | A personal AI agent in your terminal. Read/write files, run code, browse the web. Powers autonomous agents like #[span.text-green-400 Bob].
-            | Available as CLI, web app, desktop app, and at #[span.text-green-400 gptme.ai].
-          div.flex.flex-wrap.gap-2
-            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700 gptme.ai
-            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700 Docs
-            span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700
-              i.fab.fa-github.mr-1
-              | GitHub
+            span.text-xs.text-slate-500
+              i.fas.fa-star.text-yellow-500.mr-1
+              | 4k+
+          p.text-sm.text-slate-400
+            | A personal AI agent in your terminal. Read/write files, run code, browse the web. Powers autonomous agents like #[a.text-green-400(href="https://timetobuildbob.github.io" target="_blank") Bob].
+            | Available as CLI, web app, desktop app, and at #[a.text-green-400(href="https://gptme.ai" target="_blank") gptme.ai].
+      div.flex.flex-wrap.gap-2.mt-5
+        a.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700(href="https://gptme.ai/" target="_blank", class="hover:bg-slate-700 transition-colors")
+          | gptme.ai
+        a.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700(href="https://github.com/gptme/gptme" target="_blank", class="hover:bg-slate-700 transition-colors")
+          i.fab.fa-github.mr-1
+          | GitHub
+        a.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700(href="https://gptme.org/docs/" target="_blank", class="hover:bg-slate-700 transition-colors")
+          | Docs
 
   //- Secondary projects — compact
   div.grid.grid-cols-1.gap-4(class="sm:grid-cols-2")
-    a.group.block.rounded-xl.bg-slate-900.border.border-slate-800.p-5(class="hover:border-slate-700 transition-all" href="https://github.com/uniswap-python/uniswap-python" target="_blank")
-      div.flex.items-center.gap-4
-        img.w-10.h-10.rounded-lg.shrink-0(src='/media/uniswap-python.png', alt='uniswap-python')
-        div
-          div.flex.items-center.gap-2
-            h3.text-base.font-semibold.text-white uniswap-python
-          p.text-xs.text-slate-500 Unofficial Python library for Uniswap
+    a.group.flex.items-center.gap-4.rounded-xl.bg-slate-900.border.border-slate-800.p-5(class="hover:border-slate-700 transition-all" href="https://github.com/uniswap-python/uniswap-python" target="_blank")
+      img.w-10.h-10.rounded-lg.shrink-0.object-contain(src='/media/uniswap-python.png', alt='uniswap-python')
+      div
+        h3.text-base.font-semibold.text-white uniswap-python
+        p.text-xs.text-slate-500 Unofficial Python library for Uniswap
 
-    a.group.block.rounded-xl.bg-slate-900.border.border-slate-800.p-5.opacity-60(class="hover:border-slate-700 hover:opacity-80 transition-all" href="https://github.com/SuperuserLabs/thankful" target="_blank")
-      div.flex.items-center.gap-4
-        img.w-10.h-10.rounded-lg.shrink-0(src='/media/thankful-logo.png', alt='Thankful')
-        div
-          div.flex.items-center.gap-2
-            h3.text-base.font-semibold.text-white Thankful
-            span.text-xs.text-slate-600 Discontinued
-          p.text-xs.text-slate-500 Donate crypto directly to creators you love
+    a.group.flex.items-center.gap-4.rounded-xl.bg-slate-900.border.border-slate-800.p-5.opacity-50(class="hover:border-slate-700 hover:opacity-70 transition-all" href="https://github.com/SuperuserLabs/thankful" target="_blank")
+      img.w-10.h-10.rounded-lg.shrink-0(src='/media/thankful-logo.png', alt='Thankful')
+      div
+        div.flex.items-center.gap-2
+          h3.text-base.font-semibold.text-white Thankful
+          span.text-xs.text-slate-600 Discontinued
+        p.text-xs.text-slate-500 Donate crypto directly to creators you love
 
 //- ============================================================
 //- TEAM
 //- ============================================================
-div.border-t.border-slate-800.py-20
+div.border-t.border-slate-800.py-14
   div.max-w-6xl.mx-auto.px-6
-    h2.text-2xl.font-bold.text-slate-300.mb-8 Team
+    h2.text-2xl.font-bold.text-slate-300.mb-8.text-center Team
 
-    div.grid.grid-cols-1.gap-6(class="sm:grid-cols-3")
+    div.grid.grid-cols-3.gap-4.max-w-3xl.mx-auto(class="sm:gap-6")
       +teammember("Erik Bjäreholt", "erik.jpg", "CEO, Developer", github="https://github.com/ErikBjare", linkedin="https://www.linkedin.com/in/erikbjareholt/", twitter="https://twitter.com/ErikBjare")
       +teammember("Johan Bjäreholt", "johan.png", "Developer", github="https://github.com/johan-bjareholt", linkedin="https://www.linkedin.com/in/johanbjareholt/")
-      +teammember("Bob", "bob.jpg", "AI Agent", github="https://github.com/TimeToBuildBob", twitter="https://twitter.com/TimeToBuildBob", website="https://timetobuildbob.github.io")
+      +teammember("Bob", "bob.jpg", "AI Agent", "https://github.com/TimeToBuildBob", null, "https://twitter.com/TimeToBuildBob", "https://timetobuildbob.github.io")
 
-    p.text-sm.text-slate-600.mt-4
-      | Bob is an autonomous agent built with #[a.text-slate-400.underline(href="https://gptme.org/" target="_blank") gptme] — contributing code and reviewing PRs around the clock.
+    p.text-sm.text-slate-600.mt-4.text-center
+      | Bob is a self-improving AI agent built on #[a.text-slate-400.underline(href="https://gptme.org/" target="_blank") gptme] — autonomously writing, shipping, and merging code 24/7.
 
-    //- Past members
-    details.mt-8
+    //- Past members — compact circular avatars
+    details.mt-8.text-center
       summary.text-sm.text-slate-600.cursor-pointer(class="hover:text-slate-400 transition-colors")
         | Past team members
-      div.grid.grid-cols-2.gap-4.mt-6(class="md:grid-cols-3 lg:grid-cols-6")
+      div.grid.grid-cols-3.gap-4.mt-6(class="sm:grid-cols-6")
         each member in [{name:"Johannes Ahnlide",img:"johannes.jpg",gh:"https://github.com/ahnlabb"},{name:"Jacob Karlsson",img:"jacob.jpg",gh:"https://github.com/powersource"},{name:"Patrik Laurell",img:"patrik.jpg",gh:"https://github.com/patrik-laurell"},{name:"Valthor Halldórsson",img:"valthor.jpg",gh:"https://github.com/vlthr"},{name:"Dwight Lidman",img:"dwight.jpg",gh:"https://github.com/dwilid"},{name:"Michael Young",img:"michael.jpg",gh:"https://github.com/Miyou"}]
           a.block.text-center.group(href=member.gh target="_blank")
-            div.w-16.h-16.mx-auto.rounded-full.bg-slate-800.overflow-hidden(class="group-hover:ring-2 group-hover:ring-slate-600 transition-all")
+            div.w-16.h-16.mx-auto.rounded-full.overflow-hidden.border.border-slate-800(class="group-hover:border-slate-600 transition-all")
               div.w-full.h-full(style=`background: url('/media/${member.img}') center / cover`)
-            div.text-xs.text-slate-500.mt-2(class="group-hover:text-slate-300 transition-colors")= member.name
+            div.text-xs.text-slate-600.mt-2(class="group-hover:text-slate-400 transition-colors")= member.name
 
 //- ============================================================
-//- ABOUT — woven into the flow
+//- ABOUT — brief, woven into flow
 //- ============================================================
-div.border-t.border-slate-800.py-16
+div.border-t.border-slate-800.py-12
   div.max-w-3xl.mx-auto.px-6.text-center
     p.text-slate-400.text-base.leading-relaxed
       | A small team of developers and researchers from #[span.text-slate-300 Sweden], building open-source tools since 2017.
       | Experience spanning full-stack development, machine learning, AI agents, and decentralized systems.
     p.mt-4.text-sm.text-slate-600
-      | We also offer consulting in software development, ML, and AI. #[a.text-slate-400.underline(href="mailto:erik@superuserlabs.org") Get in touch].
+      | We also offer consulting in software development, ML, and AI.
 
 //- ============================================================
 //- HISTORY — timeline
 //- ============================================================
-div.border-t.border-slate-800.py-20
+div.border-t.border-slate-800.py-14
   div.max-w-3xl.mx-auto.px-6
-    h2.text-2xl.font-bold.text-slate-300.mb-10 History
+    h2.text-2xl.font-bold.text-slate-300.mb-8.text-center History
 
     mixin timeline-entry(year, highlight)
-      div.flex.group
+      div.flex.group.max-w-md.mx-auto
         div.w-16.shrink-0.text-right.pr-5
           if highlight
             span.font-bold.text-green-400.text-sm= year
           else
-            span.font-bold.text-slate-500.text-sm= year
+            span.font-bold.text-slate-600.text-sm= year
         div.border-l.border-slate-800.pl-5.pb-6(class="group-hover:border-slate-600 transition-colors")
           block
 

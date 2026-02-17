@@ -1,14 +1,8 @@
 header.border-b.border-slate-800
-  div.max-w-6xl.mx-auto.flex.items-center.px-6.py-4
+  div.max-w-6xl.mx-auto.flex.items-center.px-6.py-3
     a.font-semibold.flex.items-center.text-white(href='{{ site.baseurl }}/', class="hover:opacity-80 transition-opacity")
-      img.mr-2.rounded(src='/media/superuserlabs-logo-workspace-rounded.png', alt='Superuser Labs', width='26', height='26')
+      img.rounded-lg(src='/media/superuserlabs-icon-padded.png', alt='Superuser Labs', width='34', height='34', class="mr-2.5", style="background: rgb(2,6,23);")
       | Superuser Labs
-
-    nav.hidden.ml-10.text-sm.text-slate-400.gap-6(class="md:flex")
-      a.flex.items-center(href='https://activitywatch.net/' target="_blank", class="hover:text-white transition-colors")
-        | ActivityWatch
-      a.flex.items-center(href='https://gptme.org/' target="_blank", class="hover:text-white transition-colors")
-        | gptme
 
     div.flex-1.flex.items-center.justify-end.gap-5
       a.text-slate-500.text-lg(href='https://github.com/{{ site.github_username }}' target="_blank", class="hover:text-white transition-colors")
