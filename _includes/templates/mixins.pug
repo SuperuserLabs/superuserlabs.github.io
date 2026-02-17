@@ -5,7 +5,7 @@ mixin section(padding="2em 0em")
         block
 
 mixin button
-  a.rounded-md.border.mr-4.px-3.py-2.shadow(class="hover:bg-gray-100" target="_blank")&attributes(attributes)
+  a.rounded-lg.border.border-gray-200.mr-3.px-4.py-2.text-sm.font-medium(class="hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank")&attributes(attributes)
     block
 
 mixin fa(name, group='fas', color='black')
@@ -20,34 +20,39 @@ mixin sectitle
     block
 
 mixin footer
-  div.bg-slate-900.text-white.w-full.p-8.text-center(class!=attributes.class)
-    b Made with #[i.fas.fa-heart(style="color: red")] by Superuser Labs
+  div.bg-slate-900.text-gray-400.w-full.py-6.text-center.text-sm(class!=attributes.class)
+    | Made with #[i.fas.fa-heart(style="color: #ef4444")] by Superuser Labs
 
-mixin teammember(name, imagename, role, github, linkedin, image_style)
-  .border.rounded-xl.shadow.bg-white.text-black
+mixin teammember(name, imagename, role, github, linkedin, twitter, website, image_style)
+  .border.border-gray-100.rounded-2xl.shadow-sm.bg-white.text-black.overflow-hidden(class="hover:shadow-md transition-shadow")
     div
-      div.h-72.rounded-t-xl(style=`background: url('/media/${imagename}') center / cover; ${image_style}`)
-    div.flex.p-3
+      div.h-64.rounded-t-2xl(style=`background: url('/media/${imagename}') center / cover; ${image_style || ''}`)
+    div.flex.items-center.p-4
       div.flex-grow
-        div.m-0 #{name}
+        div.font-medium #{name}
         div.text-sm.text-gray-500 #{role}
-      div
-        div.text-2xl.ml-2
-          a(href=`${github}`, style="color: #444")
-            i.fab.fa-github
-          if(linkedin)
-            a.ml-2(href=`${linkedin}`, style="color: #0077B5")
-              i.fab.fa-linkedin
+      div.flex.items-center.gap-2
+        if github
+          a(href=`${github}` target="_blank", class="text-gray-400 hover:text-gray-700 transition-colors")
+            i.fab.fa-github.text-xl
+        if linkedin
+          a(href=`${linkedin}` target="_blank", class="text-gray-400 hover:text-blue-600 transition-colors")
+            i.fab.fa-linkedin.text-xl
+        if twitter
+          a(href=`${twitter}` target="_blank", class="text-gray-400 hover:text-blue-400 transition-colors")
+            i.fab.fa-twitter.text-xl
+        if website
+          a(href=`${website}` target="_blank", class="text-gray-400 hover:text-green-600 transition-colors")
+            i.fas.fa-globe.text-xl
 
 mixin analytics-superuserlabs(ua_id, ga_id)
   |<!-- Global site tag (gtag.js) - Google Analytics -->
-  |<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121118459-1"></script>
+  |<script async src="https://www.googletagmanager.com/gtag/js?id=G-2MVEP1H2F6"></script>
   |<script>
   | window.dataLayer = window.dataLayer || [];
   | function gtag(){dataLayer.push(arguments);}
   | gtag('js', new Date());
   |
-  | gtag('config', 'UA-121118459-1');
   | gtag('config', 'G-2MVEP1H2F6');
   |</script>
 
@@ -61,43 +66,3 @@ mixin analytics-thankful
   |
   | gtag('config', 'UA-121109725-1');
   |</script>
-
-mixin analytics-linkout
-  |<script>
-  |// From: https://support.google.com/analytics/answer/7478520?hl=en
-  |/**
-  |* Function that registers a click on an outbound link in Analytics.
-  |* This function takes a valid URL string as an argument, and uses that URL string
-  |* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-  |* using 'navigator.sendBeacon' in browser that support it.
-  |*/
-  |var getOutboundLink = function(urlOrEvent) {
-  |  let url;
-  |  let target;
-  |  if(typeof urlOrEvent === 'string') {
-  |    url = urlOrEvent;
-  |  } else {
-  |    let event = urlOrEvent || window.event;
-  |    let el = event.target || event.srcElement;
-  |    if(!el.href) el = el.parentNode;
-  |    url = el.href;
-  |    target = el.target;
-  |  }
-  |  //console.log(url);
-  |  //console.log(target);
-  |  if(window.google_tag_manager) {
-  |    gtag('event', 'click', {
-  |         'event_category': 'outbound',
-  |         'event_label': url,
-  |         'transport_type': 'beacon',
-  |         'event_callback': function() {
-  |           window.open(url, target);
-  |           //document.location = url;
-  |         }
-  |    });
-  |  } else {
-  |    window.open(url, target);
-  |  }
-  |}
-  |</script>
-
