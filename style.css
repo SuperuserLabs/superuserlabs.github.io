@@ -1,3 +1,22 @@
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
 
+.logo-glow {
+  box-shadow: 0 0 80px 20px rgba(74, 222, 128, 0.1), 0 0 30px 5px rgba(74, 222, 128, 0.05);
+  border-radius: 1rem;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-shine {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
+}
 
 /*# sourceMappingURL=style.css.map */

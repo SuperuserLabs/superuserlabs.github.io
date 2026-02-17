@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="dark">
   <head>
     <title>Superuser Labs</title>
     <!-- Favicon-->
@@ -29,10 +29,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!-- Custom CSS-->
     <link rel="stylesheet" href="/style.css">
-    <!-- Fonts (Inter & Roboto)-->
+    <!-- Fonts (Inter)-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap">
     <!-- jekyll-seo-tag--><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Superuser Labs | Superuser Labs is a team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!).</title>
 <meta name="generator" content="Jekyll v4.4.1" />
@@ -48,7 +48,7 @@
 <meta property="twitter:title" content="Superuser Labs" />
 <meta name="twitter:site" content="@SuperusrLabs" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","dateModified":"2026-02-17T18:12:50+00:00","description":"Superuser Labs is a team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!).","headline":"Superuser Labs","name":"Superuser Labs","sameAs":["https://twitter.com/SuperusrLabs","https://www.linkedin.com/company/superuser-labs","https://github.com/SuperuserLabs"],"url":"https://superuserlabs.org/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","dateModified":"2026-02-17T18:28:59+00:00","description":"Superuser Labs is a team of developers and researchers who are passionate about free and open-source software, and we are building such software to empower users (like you!).","headline":"Superuser Labs","name":"Superuser Labs","sameAs":["https://twitter.com/SuperusrLabs","https://www.linkedin.com/company/superuser-labs","https://github.com/SuperuserLabs"],"url":"https://superuserlabs.org/"}</script>
 <!-- End Jekyll SEO tag -->
 
     <!-- Google Analytics-->
@@ -62,310 +62,231 @@
     gtag('config', 'G-2MVEP1H2F6');
     </script>
   </head>
-  <!-- set background color on body, to match navbar color when scrolling above viewport-->
-  <body class="antialiased" style="background-color: rgb(15 23 42); font-family: 'Inter', 'Roboto', 'Helvetica', sans-serif;">
-    <div class="flex flex-col min-h-screen justify-between">
-      <header class="flex items-center p-4 bg-slate-900 text-base whitespace-nowrap">
-        <div class="text-white flex items-center"><a class="ml-4 font-semibold flex items-center hover:opacity-80 transition-opacity" href="/"><img class="mr-2 rounded" src="/media/superuserlabs-logo-workspace-rounded.png" alt="Superuser Labs" width="28" height="28">Superuser Labs</a></div>
-        <div class="hidden text-gray-300 text-sm items-center md:flex"><a class="mx-8 flex items-center hover:text-white transition-colors" href="https://activitywatch.net/" target="_blank"><img class="inline-block mr-2" src="/media/activitywatch-logo.png" alt="ActivityWatch" width="18" height="18">ActivityWatch</a><a class="mr-8 flex items-center hover:text-white transition-colors" href="https://gptme.org/" target="_blank"><img class="inline-block mr-2" src="/media/gptme-logo.png" alt="gptme" width="18" height="18">gptme</a></div>
-        <div class="flex-1 text-right flex items-center justify-end gap-4"><a class="text-gray-400 text-lg hover:text-white transition-colors" href="https://github.com/SuperuserLabs" target="_blank"><i class="fab fa-github"></i></a><a class="text-gray-400 text-lg hover:text-white transition-colors" href="https://twitter.com/SuperusrLabs" target="_blank"><i class="fab fa-twitter"></i></a><a class="text-gray-400 text-lg hover:text-white transition-colors" href="https://www.linkedin.com/company/superuser-labs" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+  <body class="antialiased bg-slate-950 text-gray-100" style="font-family: 'Inter', system-ui, sans-serif;">
+    <div class="flex flex-col min-h-screen">
+      <header class="border-b border-slate-800">
+        <div class="max-w-6xl mx-auto flex items-center px-6 py-3"><a class="font-semibold flex items-center text-white hover:opacity-80 transition-opacity" href="/"><img class="rounded-lg mr-2.5" src="/media/superuserlabs-icon-padded.png" alt="Superuser Labs" width="34" height="34" style="background: rgb(2,6,23);">Superuser Labs</a>
+          <div class="flex-1 flex items-center justify-end gap-5"><a class="text-slate-500 text-lg hover:text-white transition-colors" href="https://github.com/SuperuserLabs" target="_blank"><i class="fab fa-github"></i></a><a class="text-slate-500 text-lg hover:text-white transition-colors" href="https://twitter.com/SuperusrLabs" target="_blank"><i class="fab fa-twitter"></i></a><a class="text-slate-500 text-lg hover:text-white transition-colors" href="https://www.linkedin.com/company/superuser-labs" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+        </div>
       </header>
-      <main class="bg-white"><div class="bg-slate-950 text-white">
-  <div class="container mx-auto" style="padding: 2em 0em">
-    <div class="grid">
-      <div class="text-center flex flex-col justify-center items-center py-24 md:py-32">
-        <div class="mb-8"><img class="mx-auto rounded-2xl" src="/media/superuserlabs-logo.png" alt="Superuser Labs" width="120" height="120"/></div>
+      <main><div class="relative overflow-hidden dot-grid">
+  <div class="max-w-6xl mx-auto px-6 py-16 text-center md:py-24">
+    <div class="flex items-center justify-center gap-5 mb-6">
+      <div class="logo-glow shrink-0"><img class="rounded-2xl block" src="/media/superuserlabs-logo.png" alt="Superuser Labs" width="80" height="80" style="background: rgb(2,6,23);"/></div>
+      <h1 class="text-5xl font-extrabold tracking-tight text-left sm:text-6xl md:text-7xl">Superuser <span class="text-slate-600">Labs</span></h1>
+    </div>
+    <p class="text-lg text-slate-400 max-w-xl mx-auto">We build <span class="gradient-text">free and open-source</span> software that empowers you</p>
+    <div class="mt-8 flex justify-center gap-10 sm:gap-16">
+      <div>
+        <div class="text-2xl font-bold text-white sm:text-3xl">20k+</div>
+        <div class="text-xs text-slate-500 mt-1">GitHub stars</div>
+      </div>
+      <div>
+        <div class="text-2xl font-bold text-white sm:text-3xl">10+</div>
+        <div class="text-xs text-slate-500 mt-1">Years active</div>
+      </div>
+      <div>
+        <div class="text-2xl font-bold text-white sm:text-3xl">500k+</div>
+        <div class="text-xs text-slate-500 mt-1">Downloads</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="max-w-6xl mx-auto px-6 py-12">
+  <h2 class="text-2xl font-bold text-slate-300 mb-6 text-center">Projects</h2>
+  <div class="grid grid-cols-1 gap-4 mb-4 md:grid-cols-2">
+    <div class="card-shine rounded-2xl bg-slate-900 border border-slate-800 p-8 flex flex-col hover:border-slate-700 transition-all">
+      <div class="flex items-start gap-5 flex-1"><img class="w-14 h-14 rounded-xl shrink-0" src="/media/activitywatch-logo.png" alt="ActivityWatch"/>
         <div>
-          <h1 class="text-6xl font-bold md:text-7xl">Superuser <span class="text-slate-500">Labs</span></h1>
+          <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-xl font-semibold text-white">ActivityWatch</h3><span class="text-xs text-slate-500"><i class="fas fa-star text-yellow-500 mr-1"></i>16k+</span>
+          </div>
+          <p class="text-sm text-slate-400">The world's best free and open-source automated time-tracker. Cross-platform, local-first, extensible.</p>
         </div>
-        <p class="mt-6 text-lg text-slate-300 max-w-2xl mx-auto px-4">We build <span class="text-green-400">free</span> and <span class="text-green-400">open-source</span> software that empowers you</p>
-        <div class="mt-8 flex flex-wrap justify-center gap-3 text-slate-400 text-base"><span>Software that gives you <span class="text-orange-400">superpowers</span></span><span class="hidden sm:inline">&middot;</span><span>For <span class="text-green-400">free</span></span></div>
       </div>
+      <div class="flex flex-wrap gap-2 mt-5"><a class="px-3 py-1 rounded-full bg-green-900 text-green-300 text-xs border border-green-800 font-medium hover:bg-green-800 transition-colors" href="https://activitywatch.net/downloads/" target="_blank"><i class="fas fa-download mr-1"></i>Downloads</a><a class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700 hover:bg-slate-700 transition-colors" href="https://activitywatch.net/" target="_blank">Website</a><a class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700 hover:bg-slate-700 transition-colors" href="https://github.com/ActivityWatch/activitywatch" target="_blank"><i class="fab fa-github mr-1"></i>GitHub</a><a class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700 hover:bg-slate-700 transition-colors" href="https://docs.activitywatch.net/" target="_blank">Docs</a></div>
+    </div>
+    <div class="card-shine rounded-2xl bg-slate-900 border border-slate-800 p-8 flex flex-col hover:border-slate-700 transition-all">
+      <div class="flex items-start gap-5 flex-1"><img class="w-14 h-14 rounded-xl shrink-0" src="/media/gptme-logo.png" alt="gptme"/>
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <h3 class="text-xl font-semibold text-white">gptme</h3><span class="text-xs text-slate-500"><i class="fas fa-star text-yellow-500 mr-1"></i>4k+</span>
+          </div>
+          <p class="text-sm text-slate-400">A personal AI agent in your terminal. Read/write files, run code, browse the web. Powers autonomous agents like <a class="text-green-400" href="https://timetobuildbob.github.io" target="_blank">Bob</a>.
+            Available as CLI, web app, desktop app, and at <a class="text-green-400" href="https://gptme.ai" target="_blank">gptme.ai</a>.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2 mt-5"><a class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700 hover:bg-slate-700 transition-colors" href="https://gptme.ai/" target="_blank">gptme.ai</a><a class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700 hover:bg-slate-700 transition-colors" href="https://github.com/gptme/gptme" target="_blank"><i class="fab fa-github mr-1"></i>GitHub</a><a class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs border border-slate-700 hover:bg-slate-700 transition-colors" href="https://gptme.org/docs/" target="_blank">Docs</a></div>
     </div>
   </div>
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2"><a class="group flex items-center gap-4 rounded-xl bg-slate-900 border border-slate-800 p-5 hover:border-slate-700 transition-all" href="https://github.com/uniswap-python/uniswap-python" target="_blank"><img class="w-10 h-10 rounded-lg shrink-0 object-contain" src="/media/uniswap-python.png" alt="uniswap-python"/>
+      <div>
+        <h3 class="text-base font-semibold text-white">uniswap-python</h3>
+        <p class="text-xs text-slate-500">Unofficial Python library for Uniswap</p>
+      </div></a><a class="group flex items-center gap-4 rounded-xl bg-slate-900 border border-slate-800 p-5 opacity-50 hover:border-slate-700 hover:opacity-70 transition-all" href="https://github.com/SuperuserLabs/thankful" target="_blank"><img class="w-10 h-10 rounded-lg shrink-0" src="/media/thankful-logo.png" alt="Thankful"/>
+      <div>
+        <div class="flex items-center gap-2">
+          <h3 class="text-base font-semibold text-white">Thankful</h3><span class="text-xs text-slate-600">Discontinued</span>
+        </div>
+        <p class="text-xs text-slate-500">Donate crypto directly to creators you love</p>
+      </div></a></div>
 </div>
-<div class="max-w-4xl mx-auto py-16">
-  <div class="container mx-auto" style="padding: 2em 0em">
-    <div class="grid">
-      <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
-      <div class="flex flex-col mb-8 p-6 rounded-xl md:flex-row hover:bg-gray-50 transition-colors">
-        <div class="w-28 shrink-0 mx-auto mb-4 md:mx-0 md:mr-8 md:mb-0"><img class="rounded-lg" src="/media/activitywatch-logo.png"/></div>
-        <div class="text-sm">
-          <h3 class="text-2xl font-semibold mb-2">ActivityWatch</h3>
-          <div>
-            <p class="mb-4 text-gray-600">The world's best free and open-source automated time-tracker.<br/>Cross-platform, local-first, extensible.</p>
-            <div class="flex flex-wrap gap-1 mb-3"><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors bg-green-600 border-green-600 text-white hover:bg-green-700 hover:border-green-700" target="_blank" href="https://activitywatch.net/downloads/"><i class="fas fa-download mr-1"></i> Downloads</a><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank" href="https://activitywatch.net/"><i class="fas fa-globe mr-1"></i> Website</a><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank" href="https://github.com/ActivityWatch/activitywatch/"><i class="fab fa-github mr-1"></i> GitHub</a><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank" href="https://docs.activitywatch.net/"><i class="fas fa-book mr-1"></i> Docs</a>
-            </div><a href="https://github.com/ActivityWatch/activitywatch" target="_blank"><img class="opacity-70 hover:opacity-100 transition-opacity" src="https://img.shields.io/github/stars/ActivityWatch/activitywatch?style=social"/></a>
+<div class="border-t border-slate-800 py-14">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-2xl font-bold text-slate-300 mb-8 text-center">Team</h2>
+    <div class="grid grid-cols-3 gap-4 max-w-3xl mx-auto sm:gap-6">
+      <div class="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-slate-700 transition-all">
+        <div>
+          <div class="aspect-square" style="background: url('/media/erik.jpg') center / cover; "></div>
+        </div>
+        <div class="flex items-center p-4">
+          <div class="flex-grow">
+            <div class="font-medium text-white">Erik Bjäreholt</div>
+            <div class="text-sm text-slate-400">CEO, Developer</div>
+          </div>
+          <div class="flex items-center gap-2"><a class="text-slate-600 hover:text-white transition-colors" href="https://github.com/ErikBjare" target="_blank"><i class="fab fa-github text-lg"></i></a><a class="text-slate-600 hover:text-blue-400 transition-colors" href="https://www.linkedin.com/in/erikbjareholt/" target="_blank"><i class="fab fa-linkedin text-lg"></i></a><a class="text-slate-600 hover:text-sky-400 transition-colors" href="https://twitter.com/ErikBjare" target="_blank"><i class="fab fa-twitter text-lg"></i></a>
           </div>
         </div>
       </div>
-      <div class="flex flex-col mb-8 p-6 rounded-xl md:flex-row hover:bg-gray-50 transition-colors">
-        <div class="w-28 shrink-0 mx-auto mb-4 md:mx-0 md:mr-8 md:mb-0"><img class="rounded-lg" src="/media/gptme-logo.png"/></div>
-        <div class="text-sm">
-          <h3 class="text-2xl font-semibold mb-2">gptme</h3>
-          <div>
-            <p class="mb-4 text-gray-600">
-              A personal AI agent in your terminal.
-              Tools for reading/writing files, running code, browsing the web, and more.
-              Used for coding, research, and building autonomous agents like <a class="text-blue-600 underline" href="https://timetobuildbob.github.io" target="_blank">Bob</a>.
-              Available as CLI, web app, desktop app, and managed service at <a class="text-blue-600 underline" href="https://gptme.ai" target="_blank">gptme.ai</a>.
-            </p>
-            <div class="flex flex-wrap gap-1 mb-3"><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank" href="https://gptme.org/"><i class="fas fa-globe mr-1"></i> Website</a><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank" href="https://github.com/gptme/gptme"><i class="fab fa-github mr-1"></i> GitHub</a><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank" href="https://gptme.org/docs/"><i class="fas fa-book mr-1"></i> Docs</a>
-            </div><a href="https://github.com/gptme/gptme" target="_blank"><img class="opacity-70 hover:opacity-100 transition-opacity" src="https://img.shields.io/github/stars/gptme/gptme?style=social"/></a>
+      <div class="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-slate-700 transition-all">
+        <div>
+          <div class="aspect-square" style="background: url('/media/johan.png') center / cover; "></div>
+        </div>
+        <div class="flex items-center p-4">
+          <div class="flex-grow">
+            <div class="font-medium text-white">Johan Bjäreholt</div>
+            <div class="text-sm text-slate-400">Developer</div>
+          </div>
+          <div class="flex items-center gap-2"><a class="text-slate-600 hover:text-white transition-colors" href="https://github.com/johan-bjareholt" target="_blank"><i class="fab fa-github text-lg"></i></a><a class="text-slate-600 hover:text-blue-400 transition-colors" href="https://www.linkedin.com/in/johanbjareholt/" target="_blank"><i class="fab fa-linkedin text-lg"></i></a>
           </div>
         </div>
       </div>
-      <div class="flex flex-col mb-8 p-6 rounded-xl md:flex-row hover:bg-gray-50 transition-colors">
-        <div class="w-28 shrink-0 mx-auto mb-4 md:mx-0 md:mr-8 md:mb-0"><img class="rounded-lg" src="/media/thankful-logo.png"/></div>
-        <div class="text-sm">
-          <h3 class="text-2xl font-semibold mb-2">Thankful</h3>
-          <div>
-            <p class="mb-1 text-gray-600">Donate crypto directly to every content creator that you like. Automatically and without middlemen.</p>
-            <p class="mb-4 text-gray-400 text-xs">Discontinued in 2019.</p>
-            <div class="flex flex-wrap gap-1 mb-3"><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank" href="https://superuserlabs.org/thankful/"><i class="fas fa-globe mr-1"></i> Website</a><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank" href="https://github.com/SuperuserLabs/thankful"><i class="fab fa-github mr-1"></i> GitHub</a>
-            </div><a href="https://github.com/SuperuserLabs/thankful" target="_blank"><img class="opacity-70 hover:opacity-100 transition-opacity" src="https://img.shields.io/github/stars/SuperuserLabs/thankful?style=social"/></a>
-          </div>
+      <div class="group rounded-2xl bg-slate-900 border border-slate-800 overflow-hidden hover:border-slate-700 transition-all">
+        <div>
+          <div class="aspect-square" style="background: url('/media/bob.jpg') center / cover; "></div>
         </div>
-      </div>
-      <div class="flex flex-col mb-8 p-6 rounded-xl md:flex-row hover:bg-gray-50 transition-colors">
-        <div class="w-28 shrink-0 mx-auto mb-4 md:mx-0 md:mr-8 md:mb-0"><img class="rounded-lg" src="/media/uniswap-python.png"/></div>
-        <div class="text-sm">
-          <h3 class="text-2xl font-semibold mb-2">uniswap-python</h3>
-          <div>
-            <p class="mb-4 text-gray-600">The unofficial Python library for Uniswap. Funded by the Uniswap Grants Program.</p>
-            <div class="flex flex-wrap gap-1 mb-3"><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank" href="https://github.com/uniswap-python/uniswap-python"><i class="fab fa-github mr-1"></i> GitHub</a><a class="rounded-lg border border-gray-200 mr-3 px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 transition-colors" target="_blank" href="https://uniswap-python.com/"><i class="fas fa-book mr-1"></i> Docs</a>
-            </div><a href="https://github.com/uniswap-python/uniswap-python" target="_blank"><img class="opacity-70 hover:opacity-100 transition-opacity" src="https://img.shields.io/github/stars/uniswap-python/uniswap-python?style=social"/></a>
+        <div class="flex items-center p-4">
+          <div class="flex-grow">
+            <div class="font-medium text-white">Bob</div>
+            <div class="text-sm text-slate-400">AI Agent</div>
+          </div>
+          <div class="flex items-center gap-2"><a class="text-slate-600 hover:text-white transition-colors" href="https://github.com/TimeToBuildBob" target="_blank"><i class="fab fa-github text-lg"></i></a><a class="text-slate-600 hover:text-sky-400 transition-colors" href="https://twitter.com/TimeToBuildBob" target="_blank"><i class="fab fa-twitter text-lg"></i></a><a class="text-slate-600 hover:text-green-400 transition-colors" href="https://timetobuildbob.github.io" target="_blank"><i class="fas fa-globe text-lg"></i></a>
           </div>
         </div>
       </div>
     </div>
+    <p class="text-sm text-slate-600 mt-4 text-center">Bob is a self-improving AI agent built on <a class="text-slate-400 underline" href="https://gptme.org/" target="_blank">gptme</a> — autonomously writing, shipping, and merging code 24/7.</p>
+    <details class="mt-8 text-center">
+      <summary class="text-sm text-slate-600 cursor-pointer hover:text-slate-400 transition-colors">Past team members</summary>
+      <div class="grid grid-cols-3 gap-4 mt-6 sm:grid-cols-6"><a class="block text-center group" href="https://github.com/ahnlabb" target="_blank">
+          <div class="w-16 h-16 mx-auto rounded-full overflow-hidden border border-slate-800 group-hover:border-slate-600 transition-all">
+            <div class="w-full h-full" style="background: url('/media/johannes.jpg') center / cover"></div>
+          </div>
+          <div class="text-xs text-slate-600 mt-2 group-hover:text-slate-400 transition-colors">Johannes Ahnlide</div></a><a class="block text-center group" href="https://github.com/powersource" target="_blank">
+          <div class="w-16 h-16 mx-auto rounded-full overflow-hidden border border-slate-800 group-hover:border-slate-600 transition-all">
+            <div class="w-full h-full" style="background: url('/media/jacob.jpg') center / cover"></div>
+          </div>
+          <div class="text-xs text-slate-600 mt-2 group-hover:text-slate-400 transition-colors">Jacob Karlsson</div></a><a class="block text-center group" href="https://github.com/patrik-laurell" target="_blank">
+          <div class="w-16 h-16 mx-auto rounded-full overflow-hidden border border-slate-800 group-hover:border-slate-600 transition-all">
+            <div class="w-full h-full" style="background: url('/media/patrik.jpg') center / cover"></div>
+          </div>
+          <div class="text-xs text-slate-600 mt-2 group-hover:text-slate-400 transition-colors">Patrik Laurell</div></a><a class="block text-center group" href="https://github.com/vlthr" target="_blank">
+          <div class="w-16 h-16 mx-auto rounded-full overflow-hidden border border-slate-800 group-hover:border-slate-600 transition-all">
+            <div class="w-full h-full" style="background: url('/media/valthor.jpg') center / cover"></div>
+          </div>
+          <div class="text-xs text-slate-600 mt-2 group-hover:text-slate-400 transition-colors">Valthor Halldórsson</div></a><a class="block text-center group" href="https://github.com/dwilid" target="_blank">
+          <div class="w-16 h-16 mx-auto rounded-full overflow-hidden border border-slate-800 group-hover:border-slate-600 transition-all">
+            <div class="w-full h-full" style="background: url('/media/dwight.jpg') center / cover"></div>
+          </div>
+          <div class="text-xs text-slate-600 mt-2 group-hover:text-slate-400 transition-colors">Dwight Lidman</div></a><a class="block text-center group" href="https://github.com/Miyou" target="_blank">
+          <div class="w-16 h-16 mx-auto rounded-full overflow-hidden border border-slate-800 group-hover:border-slate-600 transition-all">
+            <div class="w-full h-full" style="background: url('/media/michael.jpg') center / cover"></div>
+          </div>
+          <div class="text-xs text-slate-600 mt-2 group-hover:text-slate-400 transition-colors">Michael Young</div></a>
+      </div>
+    </details>
   </div>
 </div>
-<div class="bg-gray-50 py-16">
-  <div class="px-6 max-w-3xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-6">About us</h2>
-    <div class="text-gray-600 space-y-4 text-left sm:text-center">
-      <p>We are a small team of developers and researchers passionate about free and open-source software, building tools to empower users like you.</p>
-      <p>Based in <span class="font-medium">Sweden</span>, active since 2017, with experience across full-stack development, machine learning, AI agents, and decentralized systems.</p>
-      <p class="text-sm text-gray-500">We also offer consulting in software development, machine learning, and AI.</p>
-    </div>
+<div class="border-t border-slate-800 py-12">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <p class="text-slate-400 text-base leading-relaxed">A small team of developers and researchers from <span class="text-slate-300">Sweden</span>, building open-source tools since 2017.
+      Experience spanning full-stack development, machine learning, AI agents, and decentralized systems.
+    </p>
+    <p class="mt-4 text-sm text-slate-600">We also offer consulting in software development, ML, and AI.</p>
   </div>
 </div>
-<div class="py-16 sm:py-20">
-  <div class="container mx-auto" style="padding: 2em 0em">
-    <div class="grid">
-      <h2 class="text-center text-3xl font-bold mb-12">Team</h2>
-      <div class="max-w-4xl mx-auto grid grid-cols-1 gap-8 sm:grid-cols-3">
-        <div class="border border-gray-100 rounded-2xl shadow-sm bg-white text-black overflow-hidden hover:shadow-md transition-shadow">
-          <div>
-            <div class="h-64 rounded-t-2xl" style="background: url('/media/erik.jpg') center / cover; "></div>
-          </div>
-          <div class="flex items-center p-4">
-            <div class="flex-grow">
-              <div class="font-medium">Erik Bjäreholt</div>
-              <div class="text-sm text-gray-500">CEO, Developer</div>
-            </div>
-            <div class="flex items-center gap-2"><a class="text-gray-400 hover:text-gray-700 transition-colors" href="https://github.com/ErikBjare" target="_blank"><i class="fab fa-github text-xl"></i></a><a class="text-gray-400 hover:text-blue-600 transition-colors" href="https://www.linkedin.com/in/erikbjareholt/" target="_blank"><i class="fab fa-linkedin text-xl"></i></a><a class="text-gray-400 hover:text-blue-400 transition-colors" href="https://twitter.com/ErikBjare" target="_blank"><i class="fab fa-twitter text-xl"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="border border-gray-100 rounded-2xl shadow-sm bg-white text-black overflow-hidden hover:shadow-md transition-shadow">
-          <div>
-            <div class="h-64 rounded-t-2xl" style="background: url('/media/johan.png') center / cover; "></div>
-          </div>
-          <div class="flex items-center p-4">
-            <div class="flex-grow">
-              <div class="font-medium">Johan Bjäreholt</div>
-              <div class="text-sm text-gray-500">Developer</div>
-            </div>
-            <div class="flex items-center gap-2"><a class="text-gray-400 hover:text-gray-700 transition-colors" href="https://github.com/johan-bjareholt" target="_blank"><i class="fab fa-github text-xl"></i></a><a class="text-gray-400 hover:text-blue-600 transition-colors" href="https://www.linkedin.com/in/johanbjareholt/" target="_blank"><i class="fab fa-linkedin text-xl"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="border border-gray-100 rounded-2xl shadow-sm bg-white text-black overflow-hidden hover:shadow-md transition-shadow">
-          <div>
-            <div class="h-64 rounded-t-2xl" style="background: url('/media/bob.jpg') center / cover; "></div>
-          </div>
-          <div class="flex items-center p-4">
-            <div class="flex-grow">
-              <div class="font-medium">Bob</div>
-              <div class="text-sm text-gray-500">AI Agent, Developer</div>
-            </div>
-            <div class="flex items-center gap-2"><a class="text-gray-400 hover:text-gray-700 transition-colors" href="https://github.com/TimeToBuildBob" target="_blank"><i class="fab fa-github text-xl"></i></a><a class="text-gray-400 hover:text-blue-400 transition-colors" href="https://twitter.com/TimeToBuildBob" target="_blank"><i class="fab fa-twitter text-xl"></i></a><a class="text-gray-400 hover:text-green-600 transition-colors" href="https://timetobuildbob.github.io" target="_blank"><i class="fas fa-globe text-xl"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="max-w-4xl mx-auto mt-4">
-        <p class="text-center text-sm text-gray-500 mt-2">Bob is an autonomous AI agent built with <a class="underline" href="https://gptme.org/" target="_blank">gptme</a>, contributing code and reviewing PRs 24/7.</p>
-      </div>
-      <div class="max-w-4xl mx-auto text-sm mt-8">
-        <details>
-          <summary class="text-center text-xl font-medium py-6 text-gray-500 hover:cursor-pointer hover:text-gray-700 transition-colors">Past team members</summary>
-          <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2 md:grid-cols-3">
-            <div class="border border-gray-100 rounded-2xl shadow-sm bg-white text-black overflow-hidden hover:shadow-md transition-shadow">
-              <div>
-                <div class="h-64 rounded-t-2xl" style="background: url('/media/johannes.jpg') center / cover; "></div>
-              </div>
-              <div class="flex items-center p-4">
-                <div class="flex-grow">
-                  <div class="font-medium">Johannes Ahnlide</div>
-                  <div class="text-sm text-gray-500">Developer</div>
-                </div>
-                <div class="flex items-center gap-2"><a class="text-gray-400 hover:text-gray-700 transition-colors" href="https://github.com/ahnlabb" target="_blank"><i class="fab fa-github text-xl"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="border border-gray-100 rounded-2xl shadow-sm bg-white text-black overflow-hidden hover:shadow-md transition-shadow">
-              <div>
-                <div class="h-64 rounded-t-2xl" style="background: url('/media/jacob.jpg') center / cover; "></div>
-              </div>
-              <div class="flex items-center p-4">
-                <div class="flex-grow">
-                  <div class="font-medium">Jacob Karlsson</div>
-                  <div class="text-sm text-gray-500">Developer</div>
-                </div>
-                <div class="flex items-center gap-2"><a class="text-gray-400 hover:text-gray-700 transition-colors" href="https://github.com/powersource" target="_blank"><i class="fab fa-github text-xl"></i></a><a class="text-gray-400 hover:text-blue-600 transition-colors" href="https://www.linkedin.com/in/jacob-karlsson-6a483bb1/" target="_blank"><i class="fab fa-linkedin text-xl"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="border border-gray-100 rounded-2xl shadow-sm bg-white text-black overflow-hidden hover:shadow-md transition-shadow">
-              <div>
-                <div class="h-64 rounded-t-2xl" style="background: url('/media/patrik.jpg') center / cover; "></div>
-              </div>
-              <div class="flex items-center p-4">
-                <div class="flex-grow">
-                  <div class="font-medium">Patrik Laurell</div>
-                  <div class="text-sm text-gray-500">Developer</div>
-                </div>
-                <div class="flex items-center gap-2"><a class="text-gray-400 hover:text-gray-700 transition-colors" href="https://github.com/patrik-laurell" target="_blank"><i class="fab fa-github text-xl"></i></a><a class="text-gray-400 hover:text-blue-600 transition-colors" href="https://www.linkedin.com/in/patrik-laurell-ba5b306b/" target="_blank"><i class="fab fa-linkedin text-xl"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="border border-gray-100 rounded-2xl shadow-sm bg-white text-black overflow-hidden hover:shadow-md transition-shadow">
-              <div>
-                <div class="h-64 rounded-t-2xl" style="background: url('/media/valthor.jpg') center / cover; "></div>
-              </div>
-              <div class="flex items-center p-4">
-                <div class="flex-grow">
-                  <div class="font-medium">Valthor Halldórsson</div>
-                  <div class="text-sm text-gray-500">Developer</div>
-                </div>
-                <div class="flex items-center gap-2"><a class="text-gray-400 hover:text-gray-700 transition-colors" href="https://github.com/vlthr" target="_blank"><i class="fab fa-github text-xl"></i></a><a class="text-gray-400 hover:text-blue-600 transition-colors" href="https://www.linkedin.com/in/valthor-halldorsson-002aaa13a/" target="_blank"><i class="fab fa-linkedin text-xl"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="border border-gray-100 rounded-2xl shadow-sm bg-white text-black overflow-hidden hover:shadow-md transition-shadow">
-              <div>
-                <div class="h-64 rounded-t-2xl" style="background: url('/media/dwight.jpg') center / cover; "></div>
-              </div>
-              <div class="flex items-center p-4">
-                <div class="flex-grow">
-                  <div class="font-medium">Dwight Lidman</div>
-                  <div class="text-sm text-gray-500">Developer</div>
-                </div>
-                <div class="flex items-center gap-2"><a class="text-gray-400 hover:text-gray-700 transition-colors" href="https://github.com/dwilid" target="_blank"><i class="fab fa-github text-xl"></i></a><a class="text-gray-400 hover:text-blue-600 transition-colors" href="https://www.linkedin.com/in/dwight-lidman/" target="_blank"><i class="fab fa-linkedin text-xl"></i></a><a class="text-gray-400 hover:text-blue-400 transition-colors" href="background-position-y: 10%" target="_blank"><i class="fab fa-twitter text-xl"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="border border-gray-100 rounded-2xl shadow-sm bg-white text-black overflow-hidden hover:shadow-md transition-shadow">
-              <div>
-                <div class="h-64 rounded-t-2xl" style="background: url('/media/michael.jpg') center / cover; "></div>
-              </div>
-              <div class="flex items-center p-4">
-                <div class="flex-grow">
-                  <div class="font-medium">Michael Young</div>
-                  <div class="text-sm text-gray-500">Developer</div>
-                </div>
-                <div class="flex items-center gap-2"><a class="text-gray-400 hover:text-gray-700 transition-colors" href="https://github.com/Miyou" target="_blank"><i class="fab fa-github text-xl"></i></a><a class="text-gray-400 hover:text-blue-600 transition-colors" href="https://www.linkedin.com/in/michael-young-522148142/" target="_blank"><i class="fab fa-linkedin text-xl"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </details>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="bg-slate-900 text-white py-16">
+<div class="border-t border-slate-800 py-14">
   <div class="max-w-3xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">History</h2>
-    <div class="space-y-0">
-            <div class="flex">
-              <div class="w-20 shrink-0 text-right pr-6"><span class="font-bold text-green-400">2014</span></div>
-              <div class="border-l-2 border-slate-700 pl-6 pb-8">
-                <p class="text-slate-300">Erik starts working on ActivityWatch</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="w-20 shrink-0 text-right pr-6"><span class="font-bold text-green-400">2016</span></div>
-              <div class="border-l-2 border-slate-700 pl-6 pb-8">
-                <p class="text-slate-300">ActivityWatch v0.1 released</p>
-                <p class="text-slate-300">Johan joins ActivityWatch development</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="w-20 shrink-0 text-right pr-6"><span class="font-bold text-green-400">2017</span></div>
-              <div class="border-l-2 border-slate-700 pl-6 pb-8">
-                <p class="text-slate-300">Superuser Labs founded, with Thankful as its initial project</p>
-                <p class="text-slate-300">Awarded a Leapfrogs grant by Lund University</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="w-20 shrink-0 text-right pr-6"><span class="font-bold text-green-400">2018</span></div>
-              <div class="border-l-2 border-slate-700 pl-6 pb-8">
-                <p class="text-slate-300">Double Leapfrogs grant received</p>
-                <p class="text-slate-300">Thankful team grows to 5 developers over the summer</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="w-20 shrink-0 text-right pr-6"><span class="font-bold text-green-400">2019</span></div>
-              <div class="border-l-2 border-slate-700 pl-6 pb-8">
-                <p class="text-slate-300">Thankful folds, ActivityWatch becomes the main focus</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="w-20 shrink-0 text-right pr-6"><span class="font-bold text-green-400">2021</span></div>
-              <div class="border-l-2 border-slate-700 pl-6 pb-8">
-                <p class="text-slate-300">ActivityWatch adopted by researchers</p>
-                <p class="text-slate-300">Uniswap Grant received for uniswap-python</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="w-20 shrink-0 text-right pr-6"><span class="font-bold text-green-400">2022</span></div>
-              <div class="border-l-2 border-slate-700 pl-6 pb-8">
-                <p class="text-slate-300">Formally incorporates as "Superuser Labs Lund AB"</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="w-20 shrink-0 text-right pr-6"><span class="font-bold text-green-400">2023</span></div>
-              <div class="border-l-2 border-slate-700 pl-6 pb-8">
-                <p class="text-slate-300">First consulting client: University of Ghent</p>
-                <p class="text-slate-300">Erik starts working on gptme (March), first public release (September)</p>
-                <p class="text-slate-300">Erik joins Lovable as first hire (December)</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="w-20 shrink-0 text-right pr-6"><span class="font-bold text-green-400">2024</span></div>
-              <div class="border-l-2 border-slate-700 pl-6 pb-8">
-                <p class="text-slate-300">Erik leaves Lovable, focus returns to Superuser Labs and gptme</p>
-                <p class="text-slate-300">gptme-webui and gptme-agent-template created</p>
-                <p class="text-slate-300"><a class="text-green-400 underline" href="https://timetobuildbob.github.io" target="_blank">Bob</a> is born (November)</p>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="w-20 shrink-0 text-right pr-6"><span class="font-bold text-green-400">2025</span></div>
-              <div class="border-l-2 border-slate-700 pl-6 pb-8">
-                <p class="text-slate-300">gptme.ai service launched</p>
-                <p class="text-slate-300">gptme desktop app (Tauri) development begins</p>
-                <p class="text-slate-300">Bob achieves autonomous operation (October)</p>
-                <p class="text-slate-300">Consulting for Pale Blue Dot and Dendrite Systems</p>
-              </div>
-            </div>
-    </div>
+    <h2 class="text-2xl font-bold text-slate-300 mb-8 text-center">History</h2>
+        <div class="flex group max-w-md mx-auto">
+          <div class="w-16 shrink-0 text-right pr-5"><span class="font-bold text-slate-600 text-sm">2014</span>
+          </div>
+          <div class="border-l border-slate-800 pl-5 pb-6 group-hover:border-slate-600 transition-colors">
+            <p class="text-sm text-slate-500">Erik starts working on ActivityWatch</p>
+          </div>
+        </div>
+        <div class="flex group max-w-md mx-auto">
+          <div class="w-16 shrink-0 text-right pr-5"><span class="font-bold text-slate-600 text-sm">2016</span>
+          </div>
+          <div class="border-l border-slate-800 pl-5 pb-6 group-hover:border-slate-600 transition-colors">
+            <p class="text-sm text-slate-500">ActivityWatch v0.1 released</p>
+          </div>
+        </div>
+        <div class="flex group max-w-md mx-auto">
+          <div class="w-16 shrink-0 text-right pr-5"><span class="font-bold text-green-400 text-sm">2017</span>
+          </div>
+          <div class="border-l border-slate-800 pl-5 pb-6 group-hover:border-slate-600 transition-colors">
+            <p class="text-sm text-slate-400">Superuser Labs founded</p>
+            <p class="text-sm text-slate-500">Leapfrogs grant from Lund University</p>
+          </div>
+        </div>
+        <div class="flex group max-w-md mx-auto">
+          <div class="w-16 shrink-0 text-right pr-5"><span class="font-bold text-slate-600 text-sm">2019</span>
+          </div>
+          <div class="border-l border-slate-800 pl-5 pb-6 group-hover:border-slate-600 transition-colors">
+            <p class="text-sm text-slate-500">Thankful folds, ActivityWatch becomes main focus</p>
+          </div>
+        </div>
+        <div class="flex group max-w-md mx-auto">
+          <div class="w-16 shrink-0 text-right pr-5"><span class="font-bold text-slate-600 text-sm">2022</span>
+          </div>
+          <div class="border-l border-slate-800 pl-5 pb-6 group-hover:border-slate-600 transition-colors">
+            <p class="text-sm text-slate-500">Formally incorporates as "Superuser Labs Lund AB"</p>
+          </div>
+        </div>
+        <div class="flex group max-w-md mx-auto">
+          <div class="w-16 shrink-0 text-right pr-5"><span class="font-bold text-green-400 text-sm">2023</span>
+          </div>
+          <div class="border-l border-slate-800 pl-5 pb-6 group-hover:border-slate-600 transition-colors">
+            <p class="text-sm text-slate-400">Erik starts working on gptme</p>
+            <p class="text-sm text-slate-500">First public release of gptme (September)</p>
+          </div>
+        </div>
+        <div class="flex group max-w-md mx-auto">
+          <div class="w-16 shrink-0 text-right pr-5"><span class="font-bold text-green-400 text-sm">2024</span>
+          </div>
+          <div class="border-l border-slate-800 pl-5 pb-6 group-hover:border-slate-600 transition-colors">
+            <p class="text-sm text-slate-400">Full focus returns to Superuser Labs and gptme</p>
+            <p class="text-sm text-slate-400"><a class="text-green-400" href="https://timetobuildbob.github.io" target="_blank">Bob</a> is born</p>
+          </div>
+        </div>
+        <div class="flex group max-w-md mx-auto">
+          <div class="w-16 shrink-0 text-right pr-5"><span class="font-bold text-green-400 text-sm">2025</span>
+          </div>
+          <div class="border-l border-slate-800 pl-5 pb-6 group-hover:border-slate-600 transition-colors">
+            <p class="text-sm text-slate-400">gptme.ai service launched</p>
+            <p class="text-sm text-slate-400">Bob achieves autonomous operation</p>
+            <p class="text-sm text-slate-500">Consulting for Pale Blue Dot, Dendrite Systems</p>
+          </div>
+        </div>
   </div>
 </div></main>
-      <div class="bg-slate-900 text-gray-400 w-full py-6 text-center text-sm">Made with <i class="fas fa-heart" style="color: #ef4444"></i> by Superuser Labs</div>
+      <div class="border-t border-slate-800 text-slate-500 w-full py-8 text-center text-sm">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-between"><span>Made with <i class="fas fa-heart" style="color: #ef4444"></i> by Superuser Labs</span>
+          <div class="flex items-center gap-5"><a class="text-slate-600 hover:text-slate-300 transition-colors" href="https://github.com/SuperuserLabs" target="_blank"><i class="fab fa-github"></i></a><a class="text-slate-600 hover:text-slate-300 transition-colors" href="https://twitter.com/SuperusrLabs" target="_blank"><i class="fab fa-twitter"></i></a><a class="text-slate-600 hover:text-slate-300 transition-colors" href="https://www.linkedin.com/company/superuser-labs" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
