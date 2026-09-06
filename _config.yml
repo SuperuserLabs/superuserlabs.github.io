@@ -19,10 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Superuser Labs
-email: erik@bjareho.lt
+email: erik@superuserlabs.com
 description: >- # this means to ignore newlines until "baseurl:"
   Superuser Labs is a team of developers and researchers who are passionate about free and open-source software,
   and we are building such software to empower users (like you!).
+  We also offer consulting in AI agents, ML, and software development.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://superuserlabs.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: SuperusrLabs

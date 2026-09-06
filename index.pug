@@ -19,7 +19,7 @@ div.relative.overflow-hidden.dot-grid
     //- Stats row
     div.mt-8.flex.justify-center.gap-10(class="sm:gap-16")
       div
-        div.text-2xl.font-bold.text-white(class="sm:text-3xl") 20k+
+        div.text-2xl.font-bold.text-white(class="sm:text-3xl") 24k+
         div.text-xs.text-slate-500.mt-1 GitHub stars
       div
         div.text-2xl.font-bold.text-white(class="sm:text-3xl") 10+
@@ -45,7 +45,7 @@ div.max-w-6xl.mx-auto.px-6.py-12
             h3.text-xl.font-semibold.text-white ActivityWatch
             span.text-xs.text-slate-500
               i.fas.fa-star.text-yellow-500.mr-1
-              | 16k+
+              | 18k+
           p.text-sm.text-slate-400
             | The world's best free and open-source automated time-tracker. Cross-platform, local-first, extensible.
       div.flex.flex-wrap.gap-2.mt-5
@@ -71,7 +71,7 @@ div.max-w-6xl.mx-auto.px-6.py-12
               i.fas.fa-star.text-yellow-500.mr-1
               | 4k+
           p.text-sm.text-slate-400
-            | A personal AI agent in your terminal. Read/write files, run code, browse the web. Powers autonomous agents like #[a.text-green-400(href="https://timetobuildbob.github.io" target="_blank") Bob].
+            | A personal AI agent. Read/write files, run code, browse the web. Powers autonomous agents like #[a.text-green-400(href="https://timetobuildbob.github.io" target="_blank") Bob].
             | Available as CLI, web app, desktop app, and at #[a.text-green-400(href="https://gptme.ai" target="_blank") gptme.ai].
       div.flex.flex-wrap.gap-2.mt-5
         a.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700(href="https://gptme.ai/" target="_blank", class="hover:bg-slate-700 transition-colors")
@@ -88,7 +88,7 @@ div.max-w-6xl.mx-auto.px-6.py-12
       img.w-10.h-10.rounded-lg.shrink-0.object-contain(src='/media/uniswap-python.png', alt='uniswap-python')
       div
         h3.text-base.font-semibold.text-white uniswap-python
-        p.text-xs.text-slate-500 Unofficial Python library for Uniswap
+        p.text-xs.text-slate-400 Unofficial Python library for Uniswap
 
     a.group.flex.items-center.gap-4.rounded-xl.bg-slate-900.border.border-slate-800.p-5.opacity-50(class="hover:border-slate-700 hover:opacity-70 transition-all" href="https://github.com/SuperuserLabs/thankful" target="_blank")
       img.w-10.h-10.rounded-lg.shrink-0(src='/media/thankful-logo.png', alt='Thankful')
@@ -96,7 +96,7 @@ div.max-w-6xl.mx-auto.px-6.py-12
         div.flex.items-center.gap-2
           h3.text-base.font-semibold.text-white Thankful
           span.text-xs.text-slate-600 Discontinued
-        p.text-xs.text-slate-500 Donate crypto directly to creators you love
+        p.text-xs.text-slate-400 Donate crypto directly to creators you love
 
 //- ============================================================
 //- TEAM
@@ -110,8 +110,8 @@ div.border-t.border-slate-800.py-14
       +teammember("Johan Bjäreholt", "johan.png", "Developer", github="https://github.com/johan-bjareholt", linkedin="https://www.linkedin.com/in/johanbjareholt/")
       +teammember("Bob", "bob.jpg", "AI Agent", "https://github.com/TimeToBuildBob", null, "https://twitter.com/TimeToBuildBob", "https://timetobuildbob.github.io")
 
-    p.text-sm.text-slate-600.mt-4.text-center
-      | Bob is a self-improving AI agent built on #[a.text-slate-400.underline(href="https://gptme.org/" target="_blank") gptme] — autonomously writing, shipping, and merging code 24/7.
+    p.text-sm.text-slate-400.mt-4.text-center
+      | Bob is a self-improving AI agent built on #[a.text-slate-300.underline(href="https://gptme.org/" target="_blank") gptme] — autonomously writing, shipping, and merging code 24/7.
 
     //- Past members — compact circular avatars
     details.mt-8.text-center
@@ -129,11 +129,34 @@ div.border-t.border-slate-800.py-14
 //- ============================================================
 div.border-t.border-slate-800.py-12
   div.max-w-3xl.mx-auto.px-6.text-center
-    p.text-slate-400.text-base.leading-relaxed
-      | A small team of developers and researchers from #[span.text-slate-300 Sweden], building open-source tools since 2017.
+    p.text-slate-300.text-base.leading-relaxed
+      | A small team of developers and researchers from #[span.text-white Sweden], building open-source tools since 2017.
       | Experience spanning full-stack development, machine learning, AI agents, and decentralized systems.
-    p.mt-4.text-sm.text-slate-600
-      | We also offer consulting in software development, ML, and AI.
+
+//- ============================================================
+//- CONSULTING
+//- ============================================================
+div#consulting.border-t.border-slate-800.py-14
+  div.max-w-3xl.mx-auto.px-6.text-center
+    h2.text-2xl.font-bold.text-slate-300.mb-6 Consulting
+    p.text-slate-300.text-base.leading-relaxed
+      | We take on a small number of consulting engagements alongside our open-source work 🛠️
+      | We help teams with #[span.text-white AI agents & LLM integration], #[span.text-white developer tooling], #[span.text-white full-stack engineering], and #[span.text-white ML],
+      | from the creator of ActivityWatch (18k+ #[i.fas.fa-star.text-yellow-500]) and gptme (4k+ #[i.fas.fa-star.text-yellow-500]), with founding-team experience at #[a.text-green-400(href="https://lovable.dev" target="_blank") Lovable].
+    p.mt-4.text-slate-400.text-sm.leading-relaxed
+      | Engagements are typically short-to-medium projects (weeks to a few months) or retainer-style advisory: remote-first, with on-site stints by arrangement.
+    div.mt-8
+      div.text-xs.text-slate-500.uppercase.tracking-wider.mb-3 Selected clients
+      div.flex.flex-wrap.justify-center.gap-2
+        a.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700(href="https://strawberrybrowser.com/" target="_blank", class="hover:bg-slate-700 transition-colors") Strawberry Browser
+        a.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700(href="https://paleblue.vc/" target="_blank", class="hover:bg-slate-700 transition-colors") Pale Blue Dot
+        span.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700 Ghent University
+        a.px-3.py-1.rounded-full.bg-slate-800.text-slate-300.text-xs.border.border-slate-700(href="https://lovable.dev" target="_blank", class="hover:bg-slate-700 transition-colors") Lovable
+    a.inline-block.mt-8.px-6.py-2.rounded-full.bg-green-900.text-green-300.border.border-green-800.font-medium(href="mailto:erik@superuserlabs.com", class="hover:bg-green-800 transition-colors")
+      i.fas.fa-envelope.mr-2
+      | Get in touch
+    p.mt-6.text-xs.text-slate-500
+      | Engagements are B2B through Superuser Labs Lund AB (org.nr 559388-1773), a VAT-registered Swedish company.
 
 //- ============================================================
 //- HISTORY — timeline
@@ -153,32 +176,32 @@ div.border-t.border-slate-800.py-14
           block
 
     +timeline-entry("2014")
-      p.text-sm.text-slate-500 Erik starts working on ActivityWatch
+      p.text-sm.text-slate-400 Erik starts working on ActivityWatch
     +timeline-entry("2016")
-      p.text-sm.text-slate-500 ActivityWatch v0.1 released
-      p.text-sm.text-slate-500 Johan joins ActivityWatch development
+      p.text-sm.text-slate-400 ActivityWatch v0.1 released
+      p.text-sm.text-slate-400 Johan joins ActivityWatch development
     +timeline-entry("2017", true)
-      p.text-sm.text-slate-400 Superuser Labs founded, with Thankful as its initial project
-      p.text-sm.text-slate-500 Leapfrogs grant from Lund University
+      p.text-sm.text-slate-300 Superuser Labs founded, with Thankful as its initial project
+      p.text-sm.text-slate-400 Leapfrogs grant from Lund University
     +timeline-entry("2018")
-      p.text-sm.text-slate-500 Double Leapfrogs grant
-      p.text-sm.text-slate-500 Thankful team grows to 5 developers
+      p.text-sm.text-slate-400 Double Leapfrogs grant
+      p.text-sm.text-slate-400 Thankful team grows to 5 developers
     +timeline-entry("2019")
-      p.text-sm.text-slate-500 Thankful folds, ActivityWatch becomes main focus
+      p.text-sm.text-slate-400 Thankful folds, ActivityWatch becomes main focus
     +timeline-entry("2021")
-      p.text-sm.text-slate-500 ActivityWatch adopted by researchers
-      p.text-sm.text-slate-500 Uniswap Grant for uniswap-python
+      p.text-sm.text-slate-400 ActivityWatch adopted by researchers
+      p.text-sm.text-slate-400 Uniswap Grant for uniswap-python
     +timeline-entry("2022")
-      p.text-sm.text-slate-500 Formally incorporates as "Superuser Labs Lund AB"
+      p.text-sm.text-slate-400 Formally incorporates as "Superuser Labs Lund AB"
     +timeline-entry("2023", true)
-      p.text-sm.text-slate-500 First consulting client: University of Ghent
-      p.text-sm.text-slate-400 Erik starts working on gptme
-      p.text-sm.text-slate-500 First public release of gptme (September)
-      p.text-sm.text-slate-400 Erik joins #[a.text-green-400(href="https://lovable.dev" target="_blank") Lovable] as first employee (now a unicorn)
+      p.text-sm.text-slate-400 First consulting client: University of Ghent
+      p.text-sm.text-slate-300 Erik starts working on gptme
+      p.text-sm.text-slate-400 First public release of gptme (September)
+      p.text-sm.text-slate-300 Erik joins #[a.text-green-400(href="https://lovable.dev" target="_blank") Lovable] as first employee (now a unicorn)
     +timeline-entry("2024", true)
-      p.text-sm.text-slate-400 Erik leaves Lovable, full focus returns to Superuser Labs and gptme
-      p.text-sm.text-slate-400 #[a.text-green-400(href="https://timetobuildbob.github.io" target="_blank") Bob] is born
+      p.text-sm.text-slate-300 Erik leaves Lovable, full focus returns to Superuser Labs and gptme
+      p.text-sm.text-slate-300 #[a.text-green-400(href="https://timetobuildbob.github.io" target="_blank") Bob] is born
     +timeline-entry("2025", true)
-      p.text-sm.text-slate-400 gptme.ai service launched
-      p.text-sm.text-slate-400 Bob achieves autonomous operation
-      p.text-sm.text-slate-500 Consulting for #[a.text-slate-400(href="https://paleblue.vc/" target="_blank") Pale Blue Dot], #[a.text-slate-400(href="https://strawberrybrowser.com/" target="_blank") Strawberry Browser]
+      p.text-sm.text-slate-300 gptme.ai service launched
+      p.text-sm.text-slate-300 Bob achieves autonomous operation
+      p.text-sm.text-slate-400 Consulting for #[a.text-slate-300(href="https://paleblue.vc/" target="_blank") Pale Blue Dot], #[a.text-slate-300(href="https://strawberrybrowser.com/" target="_blank") Strawberry Browser]
